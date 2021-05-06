@@ -12,7 +12,7 @@
 - 💬 Ask me about **Laravel, .Net Core and Vue**
 
 - 📫 How to reach me **joelmaykon94@gmail.com**
-![Shady's github stats](https://cr-skills-chart-widget.azurewebsites.net/api/api?username=shekohex&skills=Rust,C,C%2B%2B,C%23,Dart,JavaScript,Typescript&width=820)
+![Shady's github stats](https://cr-skills-chart-widget.azurewebsites.net/api/api?username=joelmaykonTADS&skills=Rust,C,C%2B%2B,C%23,Dart,JavaScript,Typescript&width=820)
 
 <p align="left">
 <h3 align="left">Connect with me:</h3>

@@ -38,5 +38,21 @@
 <br>
 </div>
 
+### The Best Projects
+<table>
+  <tr>
+    <td align="center">
+     <a href="https://rocketseat.com.br"><img style="border-radius: 50%;" src="https://cdn-icons-png.flaticon.com/128/9304/9304615.png" width="100px;" alt=""/>
+     <br />
+      <sub>
+      <b>Algorithms</b>
+      </sub>
+     </a>
+     <br />
+     <a href="https://github.com/joelmaykon94/algorithms-and-data-structures" title="algorithms-and-data-structures">👨‍🚀</a>
+    </td>
+  </tr>
+</table>
+
 
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=008B8B&height=120&section=footer"/>

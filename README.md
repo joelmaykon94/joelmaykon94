@@ -42,7 +42,7 @@
 <table>
   <tr>
     <td align="center">
-     <a href="https://rocketseat.com.br"><img style="border-radius: 50%;" src="https://cdn-icons-png.flaticon.com/128/9304/9304615.png" width="100px;" alt=""/>
+     <a href="https://github.com/joelmaykon94/algorithms-and-data-structures"><img style="border-radius: 50%;" src="https://cdn-icons-png.flaticon.com/128/9304/9304615.png" width="100px;" alt=""/>
      <br />
       <sub>
       <b>Algorithms</b>

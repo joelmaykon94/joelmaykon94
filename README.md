@@ -14,7 +14,7 @@
 
 <div/>
 <div align="center">  
-  <img width="100%" src="https://github-profile-trophy.vercel.app/?username=joelmaykon94&theme=dracula&row=2&no-bg=true&column=3&margin-w=15&margin-h=15" />
+  <img width="100%" height="195px" src="https://github-profile-trophy.vercel.app/?username=joelmaykon94&theme=dracula&layout=compact&row=2&no-bg=true&column=3&margin-w=15&margin-h=15" />
   <img width="100%" height="195px" src="https://github-readme-stats.vercel.app/api?username=joelmaykon94&show_icons=true&layout=compact&count_private=true&hide_border=true&title_color=008B8B&icon_color=008B8B&text_color=c9d1d9&bg_color=0d1117" alt="joel maykon 94 github stats" /> 
   <img width="100%" height="195px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=joelmaykon94&layout=compact&hide_border=true&title_color=008B8B&text_color=008B8B&bg_color=0d1117" />
 </div>

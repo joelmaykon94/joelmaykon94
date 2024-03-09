@@ -1,6 +1,6 @@
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=008B8B&height=120&section=header"/>
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com/?color=008B8B&size=35&center=true&vCenter=true&width=1000&lines=HELLO,+My+name+is+Joel+Maykon;I'm+30+years+old;I'm+from+Brazil;I+Master's+student+systems+Computation;in+Artificial+Intelligence;Be+Welcome!+:%29)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com/?color=008B8B&size=35&center=true&vCenter=true&width=1000&lines=HELLO,+My+name+is+Joel+Maykon;Student+Master+Degree+in+Artificial+Intelligence;Be+Welcome!+:%29)](https://git.io/typing-svg)
 
 [![Joel Maykon github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=joelmaykon94&bg_color=0d1117&color=008B8B&line=A52A2A&point=FF6347&area=true&hide_border=true)](https://github.com/joelmaykon94/github-readme-activity-graph)
 

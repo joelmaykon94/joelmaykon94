@@ -5,7 +5,7 @@
 [![Joel Maykon github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=joelmaykon&bg_color=0d1117&color=008B8B&line=A52A2A&point=FF6347&area=true&hide_border=true)](https://github.com/joelmaykon94/github-readme-activity-graph)
 
 <div align="center"> 
-<a href="https://www.linkedin.com/in/joelamykon/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" style="border-radius: 30px" target="_blank"></a> 
+<a href="https://www.linkedin.com/in/joelmaykon/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" style="border-radius: 30px" target="_blank"></a> 
 <a href="https://www.youtube.com/channel/UC5vQ0P_e3q3ao-O2aOX1pwA" target="_blank"><img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" target="_blank"></a>
 <a href = "mailto:cmp.1a.joelmaykon94@gmail.com@gmail.com"> <img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
  </div>

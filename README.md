@@ -1,22 +1,42 @@
-<h1 align="center">Hi 👋, I'm Joel Maykon</h1>
-<h3 align="center">A passionate developer from Brazil</h3>
+<img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=008B8B&height=120&section=header"/>
 
-<p align="left"><img src="https://komarev.com/ghpvc/?username=joelmaykon94&label=Profile%20views&color=0e75b6&style=flat" alt="joelmaykon94" /></p>
+[![Typing SVG](https://readme-typing-svg.herokuapp.com/?color=008B8B&size=35&center=true&vCenter=true&width=1000&lines=HELLO,+My+name+is+Joel+Maykon;I'm+30+years+old;I'm+from+Brazil;I+Master's+student+systems+Computation;in+Artificial+Intelligence;Be+Welcome!+:%29)](https://git.io/typing-svg)
 
-<p align="left">
-    <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=joelmaykon94" alt="joelmaykon94" /></a>
-</p>
+[![Joel Maykon github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=joelmaykon&bg_color=0d1117&color=008B8B&line=A52A2A&point=FF6347&area=true&hide_border=true)](https://github.com/joelmaykon94/github-readme-activity-graph)
 
-- 🔭 I’m currently working on [Manager Systems](https://github.com/joelmaykonTADS/manager-systems) - 🌱 I’m currently learning **React, Typescripty/Javascript and Node.JS** - 💬 Ask me about **C#, Python, Laravel, .Net Core and Vue** - 📫
-- How to reach me **joelmaykon94@gmail.com** ![Shady's github stats](https://cr-skills-chart-widget.azurewebsites.net/api/api?username=joelmaykon94&skills=Rust,C,C%2B%2B,C%23,Dart,JavaScript,Java,PHP,Typescript,Vue,ReactJS,AWS&width=820)
+<div align="center"> 
+<a href="https://www.linkedin.com/in/carolbarbosa/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" style="border-radius: 30px" target="_blank"></a> 
+<a href="https://www.youtube.com/channel/UCvFCatDtfdvwKKXkndSAPiw" target="_blank"><img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" target="_blank"></a>
+<a href = "mailto:cmp.1a.joelmaykon94@gmail.com@gmail.com"> <img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
+ </div>
 
-<p align="left"></p>
-<h4 align="left">Connect with me for Linkedin:
-  <a href="https://linkedin.com/in/joelmaykon" target="blank">
-    joelmaykon
-  </a>
-</h4>
+<p/>
 
-<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs/?username=joelmaykon94&layout=compact" alt="joelmaykon94" /></p>
+<div/>
+<div align="center">  
+  <img width="33%" src="https://github-profile-trophy.vercel.app/?username=joelmaykon94&theme=dracula&row=2&no-bg=true&column=3&margin-w=15&margin-h=15" />
+  <img width="33%" height="195px" src="https://github-readme-stats.vercel.app/api?username=joelmaykon94&show_icons=true&layout=compact&count_private=true&hide_border=true&title_color=008B8B&icon_color=008B8B&text_color=c9d1d9&bg_color=0d1117" alt="joel maykon 94 github stats" /> 
+  <img width="33%" height="195px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=joelmaykon94&layout=compact&hide_border=true&title_color=008B8B&text_color=008B8B&bg_color=0d1117" />
+</div>
 
-<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=joelmaykon94&show_icons=true" alt="joelmaykon94" /></p>
+    
+<div align="center"> 
+
+![Python](https://img.shields.io/badge/-Python-0D1117?style=for-the-badge&logo=python&labelColor=0D1117)&nbsp;
+![Node](https://img.shields.io/badge/-Node.JS-0D1117?style=for-the-badge&logo=node.JS&logoColor=1572B6&labelColor=0D1117)&nbsp;
+![HTML5](https://img.shields.io/badge/-HTML5-0D1117?style=for-the-badge&logo=HTML5&logoColor=1572B6&labelColor=0D1117)&nbsp;
+![CSS](https://img.shields.io/badge/-CSS-0D1117?style=for-the-badge&logo=CSS3&logoColor=1572B6&labelColor=0D1117)&nbsp;
+![Vue.js](https://img.shields.io/badge/-Vue.js-0D1117?style=for-the-badge&logo=vue.JS&labelColor=0D1117)&nbsp;
+![React.js](https://img.shields.io/badge/-React.js-0D1117?style=for-the-badge&logo=react&labelColor=0D1117)&nbsp;
+![Php](https://img.shields.io/badge/-php-0D1117?style=for-the-badge&logo=php&logoColor=purple&labelColor=0D1117)&nbsp; 
+
+</did>
+
+<div align="center">
+<br><p align="centre"><b>Visitors Count</b></p>  
+<p align="center"><img align="center" src="https://profile-counter.glitch.me/{joelmaykon94}/count.svg" /></p> 
+<br>
+</div>
+
+
+<img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=008B8B&height=120&section=footer"/>

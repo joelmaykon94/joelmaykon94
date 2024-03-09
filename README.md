@@ -1,4 +1,4 @@
-<!-- h1 align="center">Hi 👋, I'm Joel Maykon</h1>
+<h1 align="center">Hi 👋, I'm Joel Maykon</h1>
 <h3 align="center">A passionate developer from Brazil</h3>
 
 <p align="left"><img src="https://komarev.com/ghpvc/?username=joelmaykontads&label=Profile%20views&color=0e75b6&style=flat" alt="joelmaykontads" /></p>
@@ -8,7 +8,7 @@
 </p>
 
 - 🔭 I’m currently working on [Manager Systems](https://github.com/joelmaykonTADS/manager-systems) - 🌱 I’m currently learning **React, Typescripty/Javascript and Node.JS** - 💬 Ask me about **C#, Python, Laravel, .Net Core and Vue** - 📫
-- How to reach me **joelmaykon94@gmail.com** ![Shady's github stats](https://cr-skills-chart-widget.azurewebsites.net/api/api?username=joelmaykonTADS&skills=Rust,C,C%2B%2B,C%23,Dart,JavaScript,Java,PHP,Typescript,Vue,ReactJS,AWS&width=820)
+- How to reach me **joelmaykon94@gmail.com** ![Shady's github stats](https://cr-skills-chart-widget.azurewebsites.net/api/api?username=joelmaykon94&skills=Rust,C,C%2B%2B,C%23,Dart,JavaScript,Java,PHP,Typescript,Vue,ReactJS,AWS&width=820)
 
 <p align="left"></p>
 <h4 align="left">Connect with me for Linkedin:
@@ -17,6 +17,6 @@
   </a>
 </h4>
 
-<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs/?username=joelmaykontads&layout=compact" alt="joelmaykontads" /></p>
+<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs/?username=joelmaykon94&layout=compact" alt="joelmaykon94" /></p>
 
-<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=joelmaykontads&show_icons=true" alt="joelmaykontads" /></p -->
+<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=joelmaykon94&show_icons=true" alt="joelmaykon94" /></p>

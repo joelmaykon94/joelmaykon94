@@ -4,7 +4,7 @@
 <p align="left"><img src="https://komarev.com/ghpvc/?username=joelmaykon94&label=Profile%20views&color=0e75b6&style=flat" alt="joelmaykon94" /></p>
 
 <p align="left">
-    <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=joelmaykontads" alt="joelmaykontads" /></a>
+    <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=joelmaykon94" alt="joelmaykon94" /></a>
 </p>
 
 - 🔭 I’m currently working on [Manager Systems](https://github.com/joelmaykonTADS/manager-systems) - 🌱 I’m currently learning **React, Typescripty/Javascript and Node.JS** - 💬 Ask me about **C#, Python, Laravel, .Net Core and Vue** - 📫

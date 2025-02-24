@@ -1,0 +1,1 @@
+Deploy de modelos com FastAPI + AWS Lambda + S3 + DynamoDB

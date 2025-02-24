@@ -1,0 +1,1 @@
+Criar pipeline de ingestão Kafka → Spark → Data Lake

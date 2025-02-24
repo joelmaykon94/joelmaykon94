@@ -1,6 +1,6 @@
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=008B8B&height=120&section=header"/>
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com/?color=008B8B&size=35&center=true&vCenter=true&width=1000&lines=HELLO,+My+name+is+Joel+Maykon;Student+Master+Degree+in+Artificial+Intelligence;Be+Welcome!+:%29)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com/?color=008B8B&size=35&center=true&vCenter=true&width=1000&lines=HELLO,+My+name+is+Joel+Maykon;I'm+Data+Scientist;Be+Welcome!+:%29)](https://git.io/typing-svg)
 
 [![Joel Maykon github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=joelmaykon94&bg_color=0d1117&color=008B8B&line=A52A2A&point=FF6347&area=true&hide_border=true)](https://github.com/joelmaykon94/github-readme-activity-graph)
 
@@ -24,11 +24,7 @@
 
 ![Python](https://img.shields.io/badge/-Python-0D1117?style=for-the-badge&logo=python&labelColor=0D1117)&nbsp;
 ![Node](https://img.shields.io/badge/-Node.JS-0D1117?style=for-the-badge&logo=node.JS&logoColor=1572B6&labelColor=0D1117)&nbsp;
-![HTML5](https://img.shields.io/badge/-HTML5-0D1117?style=for-the-badge&logo=HTML5&logoColor=1572B6&labelColor=0D1117)&nbsp;
-![CSS](https://img.shields.io/badge/-CSS-0D1117?style=for-the-badge&logo=CSS3&logoColor=1572B6&labelColor=0D1117)&nbsp;
-![Vue.js](https://img.shields.io/badge/-Vue.js-0D1117?style=for-the-badge&logo=vue.JS&labelColor=0D1117)&nbsp;
 ![React.js](https://img.shields.io/badge/-React.js-0D1117?style=for-the-badge&logo=react&labelColor=0D1117)&nbsp;
-![Php](https://img.shields.io/badge/-php-0D1117?style=for-the-badge&logo=php&logoColor=purple&labelColor=0D1117)&nbsp; 
 
 </did>
 
@@ -42,10 +38,10 @@
 <table>
   <tr>
     <td align="center">
-     <a href="https://github.com/joelmaykon94/algorithms-and-data-structures"><img style="border-radius: 50%;" src="https://cdn-icons-png.flaticon.com/128/9304/9304615.png" width="100px;" alt=""/>
+     <a href="https://github.com/joelmaykon94/algorithms-and-data-structures"><img style="border-radius: 50%;" src="https://cdn-icons-png.flaticon.com/128/9304/9304615.png" width="20px;" alt=""/>
      <br />
       <sub>
-      <b>Algorithms</b>
+      <b></b>
       </sub>
      </a>
      <br />

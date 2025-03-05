@@ -1,9 +1,10 @@
 ---
 title: Academic Sites
 ---
+
 1. Sci-Hub – sci-hub.se
 
-2. [ResearchGate](researchgate.net)
+2. ResearchGate
 
 
 3. Academia.edu – academia.edu

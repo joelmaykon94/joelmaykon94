@@ -1,0 +1,10 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.School Files": {
+    "message": "School Files",
+    "description": "The label for category School Files in sidebar tutorialSidebar"
+  }
+}

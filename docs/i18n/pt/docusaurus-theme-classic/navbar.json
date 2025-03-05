@@ -1,0 +1,26 @@
+{
+  "title": {
+    "message": "Joel Maykon",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "Logo Montain",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Documentations": {
+    "message": "Documentations",
+    "description": "Navbar item with label Documentations"
+  },
+  "item.label.Blog": {
+    "message": "Blog",
+    "description": "Navbar item with label Blog"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  },
+  "item.label.Linkedin": {
+    "message": "Linkedin",
+    "description": "Navbar item with label Linkedin"
+  }
+}

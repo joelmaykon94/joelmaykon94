@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Documentação de código
+# Code Documentation
 
 Let's discover **Docusaurus in less than 5 minutes**.
 

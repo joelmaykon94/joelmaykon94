@@ -1,3 +1,5 @@
+# https://datavizuniverse.substack.com/p/stunning-charts-with-python
+# https://python-graph-gallery.com/web-area-chart-with-different-colors-for-positive-and-negative-values/
 import streamlit as st
 import polars as pl
 import duckdb

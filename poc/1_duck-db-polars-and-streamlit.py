@@ -16,34 +16,39 @@ def load_data():
 
 df = load_data()
 
-# --------- Consulta com DuckDB ---------
-st.header("Exemplo Streamlit + Polars + DuckDB")
+# --------- Gráfico Estilo Pro ---------
+from scipy.interpolate import make_interp_spline
 
-query = """
-SELECT x, y FROM df WHERE x BETWEEN 20 AND 80
-"""
-result = duckdb.query(query).to_df()
+st.subheader("Gráfico Suavizado com Área Colorida (Estilo datavizuniverse)")
 
-st.subheader("Resultado filtrado com DuckDB")
-st.dataframe(result)
+# Interpolação para suavizar
+x = df["x"].to_numpy()
+y = df["y"].to_numpy()
 
-# --------- Gráfico estilo python-graph-gallery ---------
-st.subheader("Gráfico de Área com Cores Diferentes para Positivos e Negativos")
+x_smooth = np.linspace(x.min(), x.max(), 500)
+spl = make_interp_spline(x, y, k=3)  # spline cúbica
+y_smooth = spl(x_smooth)
+
+# Separando positivos e negativos suavizados
+y_pos_smooth = np.where(y_smooth >= 0, y_smooth, 0)
+y_neg_smooth = np.where(y_smooth < 0, y_smooth, 0)
 
 fig, ax = plt.subplots(figsize=(10, 5))
 
-# Áreas positivas
-ax.fill_between(result["x"], result["y"], where=(result["y"] >= 0), interpolate=True, color='green', alpha=0.5, label="Positivo")
+# Gradiente simples simulando preenchimento suave
+ax.fill_between(x_smooth, y_pos_smooth, color='#88d498', alpha=0.6, label="Positivo")
+ax.fill_between(x_smooth, y_neg_smooth, color='#ff6b6b', alpha=0.6, label="Negativo")
 
-# Áreas negativas
-ax.fill_between(result["x"], result["y"], where=(result["y"] < 0), interpolate=True, color='red', alpha=0.5, label="Negativo")
+# Linha suavizada
+ax.plot(x_smooth, y_smooth, color="#222222", linewidth=1.5)
 
-ax.plot(result["x"], result["y"], color="black", linewidth=1)
-
+# Linha zero
 ax.axhline(0, color='grey', linewidth=0.8, linestyle='--')
+
+# Estética geral
+ax.set_xlabel("X", fontsize=12)
+ax.set_ylabel("Y", fontsize=12)
+ax.set_title("Área Positiva (Verde) e Negativa (Vermelha) com Suavização", fontsize=14, fontweight='bold')
 ax.legend()
-ax.set_xlabel("X")
-ax.set_ylabel("Y")
-ax.set_title("Área Positiva (Verde) e Negativa (Vermelha)")
 
 st.pyplot(fig)

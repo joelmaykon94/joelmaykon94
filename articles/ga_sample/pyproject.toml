@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "google-analytics-sample"
+version = "0.1.0"
+description = ""
+authors = ["Joel Maykon <joelmaykon94@gmail.com>"]
+readme = "README.md"
+packages = [{include = "google_analytics_sample", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+kaggle = "^1.7.4.2"
+bigquery = "^0.0.45"
+pandas = "^2.2.3"
+tensorflow = "^2.19.0"
+matplotlib = "^3.10.1"
+ipykernel = "^6.29.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -6,7 +6,6 @@ title: Academic Sites
 
 2. ResearchGate
 
-
 3. Academia.edu – academia.edu
 
 

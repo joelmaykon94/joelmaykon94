@@ -2,9 +2,10 @@
 # https://python-graph-gallery.com/web-area-chart-with-different-colors-for-positive-and-negative-values/
 import streamlit as st
 import polars as pl
-import duckdb
 import matplotlib.pyplot as plt
 import numpy as np
+from scipy.interpolate import make_interp_spline
+
 
 # --------- Dados de exemplo ---------
 @st.cache_data
@@ -16,10 +17,9 @@ def load_data():
 
 df = load_data()
 
-# --------- Gráfico Estilo Pro ---------
-from scipy.interpolate import make_interp_spline
 
-st.subheader("Gráfico Suavizado com Área Colorida (Estilo datavizuniverse)")
+
+st.subheader("Gráfico Suavizado com Área Colorida")
 
 # Interpolação para suavizar
 x = df["x"].to_numpy()
@@ -48,7 +48,7 @@ ax.axhline(0, color='grey', linewidth=0.8, linestyle='--')
 # Estética geral
 ax.set_xlabel("X", fontsize=12)
 ax.set_ylabel("Y", fontsize=12)
-ax.set_title("Área Positiva (Verde) e Negativa (Vermelha) com Suavização", fontsize=14, fontweight='bold')
+ax.set_title("Área Positiva (Verde) e Negativa (Vermelha)", fontsize=14, fontweight='bold')
 ax.legend()
 
 st.pyplot(fig)

@@ -1,1 +1,0 @@
-Rodar notebooks com Spark e Delta Lake

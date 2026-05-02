@@ -1,6 +1,0 @@
-streamlit
-polars
-duckdb
-matplotlib
-plotly
-scipy

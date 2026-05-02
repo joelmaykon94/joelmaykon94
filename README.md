@@ -1,59 +1,79 @@
-<img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=008B8B&height=120&section=header"/>
+<div align="center">
+  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=222222&height=120&section=header&text=JOEL%20MAYKON&fontSize=50&fontColor=DF8F31"/>
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com/?color=008B8B&size=35&center=true&vCenter=true&width=1000&lines=HELLO,+My+name+is+Joel+Maykon;I'm+Data+Scientist;Be+Welcome!+:%29)](https://git.io/typing-svg)
+  [![Typing SVG](https://readme-typing-svg.herokuapp.com/?color=DF8F31&size=35&center=true&vCenter=true&width=1000&lines=SPECIALIST+SOFTWARE+ENGINEER;JAVA+|+GO+|+ANGULAR;CLARITY+OVER+COMPLEXITY;LESS+IS+MORE)](https://git.io/typing-svg)
 
-[![Joel Maykon github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=joelmaykon94&bg_color=0d1117&color=008B8B&line=A52A2A&point=FF6347&area=true&hide_border=true)](https://github.com/joelmaykon94/github-readme-activity-graph)
-
-<div align="center"> 
-  <a href="https://www.linkedin.com/in/joelmaykon/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" style="border-radius: 30px" target="_blank"></a> 
-  <a href="https://www.youtube.com/channel/UC5vQ0P_e3q3ao-O2aOX1pwA" target="_blank"><img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" target="_blank"></a>
-  <a href = "mailto:cmp.1a.joelmaykon94@gmail.com@gmail.com"> <img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
+  <img src="https://img.shields.io/badge/EXPERIÊNCIA-Desde%202018-222222?style=for-the-badge&labelColor=DF8F31&logo=clock&logoColor=222222" />
+  <img src="https://img.shields.io/badge/SENIORIDADE-Especialista-222222?style=for-the-badge&labelColor=50FA7B&logo=trending-up&logoColor=222222" />
+  <img src="https://img.shields.io/badge/FOCO-Performance-222222?style=for-the-badge&labelColor=8BE9FD&logo=cpu&logoColor=222222" />
 </div>
 
-<div align="center">  
-  <img width="49%" src="https://github-profile-trophy.vercel.app/?username=joelmaykon94&theme=dracula&layout=compact&row=2&no-bg=true&column=3&margin-w=15&margin-h=15" />
- <img width="49%" height="195px" src="https://github-readme-stats.vercel.app/api?username=joelmaykon94&show_icons=true&layout=compact&count_private=true&hide_border=true&title_color=008B8B&icon_color=008B8B&text_color=c9d1d9&bg_color=0d1117" alt="joel maykon 94 github stats" /> 
+---
 
-  <img width="50%"  height="195px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=joelmaykon94&layout=compact&hide_border=true&title_color=008B8B&text_color=008B8B&bg_color=0d1117" />
-</div>
-<div>
-<div align="center"> 
+## 👨‍💻 Sobre mim
 
-![Python](https://img.shields.io/badge/-Python-0D1117?style=for-the-badge&logo=python&labelColor=0D1117)&nbsp;
-![Node](https://img.shields.io/badge/-Node.JS-0D1117?style=for-the-badge&logo=node.JS&logoColor=1572B6&labelColor=0D1117)&nbsp;
-![React.js](https://img.shields.io/badge/-React.js-0D1117?style=for-the-badge&logo=react&labelColor=0D1117)&nbsp;
+Engenheiro de Software com **experiência consolidada desde 2018**. Minha filosofia de desenvolvimento é pautada na **simplicidade e eficiência**. Acredito que complexidade não é sinônimo de evolução e que, muitas vezes, "menos é mais".
 
-</div>
-<div align="">
+Busco o controle total sobre o código: entender cada ciclo de CPU e cada byte alocado. Em um mundo de abstrações infinitas, foco em recuperar a clareza e o desempenho artesanal, utilizando ferramentas modernas com consciência de baixo nível.
 
+---
 
-  <br>
-  <p align="centre">
-    <b>Visitors Count</b>
-  </p>
-<p align="center"><img align="center" src="https://profile-counter.glitch.me/{joelmaykon94}/count.svg" /></p> 
-</did>
+## 🏛️ Filosofia Arquitetural
+
+Minha abordagem de arquitetura foca no essencial:
+- **ANTES DO DESENVOLVIMENTO:** Planejamento focado na resolução do problema real, evitando o "over-engineering".
+- **DURANTE O DESENVOLVIMENTO:** Código limpo, sem "mágica" desnecessária. Preferência por soluções diretas.
+- **DEPOIS DO DESENVOLVIMENTO:** Manutenibilidade e observabilidade essencial.
+
+---
+
+## 🛠️ Tech Stack (Specialist Focus)
+
+| Categoria | Tecnologias Chave |
+|-----------|------------------|
+| **BACKEND** | <img src="https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white" /> <img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white" /> |
+| **FRONTEND** | <img src="https://img.shields.io/badge/Angular-DD0031?style=flat-square&logo=angular&logoColor=white" /> |
+| **ARQUITETURA** | <img src="https://img.shields.io/badge/Clean_Architecture-222222?style=flat-square&logo=architecture&logoColor=DF8F31" /> |
+| **DEVOPS** | <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" /> <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white" /> |
+
+---
+
+## 🚀 Navegação Estratégica (Missão 2026)
+
+| Módulo | Descrição | Link |
+|--------|-----------|------|
+| **🗓️ ROADMAP 2026** | Plano estratégico focado em Especialidade. | [Acessar Roadmap](./ROADMAP_2026.md) |
+| **🧪 LAB DE ESTUDOS** | Experimentos de performance e baixo nível. | [Acessar Labs](./LABS.md) |
+| **🚀 PROJETOS PRÁTICOS** | Roteiro focado em "Menos é Mais". | [Acessar Projetos](./PROJECTS.md) |
+
+---
+
+## 💼 Experiência Profissional
+
+| Período | Cargo / Empresa | Impacto Principal |
+|---------|----------------|-------------------|
+| 05/2025 – 12/2025 | Tech Lead – Pref. de Parnamirim/RN | Modernização via K8s e GitOps. |
+| 09/2023 – 07/2024 | Eng. de IA Conversacional – Mutant (Vivo) | Fluxos LLM para milhões de usuários. |
+| 01/2023 – 12/2023 | Front-end Engineer – Not so Impossible | AWS Serverless e arquitetura escalável. |
+
+---
+
+## 📊 GitHub Analytics
 
 <div align="center">
-
-<br>
+  <img width="49%" src="https://github-readme-stats.vercel.app/api?username=joelmaykon94&show_icons=true&theme=react&bg_color=222222&title_color=DF8F31&icon_color=DF8F31&text_color=ffffff&border_color=DF8F31" />
+  <img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=joelmaykon94&layout=compact&theme=react&bg_color=222222&title_color=DF8F31&text_color=ffffff&border_color=DF8F31" />
 </div>
 
-### The Best Projects
+---
 
-<table>
-  <tr>
-    <td align="center">
-     <a href="https://github.com/joelmaykon94/algorithms-and-data-structures"><img style="border-radius: 50%;" src="https://cdn-icons-png.flaticon.com/128/9304/9304615.png" width="20px;" alt=""/>
-     <br />
-      <sub>
-      <b></b>
-      </sub>
-     </a>
-     <br />
-     <a href="https://github.com/joelmaykon94/algorithms-and-data-structures" title="algorithms-and-data-structures">👨‍🚀</a>
-    </td>
-  </tr>
-</table>
+## 🔗 Vamos nos conectar?
 
-<img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=008B8B&height=120&section=footer"/>
+<div align="center"> 
+  <a href="https://www.linkedin.com/in/joelmaykon/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%23222222?style=for-the-badge&logo=linkedin&logoColor=DF8F31&color=222222&labelColor=222222&border=1" style="border: 1px solid #DF8F31; border-radius: 10px"></a> 
+  <a href="https://github.com/joelmaykon94" target="_blank"><img src="https://img.shields.io/badge/-GitHub-%23222222?style=for-the-badge&logo=github&logoColor=DF8F31&color=222222&labelColor=222222" style="border: 1px solid #DF8F31; border-radius: 10px"></a>
+</div>
+
+<div align="center">
+  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=222222&height=120&section=footer&fontColor=DF8F31"/>
+</div>

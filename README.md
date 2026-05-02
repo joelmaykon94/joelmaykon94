@@ -74,7 +74,7 @@ Minha abordagem de arquitetura foca no essencial:
 
 <div align="center">
   <!-- Linguagens Mais Usadas -->
-  <img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=joelmaykon94&layout=compact&langs_count=8&bg_color=222222&title_color=DF8F31&text_color=ffffff&border_color=DF8F31&hide=jupyter%20notebook,html,css" />
+  <img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=joelmaykon94&layout=compact&langs_count=8&bg_color=222222&title_color=DF8F31&text_color=ffffff&border_color=DF8F31&hide=html,css,jupyter%20notebook" />
   
   <!-- Troféus de Conquistas -->
   <img width="49%" src="https://github-profile-trophy.vercel.app/?username=joelmaykon94&theme=dracula&no-bg=true&no-frame=true&column=3&margin-w=15&margin-h=15" />

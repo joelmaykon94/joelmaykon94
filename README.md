@@ -61,8 +61,12 @@ Minha abordagem de arquitetura foca no essencial:
 ## 📊 GitHub Analytics
 
 <div align="center">
-  <img width="49%" src="https://github-readme-stats.vercel.app/api?username=joelmaykon94&show_icons=true&theme=react&bg_color=222222&title_color=DF8F31&icon_color=DF8F31&text_color=ffffff&border_color=DF8F31" />
-  <img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=joelmaykon94&layout=compact&theme=react&bg_color=222222&title_color=DF8F31&text_color=ffffff&border_color=DF8F31" />
+  <img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=joelmaykon94&bg_color=222222&color=DF8F31&line=DF8F31&point=ffffff&area=true&hide_border=true" />
+</div>
+
+<div align="center">
+  <img width="49%" src="https://github-readme-stats.vercel.app/api?username=joelmaykon94&show_icons=true&bg_color=222222&title_color=DF8F31&icon_color=DF8F31&text_color=ffffff&border_color=DF8F31" />
+  <img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=joelmaykon94&layout=compact&bg_color=222222&title_color=DF8F31&text_color=ffffff&border_color=DF8F31" />
 </div>
 
 ---

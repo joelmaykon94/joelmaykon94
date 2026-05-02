@@ -65,8 +65,25 @@ Minha abordagem de arquitetura foca no essencial:
 </div>
 
 <div align="center">
-  <img width="49%" src="https://github-readme-stats.vercel.app/api?username=joelmaykon94&show_icons=true&bg_color=222222&title_color=DF8F31&icon_color=DF8F31&text_color=ffffff&border_color=DF8F31" />
-  <img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=joelmaykon94&layout=compact&bg_color=222222&title_color=DF8F31&text_color=ffffff&border_color=DF8F31" />
+  <!-- Estatísticas Gerais com Ranking -->
+  <img width="49%" src="https://github-readme-stats.vercel.app/api?username=joelmaykon94&show_icons=true&include_all_commits=true&count_private=true&bg_color=222222&title_color=DF8F31&icon_color=DF8F31&text_color=ffffff&border_color=DF8F31&show_rank=true" />
+  
+  <!-- Streak de Contribuições (Consistência) -->
+  <img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=joelmaykon94&theme=react&background=222222&ring=DF8F31&fire=DF8F31&currStreakNum=ffffff&currStreakLabel=DF8F31&sideNums=ffffff&sideLabels=ffffff&dates=ffffff&hide_border=true" />
+</div>
+
+<div align="center">
+  <!-- Linguagens Mais Usadas -->
+  <img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=joelmaykon94&layout=compact&langs_count=8&bg_color=222222&title_color=DF8F31&text_color=ffffff&border_color=DF8F31&hide=jupyter%20notebook,html,css" />
+  
+  <!-- Troféus de Conquistas -->
+  <img width="49%" src="https://github-profile-trophy.vercel.app/?username=joelmaykon94&theme=dracula&no-bg=true&no-frame=true&column=3&margin-w=15&margin-h=15" />
+</div>
+
+---
+
+<div align="center">
+  <p><i>"A complexidade é um sinal de que você não entendeu o problema. A simplicidade é a sofisticação máxima."</i></p>
 </div>
 
 ---

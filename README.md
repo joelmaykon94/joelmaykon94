@@ -14,39 +14,20 @@
 
 Engenheiro de Software com **experiência consolidada desde 2018**. Minha filosofia de desenvolvimento é pautada na **simplicidade e eficiência**. Acredito que complexidade não é sinônimo de evolução e que, muitas vezes, "menos é mais".
 
-Busco o controle total sobre o código: entender cada ciclo de CPU e cada byte alocado. Em um mundo de abstrações infinitas, foco em recuperar a clareza e o desempenho artesanal, utilizando ferramentas modernas com consciência de baixo nível.
-
----
-
-## 🏛️ Filosofia Arquitetural
-
-Minha abordagem de arquitetura foca no essencial:
-- **ANTES DO DESENVOLVIMENTO:** Planejamento focado na resolução do problema real, evitando o "over-engineering".
-- **DURANTE O DESENVOLVIMENTO:** Código limpo, sem "mágica" desnecessária. Preferência por soluções diretas.
-- **DEPOIS DO DESENVOLVIMENTO:** Manutenibilidade e observabilidade essencial.
-
 ---
 
 ## 🛠️ Tech Stack (Specialist Focus)
 
 | Categoria | Tecnologias Chave |
 |-----------|------------------|
-| **BACKEND** | <img src="https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white" /> <img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white" /> |
-| **FRONTEND** | <img src="https://img.shields.io/badge/Angular-DD0031?style=flat-square&logo=angular&logoColor=white" /> |
+| **BACKEND** | <img src="https://img.shields.io/badge/Java%208-ED8B00?style=flat-square&logo=openjdk&logoColor=white" alt="Java 8" /> <img src="https://img.shields.io/badge/Java%2017-ED8B00?style=flat-square&logo=openjdk&logoColor=white" alt="Java 17" /> <img src="https://img.shields.io/badge/Java%2021-ED8B00?style=flat-square&logo=openjdk&logoColor=white" alt="Java 21" /> ![Quarkus](https://img.shields.io/badge/Quarkus-4643CC?style=flat-square&logo=quarkus&logoColor=white) ![Spring Batch](https://img.shields.io/badge/Spring_Batch-6DB33F?style=flat-square&logo=spring&logoColor=white) |
+| **FRONTEND** | <a href="https://v19.angular.dev/installation" target="_blank"> <img src="https://img.shields.io/badge/Angular%2019-DD0031?style=flat-square&logo=angular&logoColor=white" alt="Angular 19" /></a> |
 | **ARQUITETURA** | <img src="https://img.shields.io/badge/Clean_Architecture-222222?style=flat-square&logo=architecture&logoColor=DF8F31" /> |
-| **DEVOPS** | <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" /> <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white" /> |
+| **DEVOPS** | <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" /> <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white" />  ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white) |
+| **BANCO DE DADOS** | |
 
 ---
 
-## 🚀 Navegação Estratégica (Missão 2026)
-
-| Módulo | Descrição | Link |
-|--------|-----------|------|
-| **🗓️ ROADMAP 2026** | Plano estratégico focado em Especialidade. | [Acessar Roadmap](./ROADMAP_2026.md) |
-| **🧪 LAB DE ESTUDOS** | Experimentos de performance e baixo nível. | [Acessar Labs](./LABS.md) |
-| **🚀 PROJETOS PRÁTICOS** | Roteiro focado em "Menos é Mais". | [Acessar Projetos](./PROJECTS.md) |
-
----
 
 ## 💼 Experiência Profissional
 
@@ -54,7 +35,6 @@ Minha abordagem de arquitetura foca no essencial:
 |---------|----------------|-------------------|
 | 05/2025 – 12/2025 | Tech Lead – Pref. de Parnamirim/RN | Modernização via K8s e GitOps. |
 | 09/2023 – 07/2024 | Eng. de IA Conversacional – Mutant (Vivo) | Fluxos LLM para milhões de usuários. |
-| 01/2023 – 12/2023 | Front-end Engineer – Not so Impossible | AWS Serverless e arquitetura escalável. |
 
 ---
 

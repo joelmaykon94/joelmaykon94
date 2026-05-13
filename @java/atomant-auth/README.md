@@ -64,3 +64,21 @@ If you want to learn more about building native executables, please consult <htt
 Easily start your REST Web Services
 
 [Related guide section...](https://quarkus.io/guides/getting-started-reactive#reactive-jax-rs-resources)
+
+
+
+#### Develop Cycle FAAS
+adicionada a lib: ./mvnw quarkus:add-extension -Dextensions="container-image-docker"
+grupo para subir para o docker hub: quarkus.container-image.group=joelmaykon
+
+docker tag joelmaykon/atomant-auth:1.0.0-SNAPSHOT joelmaykon/atomant-auth:latest
+docker push joelmaykon/atomant-auth:latest
+
+aplicar manifesto: kubectl apply -f greeting-service.yaml
+status da função: kubectl get ksvc greeting-function
+teste: 
+```bash
+curl -X POST 'http://greeting-function.default.192.168.1.10.nip.io/hello-funq' \
+     -H 'Content-Type: application/json' \
+     -d '"Joel"'
+ ```

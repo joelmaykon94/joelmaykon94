@@ -5,7 +5,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'Joel Maykon',
   tagline: 'Software Engineer Senior | Java & Python | Cloud & DevOps',
-  favicon: 'img/favicon.ico',
+  favicon: 'https://github.com/joelmaykon94.png',
 
   future: {
     v4: true,
@@ -64,7 +64,8 @@ const config: Config = {
       title: 'Joel Maykon',
       logo: {
         alt: 'Joel Maykon Logo',
-        src: 'img/logo.svg',
+        src: 'https://github.com/joelmaykon94.png',
+        style: { borderRadius: '50%' },
       },
       items: [
         {

@@ -14,6 +14,13 @@ function HomepageHeader() {
     <header className={styles.heroBanner}>
       <div className="radial-gradient-bg" />
       <div className="container hero-container">
+        <div className={styles.avatarWrapper}>
+          <img 
+            src="https://github.com/joelmaykon94.png" 
+            alt="Joel Maykon" 
+            className={styles.homeAvatar}
+          />
+        </div>
         <div className="hero-badge">Disponível para Projetos de Alto Impacto</div>
         <Heading as="h1" className={styles.heroTitle}>
           Crafting Scalable <br />

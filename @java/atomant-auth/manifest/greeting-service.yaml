@@ -9,3 +9,10 @@ spec:
         - image: docker.io/joelmaykon/atomant-auth:latest
           ports:
             - containerPort: 8080
+          env:
+            - name: JAVA_OPTS
+              value: "-Xmx512m -Xms256m"
+            - name: QUARKUS_HTTP_PORT
+              value: "8080"
+            - name: QUARKUS_HTTP_HOST
+              value: "0.0.0.0"

@@ -70,7 +70,7 @@ Easily start your REST Web Services
 #### Develop Cycle FAAS
 adicionada a lib: ./mvnw quarkus:add-extension -Dextensions="container-image-docker"
 grupo para subir para o docker hub: quarkus.container-image.group=joelmaykon
-
+comando para subir para o docker hub: quarkus
 docker tag joelmaykon/atomant-auth:1.0.0-SNAPSHOT joelmaykon/atomant-auth:latest
 docker push joelmaykon/atomant-auth:latest
 

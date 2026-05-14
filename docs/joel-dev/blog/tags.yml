@@ -1,0 +1,12 @@
+java:
+  label: Java
+  description: Posts sobre o ecossistema Java, Spring Boot e Quarkus.
+python:
+  label: Python
+  description: Automação, IA e Web com Python.
+architecture:
+  label: Arquitetura
+  description: Design de sistemas, Clean Architecture e DDD.
+career:
+  label: Carreira
+  description: Reflexões sobre evolução profissional e aprendizado.

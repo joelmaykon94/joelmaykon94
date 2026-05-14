@@ -1,0 +1,117 @@
+.heroBanner {
+  padding: 120px 0 160px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroTitle {
+  font-size: 72px;
+  line-height: 1.1;
+  font-weight: 600;
+  color: var(--color-porcelain);
+  margin-bottom: 24px;
+}
+
+.heroAccent {
+  color: var(--color-aether-blue);
+  background: linear-gradient(135deg, var(--color-aether-blue) 0%, #a855f7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heroSubtitle {
+  font-size: 20px;
+  color: var(--color-storm-cloud);
+  max-width: 700px;
+  margin: 0 auto 48px;
+  line-height: 1.6;
+}
+
+.heroButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Tech Stack */
+.techStackSection {
+  padding: 40px 0;
+  border-top: 1px solid var(--color-charcoal-grey);
+  border-bottom: 1px solid var(--color-charcoal-grey);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.techStackWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.techStackLabel {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-fog-grey);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 0;
+}
+
+.techGrid {
+  display: flex;
+  gap: 32px;
+}
+
+.techItem {
+  color: var(--color-light-steel);
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 0.6;
+}
+
+/* Experience */
+.experienceSection {
+  padding: 100px 0;
+  background-color: var(--color-pitch-black);
+}
+
+.stickyHeading {
+  font-size: 40px;
+  color: var(--color-porcelain);
+  margin-bottom: 24px;
+  position: sticky;
+  top: 100px;
+}
+
+.experienceIntro {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--color-storm-cloud);
+}
+
+.timelineDate {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-neon-lime);
+  margin-bottom: 8px;
+  display: block;
+}
+
+@media screen and (max-width: 996px) {
+  .heroTitle {
+    font-size: 48px;
+  }
+  .techStackWrapper {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .techGrid {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .stickyHeading {
+    position: static;
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+}

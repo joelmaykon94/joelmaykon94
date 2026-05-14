@@ -1,0 +1,18 @@
+---
+slug: titulo-do-post-diario
+title: "O que aprendi hoje: [Assunto]"
+authors: [joel]
+tags: [estudo, tech]
+---
+
+Breve descrição do que foi estudado ou testado hoje.
+
+{/* truncate */}
+
+## Detalhes técnicos
+
+- Item 1
+- Item 2
+
+## Conclusão
+O que isso muda no meu workflow?

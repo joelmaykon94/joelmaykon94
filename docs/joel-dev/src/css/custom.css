@@ -1,0 +1,296 @@
+/**
+ * Linear-inspired Style System
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;590;600&display=swap');
+
+:root {
+  /* Colors - Linear Palette */
+  --color-pitch-black: #08090a;
+  --color-graphite: #0f1011;
+  --color-deep-slate: #161718;
+  --color-charcoal-grey: #23252a;
+  --color-muted-ash: #323334;
+  --color-gunmetal: #383b3f;
+  --color-porcelain: #f7f8f8;
+  --color-light-steel: #d0d6e0;
+  --color-storm-cloud: #8a8f98;
+  --color-fog-grey: #62666d;
+  --color-neon-lime: #e4f222;
+  --color-aether-blue: #5e6ad2;
+
+  /* Infima Overrides */
+  --ifm-font-family-base: 'Inter', sans-serif;
+  --ifm-background-color: var(--color-pitch-black);
+  --ifm-navbar-background-color: rgba(8, 9, 10, 0.8);
+  --ifm-footer-background-color: var(--color-pitch-black);
+  --ifm-card-background-color: var(--color-graphite);
+  --ifm-font-color-base: var(--color-storm-cloud);
+  --ifm-heading-color: var(--color-porcelain);
+  --ifm-color-primary: var(--color-neon-lime);
+  
+  --ifm-navbar-link-color: var(--color-storm-cloud);
+  --ifm-navbar-link-hover-color: var(--color-porcelain);
+  
+  /* Layout */
+  --ifm-container-width: 1100px;
+  --section-padding: 100px 0;
+}
+
+[data-theme='dark'] {
+  --ifm-navbar-background-color: rgba(8, 9, 10, 0.8);
+}
+
+/* Base Styles */
+body {
+  background-color: var(--color-pitch-black);
+  -webkit-font-smoothing: antialiased;
+}
+
+.navbar {
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-charcoal-grey);
+}
+
+.footer {
+  border-top: 1px solid var(--color-charcoal-grey);
+}
+
+/* Linear Gradients & Effects */
+.radial-gradient-bg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(94, 106, 210, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Hero Enhancements */
+.hero-container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  background: rgba(228, 242, 34, 0.1);
+  border: 1px solid rgba(228, 242, 34, 0.2);
+  border-radius: 99px;
+  color: var(--color-neon-lime);
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+/* Bento Grid */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.bento-item {
+  background: var(--color-graphite);
+  border: 1px solid var(--color-charcoal-grey);
+  border-radius: 12px;
+  padding: 32px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+}
+
+.bento-item:hover {
+  border-color: rgba(228, 242, 34, 0.3);
+}
+
+.bento-item h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: var(--color-porcelain);
+}
+
+/* Timeline */
+.timeline-item {
+  border-left: 1px solid var(--color-charcoal-grey);
+  padding-left: 24px;
+  padding-bottom: 32px;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -5px;
+  top: 0;
+  width: 9px;
+  height: 9px;
+  background: var(--color-neon-lime);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--color-neon-lime);
+}
+
+/* Tech Tags */
+.tech-tag {
+  display: inline-block;
+  padding: 4px 10px;
+  background: var(--color-deep-slate);
+  border: 1px solid var(--color-charcoal-grey);
+  border-radius: 4px;
+  font-size: 12px;
+  color: var(--color-light-steel);
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+/* Buttons */
+.button--primary-linear {
+  background: var(--color-neon-lime);
+  color: var(--color-pitch-black);
+  border: none;
+  border-radius: 6px;
+  padding: 12px 24px;
+  font-weight: 590;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button--primary-linear:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(228, 242, 34, 0.2);
+  color: var(--color-pitch-black);
+  text-decoration: none;
+}
+
+.button--secondary-linear {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--color-porcelain);
+  border: 1px solid var(--color-charcoal-grey);
+  border-radius: 6px;
+  padding: 12px 24px;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.button--secondary-linear:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--color-porcelain);
+  text-decoration: none;
+}
+
+/* --- Linear 'Now' Blog Aesthetic --- */
+
+/* Blog List & Post Layout */
+.blog-list-page, .blog-post-page {
+  --ifm-container-width: 800px; /* Focused reading width */
+}
+
+/* Post Headers */
+.blog-post-page header h1 {
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--color-porcelain);
+  margin-bottom: 1rem;
+}
+
+.blog-post-page .margin-vert--xl {
+    margin-top: 4rem !important;
+    margin-bottom: 4rem !important;
+}
+
+/* Metadata (Authors, Dates) */
+.avatar__name {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-porcelain);
+}
+
+.avatar__intro {
+  font-size: 13px;
+  color: var(--color-storm-cloud);
+}
+
+/* Typography for Reading */
+.markdown {
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--color-light-steel);
+}
+
+.markdown h2 {
+  font-size: 28px;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-porcelain);
+  border-bottom: none;
+}
+
+.markdown h3 {
+  font-size: 22px;
+  margin-top: 2rem;
+  color: var(--color-porcelain);
+}
+
+.markdown p {
+  margin-bottom: 1.5rem;
+}
+
+.markdown code {
+  background: var(--color-deep-slate);
+  border: 1px solid var(--color-charcoal-grey);
+  border-radius: 4px;
+  padding: 0.2rem 0.4rem;
+  color: var(--color-neon-lime);
+}
+
+.markdown blockquote {
+  border-left: 2px solid var(--color-neon-lime);
+  background: rgba(228, 242, 34, 0.03);
+  color: var(--color-storm-cloud);
+  font-style: italic;
+  padding: 1rem 1.5rem;
+  margin: 2rem 0;
+}
+
+/* Blog List Card Style (Linear Now cards) */
+article.margin-bottom--xl {
+  border-bottom: 1px solid var(--color-charcoal-grey);
+  padding-bottom: 4rem;
+  margin-bottom: 4rem !important;
+}
+
+article.margin-bottom--xl:last-child {
+  border-bottom: none;
+}
+
+.blog-list-page .markdown h2 a {
+    color: var(--color-porcelain);
+    text-decoration: none;
+}
+
+.blog-list-page .markdown h2 a:hover {
+    color: var(--color-neon-lime);
+}
+
+/* Truncate button (Read More) */
+.button--primary {
+    background: transparent;
+    border: 1px solid var(--color-charcoal-grey);
+    color: var(--color-porcelain);
+    font-size: 14px;
+    padding: 8px 16px;
+    transition: all 0.2s ease;
+}
+
+.button--primary:hover {
+    background: var(--color-deep-slate);
+    border-color: var(--color-storm-cloud);
+    color: var(--color-porcelain);
+    text-decoration: none;
+}

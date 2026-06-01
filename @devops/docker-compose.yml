@@ -1,0 +1,72 @@
+version: "3.8"
+
+services:
+  # --- AWS Local Emulator ---
+  floci:
+    image: floci/floci:latest
+    container_name: floci
+    tty: true
+    restart: unless-stopped
+    ports:
+      - "${FLOCI_PORT:-4566}:4566"
+      - "6379-6399:6379-6399"
+      - "7001-7099:7001-7099"
+      - "9200-9299:9200-9299"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - floci_data:/app/data
+    environment:
+      - FLOCI_SERVICES_DOCKER_NETWORK=${FLOCI_SERVICES_DOCKER_NETWORK}
+      - FLOCI_HOSTNAME=${FLOCI_HOSTNAME}
+      - FLOCI_BASE_URL=${FLOCI_BASE_URL}
+      - FLOCI_STORAGE_MODE=${FLOCI_STORAGE_MODE}
+      - FLOCI_DEFAULT_REGION=${FLOCI_DEFAULT_REGION}
+      - FLOCI_DEFAULT_ACCOUNT_ID=${FLOCI_DEFAULT_ACCOUNT_ID}
+      - FLOCI_SERVICES_RDS_DEFAULT_POSTGRES_IMAGE=${FLOCI_SERVICES_RDS_DEFAULT_POSTGRES_IMAGE}
+    networks:
+      - sonarnet
+
+  # --- Code Quality ---
+  sonarqube:
+    image: sonarqube:${SONAR_VERSION:-community}
+    container_name: sonarqube
+    restart: unless-stopped
+    depends_on:
+      - sonar-db
+    ports:
+      - "9000:9000"
+    environment:
+      - SONAR_JDBC_URL=${SONAR_JDBC_URL}
+      - SONAR_JDBC_USERNAME=${SONAR_JDBC_USERNAME}
+      - SONAR_JDBC_PASSWORD=${SONAR_JDBC_PASSWORD}
+    volumes:
+      - sonarqube_data:/opt/sonarqube/data
+      - sonarqube_extensions:/opt/sonarqube/extensions
+      - sonarqube_logs:/opt/sonarqube/logs
+    networks:
+      - sonarnet
+
+  # --- SonarQube Database ---
+  sonar-db:
+    image: postgres:15
+    container_name: sonar-db
+    restart: unless-stopped
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DB=${POSTGRES_DB}
+    volumes:
+      - sonar_postgresql_data:/var/lib/postgresql/data
+    networks:
+      - sonarnet
+
+networks:
+  sonarnet:
+    name: sonarnet
+
+volumes:
+  floci_data:
+  sonarqube_data:
+  sonarqube_extensions:
+  sonarqube_logs:
+  sonar_postgresql_data:

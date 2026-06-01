@@ -1,0 +1,8 @@
+{
+  "label": "Geral",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Introdução e conceitos gerais do workspace."
+  }
+}

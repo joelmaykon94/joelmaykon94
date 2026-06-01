@@ -1,0 +1,8 @@
+{
+  "label": "Quality & Monitoring",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Tools and practices to ensure code quality, security, and observability."
+  }
+}

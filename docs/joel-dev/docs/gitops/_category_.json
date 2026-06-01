@@ -1,0 +1,8 @@
+{
+  "label": "Implementação GitOps",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Detalhes técnicos sobre a implementação de CI/CD utilizando GitHub Actions e ArgoCD."
+  }
+}

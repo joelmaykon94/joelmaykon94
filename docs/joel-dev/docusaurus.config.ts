@@ -11,6 +11,11 @@ const config: Config = {
     v4: true,
   },
 
+  markdown: {
+    mermaid: true,
+  },
+  themes: ['@docusaurus/theme-mermaid'],
+
   // Netlify Configuration
   url: 'https://joelmaykon.netlify.app',
   baseUrl: '/',
@@ -23,6 +28,16 @@ const config: Config = {
   i18n: {
     defaultLocale: 'pt-BR',
     locales: ['pt-BR', 'en'],
+    localeConfigs: {
+      en: {
+        label: 'English',
+        direction: 'ltr',
+      },
+      'pt-BR': {
+        label: 'Português',
+        direction: 'ltr',
+      },
+    },
   },
 
   presets: [
@@ -72,9 +87,13 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Conhecimento',
+          label: 'Práticas',
         },
         {to: '/blog', label: 'Blog', position: 'left'},
+        {
+          type: 'localeDropdown',
+          position: 'right',
+        },
         {
           href: 'https://github.com/joelmaykon94',
           label: 'GitHub',

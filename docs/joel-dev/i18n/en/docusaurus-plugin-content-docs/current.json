@@ -1,0 +1,38 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.Arquitetura": {
+    "message": "Architecture",
+    "description": "The label for category 'Arquitetura' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Arquitetura.link.generated-index.description": {
+    "message": "Technical detailing of system architecture, patterns, and infrastructure used in my projects.",
+    "description": "The generated-index page description for category 'Arquitetura' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Implementação GitOps": {
+    "message": "GitOps Implementation",
+    "description": "The label for category 'Implementação GitOps' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Implementação GitOps.link.generated-index.description": {
+    "message": "Technical details about CI/CD implementation using GitHub Actions and ArgoCD.",
+    "description": "The generated-index page description for category 'Implementação GitOps' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Especialista Java": {
+    "message": "Java Expert",
+    "description": "The label for category 'Especialista Java' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Especialista Java.link.generated-index.description": {
+    "message": "In-depth guide for mastering Modern Java, based on market best practices and roadmap.sh.",
+    "description": "The generated-index page description for category 'Especialista Java' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Qualidade & Monitoramento": {
+    "message": "Quality & Monitoring",
+    "description": "The label for category 'Qualidade & Monitoramento' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Qualidade & Monitoramento.link.generated-index.description": {
+    "message": "Tools and practices to ensure code quality, security, and observability.",
+    "description": "The generated-index page description for category 'Qualidade & Monitoramento' in sidebar 'tutorialSidebar'"
+  }
+}

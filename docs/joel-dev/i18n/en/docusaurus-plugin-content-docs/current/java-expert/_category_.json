@@ -1,0 +1,8 @@
+{
+  "label": "Java Expert",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "In-depth guide for mastering Modern Java, based on market best practices and roadmap.sh."
+  }
+}

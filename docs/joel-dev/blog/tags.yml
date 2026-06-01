@@ -10,3 +10,9 @@ architecture:
 career:
   label: Carreira
   description: Reflexões sobre evolução profissional e aprendizado.
+devops:
+  label: DevOps
+  description: CI/CD, Infrastructure as Code e Automação de Infraestrutura.
+quality:
+  label: Qualidade
+  description: Testes, SonarQube e melhores práticas de Clean Code.

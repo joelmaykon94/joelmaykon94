@@ -1,0 +1,8 @@
+{
+  "label": "Arquitetura",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Detalhamento técnico da arquitetura de sistemas, padrões e infraestrutura utilizados nos meus projetos."
+  }
+}

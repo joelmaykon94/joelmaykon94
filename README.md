@@ -33,7 +33,8 @@ Engenheiro de Software com **experiência consolidada desde 2018**. Minha filoso
 
 | Período | Cargo / Empresa | Impacto Principal |
 |---------|----------------|-------------------|
-| 05/2025 – 12/2025 | Tech Lead – Pref. de Parnamirim/RN | Modernização via K8s e GitOps. |
+| 05/2026 – Atual | Analista Senior Plataforma Baixa – EngeSoftware (CEF - Bank Federal) | Modernização Java & Angular. |
+| 05/2025 – 12/2025 | Assessor Especial – Pref. de Parnamirim/RN | Modernização Java, Angular & Quarkus via K8s e GitOps. |
 | 09/2023 – 07/2024 | Eng. de IA Conversacional – Mutant (Vivo) | Fluxos LLM para milhões de usuários. |
 
 ---
@@ -64,6 +65,10 @@ Engenheiro de Software com **experiência consolidada desde 2018**. Minha filoso
 </div>
 
 ---
+
+## GOALS
+
+
 
 ## 🔗 Vamos nos conectar?
 

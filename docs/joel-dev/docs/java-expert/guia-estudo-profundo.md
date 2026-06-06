@@ -12,4 +12,5 @@ Este guia visa transformar um desenvolvedor "que sabe Java" em um **Especialista
 :::
 
 - [ ] Basic Syntax
+    
 - [ ] Lifecycle of a Program

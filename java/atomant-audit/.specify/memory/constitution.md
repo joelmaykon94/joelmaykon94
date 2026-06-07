@@ -1,4 +1,4 @@
-# Project Constitution & Engineering Principles: `atomant-audit-module` (Audit & Aggregation Module)
+# Project Constitution & Engineering Principles: `atomant-audit` (Audit & Aggregation Module)
 
 This constitution establishes the core, non-negotiable architectural principles, database schema design, and tax aggregation requirements for the **Audit and Aggregation Module**. All code modifications, database schemas, and queries must comply with these guidelines.
 

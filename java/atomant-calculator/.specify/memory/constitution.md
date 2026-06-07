@@ -1,4 +1,4 @@
-# Project Constitution & Engineering Principles: `atomant-calculator-module` (Calculator Module)
+# Project Constitution & Engineering Principles: `atomant-calculator` (Calculator Module)
 
 This constitution establishes the core, non-negotiable mathematical, precision, and business calculation rules for the **Calculator Module**. All contributors, calculations, and tests must adhere to these policies to prevent financial rounding discrepancies and data loss.
 

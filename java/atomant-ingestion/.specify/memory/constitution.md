@@ -1,4 +1,4 @@
-# Project Constitution & Engineering Principles: `atomant-ingestion-module` (Ingestion Module)
+# Project Constitution & Engineering Principles: `atomant-ingestion` (Ingestion Module)
 
 This constitution establishes the core, non-negotiable architectural rules, resilience patterns, and data ingestion/normalization standards for the **Ingestion Module** microservice. All contributors, AI agents, and pull requests must strictly adhere to this specification.
 

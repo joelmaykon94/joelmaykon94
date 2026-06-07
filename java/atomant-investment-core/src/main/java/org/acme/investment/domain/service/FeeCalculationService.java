@@ -1,3 +1,4 @@
+
 package org.acme.investment.domain.service;
 
 import jakarta.enterprise.context.ApplicationScoped;

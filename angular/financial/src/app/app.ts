@@ -5,13 +5,18 @@ import { BaseChartDirective } from 'ng2-charts';
 import { ChartConfiguration, ChartOptions } from 'chart.js';
 import { CommonModule } from '@angular/common';
 
+import { PortfolioComposition } from './portfolio-composition/portfolio-composition';
+import { ClassConfiguration } from './class-configuration/class-configuration';
+
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
     LucideAngularModule, 
     BaseChartDirective, 
-    CommonModule
+    CommonModule,
+    PortfolioComposition,
+    ClassConfiguration
   ],
   templateUrl: './app.html',
   styleUrl: './app.css'
@@ -25,6 +30,7 @@ export class App {
     });
   }
   protected readonly title = signal('financial');
+  readonly currentTab = signal<'home' | 'portfolio' | 'classes'>('home');
 
   // Icons for Sidebar
   readonly Home = Home;

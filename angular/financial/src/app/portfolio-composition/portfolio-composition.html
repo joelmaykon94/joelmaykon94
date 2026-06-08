@@ -1,0 +1,351 @@
+<div class="flex flex-col gap-8 w-full">
+  
+  <!-- Header with Title and Template Selector -->
+  <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+    <div>
+      <h2 class="text-xl sm:text-2xl font-bold tracking-tight text-white/90">Composição da Carteira</h2>
+      <p class="text-white/40 text-xs sm:text-sm mt-1">
+        Configure e administre os limites teóricos regulatórios de alocação por ativos e grupos.
+      </p>
+    </div>
+
+    <!-- Bulk Actions & Reset -->
+    <div class="flex flex-wrap items-center gap-3">
+      <button (click)="expandAll()" 
+              class="px-3 py-1.5 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl text-xs font-semibold text-white/80 transition-all flex items-center gap-1.5 cursor-pointer">
+        <lucide-icon [name]="ChevronDown" class="w-3.5 h-3.5"></lucide-icon>
+        Expandir Tudo
+      </button>
+      <button (click)="collapseAll()" 
+              class="px-3 py-1.5 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl text-xs font-semibold text-white/80 transition-all flex items-center gap-1.5 cursor-pointer">
+        <lucide-icon [name]="ChevronUp" class="w-3.5 h-3.5"></lucide-icon>
+        Recolher Tudo
+      </button>
+      <button (click)="resetToDefaults()" 
+              title="Restaurar valores padrões para este template"
+              class="px-3 py-1.5 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl text-xs font-semibold text-white/80 transition-all flex items-center gap-1.5 cursor-pointer text-white/60 hover:text-white">
+        <lucide-icon [name]="RotateCcw" class="w-3.5 h-3.5"></lucide-icon>
+        Resetar
+      </button>
+    </div>
+  </div>
+
+  <!-- Portfolio Type Tabs -->
+  <div class="glass-card p-1.5 rounded-2xl flex flex-wrap gap-1 border border-white/10 max-w-2xl">
+    @for (type of portfolioTypes; track type.id) {
+      <button (click)="selectPortfolioType(type.id)"
+              [class]="selectedType() === type.id 
+                ? 'flex-1 min-w-[100px] text-center py-2.5 px-4 rounded-xl text-xs font-bold bg-white text-black shadow-lg transition-all transform duration-200' 
+                : 'flex-1 min-w-[100px] text-center py-2.5 px-4 rounded-xl text-xs font-semibold text-white/60 hover:text-white hover:bg-white/5 transition-all cursor-pointer'"
+              type="button">
+        {{ type.name }}
+      </button>
+    }
+  </div>
+
+  <!-- Main Grid Layout -->
+  <div class="grid grid-cols-1 xl:grid-cols-3 gap-8 items-start">
+    
+    <!-- Left Column: Accordion Asset Groups (Flex-2 equivalent on xl screen) -->
+    <div class="xl:col-span-2 flex flex-col gap-6">
+      
+      @for (group of activeGroups(); track group.id) {
+        <div class="glass-card rounded-[2rem] overflow-hidden border border-white/10 transition-all duration-300">
+          
+          <!-- Accordion Header -->
+          <div (click)="toggleGroup(group.id)" 
+               class="p-5 sm:p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 cursor-pointer hover:bg-white/[0.02] transition-colors selection:bg-transparent select-none">
+            
+            <div class="flex items-center gap-3 w-full sm:w-auto overflow-hidden" (click)="$event.stopPropagation()">
+              <!-- Chevron Rotates dynamically -->
+              <button (click)="toggleGroup(group.id)" 
+                      class="text-white/60 hover:text-white focus:outline-none shrink-0 transition-transform duration-300"
+                      [class.rotate-180]="group.isExpanded">
+                <lucide-icon [name]="ChevronDown" class="w-5 h-5"></lucide-icon>
+              </button>
+              
+              <!-- Editable Group Name directly in header -->
+              <input type="text" 
+                     [(ngModel)]="group.name" 
+                     placeholder="Nome do Grupo"
+                     class="bg-transparent border border-transparent hover:border-white/10 focus:border-white/30 rounded-lg px-2 py-1 text-sm sm:text-base font-bold text-white/95 w-full sm:w-64 focus:outline-none focus:bg-white/5 transition-all">
+            </div>
+
+            <!-- Header Badges and Aggregates -->
+            <div class="flex items-center gap-3 ml-auto sm:ml-0 shrink-0">
+              
+              <!-- Summary display when collapsed -->
+              @if (!group.isExpanded) {
+                <div class="flex flex-wrap items-center gap-2 text-[10px] sm:text-xs">
+                  <span class="px-2 py-0.5 bg-white/5 rounded-full text-white/55 border border-white/5">
+                    {{ group.assets.length }} ativos
+                  </span>
+                  <span class="px-2 py-0.5 bg-white/5 rounded-full text-white/55 border border-white/5">
+                    Mín total: {{ getGroupSummary(group).minSum }}%
+                  </span>
+                  <span class="px-2 py-0.5 bg-white/5 rounded-full text-white/55 border border-white/5">
+                    Máx total: {{ getGroupSummary(group).maxSum }}%
+                  </span>
+                  <span class="px-2 py-0.5 bg-white/10 rounded-full text-white font-semibold border border-white/10">
+                    Limite: {{ group.maxModalPercentage }}%
+                  </span>
+                </div>
+              } @else {
+                <!-- Active Modal Input inside Header when expanded for context -->
+                <div class="flex items-center gap-2" (click)="$event.stopPropagation()">
+                  <label class="text-xs text-white/45 hidden sm:inline">Limite Modal:</label>
+                  <div class="relative w-20 shrink-0">
+                    <input type="number" 
+                           [(ngModel)]="group.maxModalPercentage"
+                           min="0" 
+                           max="100" 
+                           step="1"
+                           class="bg-white/5 border border-white/10 rounded-lg py-1 px-2 pr-5 text-xs text-center text-white focus:outline-none focus:border-white/30 w-full placeholder:text-white/20 transition-all">
+                    <span class="absolute right-1.5 top-1/2 -translate-y-1/2 text-[10px] text-white/30">%</span>
+                  </div>
+                </div>
+              }
+
+              <!-- Delete Group Button -->
+              <button (click)="removeGroup(group.id); $event.stopPropagation()"
+                      title="Excluir este grupo de ativos"
+                      class="p-1.5 rounded-lg hover:bg-red-500/20 text-white/30 hover:text-red-400 transition-colors cursor-pointer"
+                      type="button">
+                <lucide-icon [name]="Trash2" class="w-4 h-4"></lucide-icon>
+              </button>
+            </div>
+          </div>
+
+          <!-- Accordion Body -->
+          @if (group.isExpanded) {
+            <div class="border-t border-white/5 p-5 sm:p-6 bg-white/[0.01]">
+              
+              <!-- Group Summary Info Card -->
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-4 mb-6 bg-white/[0.02] border border-white/5 rounded-2xl text-xs text-white/60">
+                <div class="flex flex-wrap gap-x-6 gap-y-2">
+                  <div>
+                    Soma de Mínimos: <span class="text-white font-bold">{{ getGroupSummary(group).minSum }}%</span>
+                  </div>
+                  <div>
+                    Soma de Máximos: <span class="text-white font-bold">{{ getGroupSummary(group).maxSum }}%</span>
+                  </div>
+                  <div>
+                    Intervalo dos Ativos: <span class="text-white font-mono">{{ getGroupSummary(group).minRangeStr }}</span> (Mín) / <span class="text-white font-mono">{{ getGroupSummary(group).maxRangeStr }}</span> (Máx)
+                  </div>
+                </div>
+                <div class="text-[10px] uppercase font-semibold text-white/35 tracking-wider">
+                  Configurações do Grupo
+                </div>
+              </div>
+
+              <!-- Assets Table -->
+              <div class="overflow-x-auto w-full">
+                <table class="w-full border-collapse text-left">
+                  <thead>
+                    <tr class="border-b border-white/5 text-white/40 text-[10px] uppercase tracking-wider font-bold">
+                      <th class="py-3 px-2">Ativo / Instrumento</th>
+                      <th class="py-3 px-2 w-28 text-center">Mín % / PL</th>
+                      <th class="py-3 px-2 w-28 text-center">Máx % / PL</th>
+                      <th class="py-3 px-2 w-16 text-center">Ações</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    @for (asset of group.assets; track asset.id) {
+                      <tr class="border-b border-white/[0.02] last:border-0 hover:bg-white/[0.005] group/row">
+                        <!-- Asset Name -->
+                        <td class="py-3 px-2">
+                          <input type="text" 
+                                 [(ngModel)]="asset.name"
+                                 placeholder="Ex: CDB CDI, PETR4, NTN-B..."
+                                 class="bg-white/5 border border-white/5 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-white/30 focus:bg-white/10 w-full placeholder:text-white/20 transition-all font-medium">
+                        </td>
+                        <!-- Min Limit Input -->
+                        <td class="py-3 px-2">
+                          <div class="relative w-full">
+                            <input type="number" 
+                                   [(ngModel)]="asset.minPercentage"
+                                   min="0" 
+                                   max="100" 
+                                   step="0.1"
+                                   class="bg-white/5 border border-white/5 rounded-xl px-3 py-2 pr-6 text-xs text-center text-white focus:outline-none focus:border-white/30 focus:bg-white/10 w-full transition-all">
+                            <span class="absolute right-2.5 top-1/2 -translate-y-1/2 text-[9px] text-white/35">%</span>
+                          </div>
+                        </td>
+                        <!-- Max Limit Input -->
+                        <td class="py-3 px-2">
+                          <div class="relative w-full">
+                            <input type="number" 
+                                   [(ngModel)]="asset.maxPercentage"
+                                   min="0" 
+                                   max="100" 
+                                   step="0.1"
+                                   class="bg-white/5 border border-white/5 rounded-xl px-3 py-2 pr-6 text-xs text-center text-white focus:outline-none focus:border-white/30 focus:bg-white/10 w-full transition-all"
+                                   [class.border-red-500/50]="asset.minPercentage > asset.maxPercentage">
+                            <span class="absolute right-2.5 top-1/2 -translate-y-1/2 text-[9px] text-white/35">%</span>
+                          </div>
+                        </td>
+                        <!-- Action Remove Row -->
+                        <td class="py-3 px-2 text-center">
+                          <button (click)="removeAsset(group.id, asset.id)"
+                                  title="Remover ativo"
+                                  class="p-2 rounded-lg hover:bg-red-500/20 text-white/20 hover:text-red-400 transition-colors cursor-pointer"
+                                  type="button">
+                            <lucide-icon [name]="Trash2" class="w-3.5 h-3.5"></lucide-icon>
+                          </button>
+                        </td>
+                      </tr>
+                    } @empty {
+                      <tr>
+                        <td colspan="4" class="py-6 text-center text-xs text-white/25 italic">
+                          Nenhum ativo configurado neste grupo. Adicione novos ativos abaixo.
+                        </td>
+                      </tr>
+                    }
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- Add Asset Row Button -->
+              <div class="mt-4 flex justify-start">
+                <button (click)="addAsset(group.id)"
+                        class="px-4 py-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl text-xs font-semibold text-white/80 transition-all flex items-center gap-1.5 cursor-pointer">
+                  <lucide-icon [name]="Plus" class="w-3.5 h-3.5"></lucide-icon>
+                  Adicionar Ativo
+                </button>
+              </div>
+
+            </div>
+          }
+        </div>
+      } @empty {
+        <div class="glass-card p-12 rounded-[2rem] text-center border border-white/10">
+          <p class="text-white/40 text-sm italic">Nenhum grupo de ativos cadastrado neste portfólio.</p>
+          <button (click)="addGroup()" 
+                  class="mt-4 px-4 py-2 bg-white/10 hover:bg-white/20 rounded-xl text-xs font-bold text-white transition-all inline-flex items-center gap-1.5 cursor-pointer">
+            <lucide-icon [name]="FolderPlus" class="w-4 h-4"></lucide-icon>
+            Adicionar Novo Grupo
+          </button>
+        </div>
+      }
+
+      <!-- Add Group Button -->
+      <div class="flex justify-center mt-2">
+        <button (click)="addGroup()" 
+                class="px-6 py-3.5 bg-white/5 hover:bg-white/10 border border-white/10 rounded-2xl text-xs font-bold text-white transition-all flex items-center gap-2 cursor-pointer shadow-lg hover:scale-102">
+          <lucide-icon [name]="FolderPlus" class="w-4 h-4 text-white/70"></lucide-icon>
+          Adicionar Novo Grupo de Ativos
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Right Column: Info, Validation and Live Analytics -->
+    <div class="flex flex-col gap-6">
+      
+      <!-- Portfolio Composition Analysis Charts -->
+      <div class="glass-card p-6 sm:p-7 rounded-[2rem] border border-white/10 flex flex-col">
+        <h3 class="text-sm sm:text-base font-bold text-white/95 mb-4 flex items-center gap-2">
+          <lucide-icon [name]="Sliders" class="w-4 h-4 text-white/60"></lucide-icon>
+          Análise de Limites
+        </h3>
+        
+        <div class="h-64 relative w-full mb-4">
+          @if (activeGroups().length > 0) {
+            <canvas baseChart
+                    [data]="chartData()"
+                    [options]="chartOptions"
+                    [type]="'bar'">
+            </canvas>
+          } @else {
+            <div class="absolute inset-0 flex items-center justify-center text-xs text-white/25 italic">
+              Sem dados de grupos para gerar a análise
+            </div>
+          }
+        </div>
+
+        <p class="text-[10px] text-white/30 text-center leading-relaxed">
+          O gráfico excede as somas e o limite modal de cada grupo para auxiliar no balanceamento dos parâmetros.
+        </p>
+      </div>
+
+      <!-- Live Totals Summary Card -->
+      <div class="glass-card p-6 sm:p-7 rounded-[2rem] border border-white/10 flex flex-col gap-5">
+        <h3 class="text-sm sm:text-base font-bold text-white/95 flex items-center gap-2">
+          <lucide-icon [name]="Info" class="w-4 h-4 text-white/60"></lucide-icon>
+          Resumo do Portfólio
+        </h3>
+
+        <div class="grid grid-cols-2 gap-4">
+          <div class="p-3 bg-white/5 border border-white/5 rounded-xl">
+            <p class="text-[10px] text-white/40 uppercase tracking-wider">Grupos / Ativos</p>
+            <p class="text-lg font-bold text-white mt-1">
+              {{ summary().totalGroupsCount }} / {{ summary().totalAssetsCount }}
+            </p>
+          </div>
+          <div class="p-3 bg-white/5 border border-white/5 rounded-xl">
+            <p class="text-[10px] text-white/40 uppercase tracking-wider">Total Modal Máx</p>
+            <p class="text-lg font-bold text-white mt-1">
+              {{ summary().totalMaxModalSum }}%
+            </p>
+          </div>
+          <div class="p-3 bg-white/5 border border-white/5 rounded-xl col-span-2">
+            <p class="text-[10px] text-white/40 uppercase tracking-wider">Limites de Exposição Somados (Mín / Máx)</p>
+            <p class="text-base font-bold text-white mt-1">
+              Soma Mín: <span class="text-white">{{ summary().totalMinSum }}%</span> • Soma Máx: <span class="text-white">{{ summary().totalMaxSum }}%</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- Warning Log Container -->
+        @if (summary().warnings.length > 0) {
+          <div class="p-4 bg-yellow-500/10 border border-yellow-500/20 rounded-2xl text-xs text-yellow-300/90 flex flex-col gap-2">
+            <div class="flex items-center gap-2 font-semibold">
+              <lucide-icon [name]="AlertTriangle" class="w-4 h-4 text-yellow-400"></lucide-icon>
+              Alertas de Inconsistência ({{ summary().warnings.length }})
+            </div>
+            <div class="max-h-32 overflow-y-auto space-y-1 pr-1 border-t border-yellow-500/10 pt-2 font-mono text-[10px] leading-relaxed">
+              @for (warn of summary().warnings; track warn) {
+                <div class="flex items-start gap-1.5">
+                  <span class="shrink-0 text-yellow-400">•</span>
+                  <span>{{ warn }}</span>
+                </div>
+              }
+            </div>
+          </div>
+        }
+
+        <!-- Specialist Rules Info Alert (Non-blocking sum disclaimer) -->
+        <div class="p-4 bg-white/[0.02] border border-white/5 rounded-2xl text-xs text-white/50 space-y-2 leading-relaxed">
+          <div class="font-semibold text-white/70 flex items-center gap-1.5">
+            <span class="w-1.5 h-1.5 rounded-full bg-white/60"></span>
+            Regra de Validação de Specialist:
+          </div>
+          <p>
+            A soma total dos limites teóricos de alocação <strong>não é bloqueada a 100%</strong>. Os valores representam tetos regulatórios máximos e pisos mínimos para fins de enquadramento regulatório do Backoffice.
+          </p>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="flex flex-col gap-3 mt-2">
+          <button (click)="saveComposition()"
+                  [disabled]="isSaving()"
+                  class="w-full py-3.5 bg-white text-black hover:bg-white/90 rounded-2xl text-xs font-bold transition-all shadow-xl hover:scale-102 flex items-center justify-center gap-2 disabled:opacity-50 cursor-pointer">
+            @if (isSaving()) {
+              <div class="w-4 h-4 border-2 border-black/30 border-t-black rounded-full animate-spin"></div>
+              Processando...
+            } @else if (showSaveSuccess()) {
+              <lucide-icon [name]="Check" class="w-4 h-4 text-green-700 stroke-[3]"></lucide-icon>
+              Limites Salvos com Sucesso!
+            } @else {
+              Salvar Composição de Limites
+            }
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

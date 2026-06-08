@@ -10,16 +10,19 @@
     </div>
     
     <nav class="flex flex-col gap-8 flex-grow">
-      <a href="#" title="Início" class="text-white bg-white/10 p-3 rounded-2xl transition-all hover:scale-110 border border-white/10 shadow-inner">
+      <a href="#" (click)="currentTab.set('home'); $event.preventDefault()" title="Início" 
+         [class]="currentTab() === 'home' ? 'text-white bg-white/10 p-3 rounded-2xl transition-all hover:scale-110 border border-white/10 shadow-inner' : 'text-white/40 hover:text-white p-3 transition-all hover:scale-110 border border-transparent'">
         <lucide-icon [name]="Home"></lucide-icon>
       </a>
-      <a href="#" title="Carteira" class="text-white/40 hover:text-white p-3 transition-all hover:scale-110">
-        <lucide-icon [name]="Wallet"></lucide-icon>
-      </a>
-      <a href="#" title="Investimentos" class="text-white/40 hover:text-white p-3 transition-all hover:scale-110">
+      <a href="#" (click)="currentTab.set('portfolio'); $event.preventDefault()" title="Investimentos" 
+         [class]="currentTab() === 'portfolio' ? 'text-white bg-white/10 p-3 rounded-2xl transition-all hover:scale-110 border border-white/10 shadow-inner' : 'text-white/40 hover:text-white p-3 transition-all hover:scale-110 border border-transparent'">
         <lucide-icon [name]="PieChart"></lucide-icon>
       </a>
-      <a href="#" title="Configurações" class="text-white/40 hover:text-white p-3 transition-all hover:scale-110">
+      <a href="#" (click)="currentTab.set('classes'); $event.preventDefault()" title="Carteira" 
+         [class]="currentTab() === 'classes' ? 'text-white bg-white/10 p-3 rounded-2xl transition-all hover:scale-110 border border-white/10 shadow-inner' : 'text-white/40 hover:text-white p-3 transition-all hover:scale-110 border border-transparent'">
+        <lucide-icon [name]="Wallet"></lucide-icon>
+      </a>
+      <a href="#" (click)="currentTab.set('home'); $event.preventDefault()" title="Configurações" class="text-white/40 hover:text-white p-3 transition-all hover:scale-110">
         <lucide-icon [name]="Settings"></lucide-icon>
       </a>
     </nav>
@@ -34,8 +37,16 @@
     <!-- Header - Glass Header -->
     <header class="h-auto min-h-20 glass-header flex flex-col sm:flex-row items-center justify-between px-4 sm:px-8 py-4 gap-4">
       <div class="text-center sm:text-left">
-        <h1 class="text-xl sm:text-2xl font-semibold tracking-tight text-white/90">Visão Geral</h1>
-        <p class="text-white/40 text-xs sm:text-sm">Bem-vindo de volta, Joel! Veja seus rendimentos.</p>
+        @if (currentTab() === 'home') {
+          <h1 class="text-xl sm:text-2xl font-semibold tracking-tight text-white/90">Visão Geral</h1>
+          <p class="text-white/40 text-xs sm:text-sm">Bem-vindo de volta, Joel! Veja seus rendimentos.</p>
+        } @else if (currentTab() === 'portfolio') {
+          <h1 class="text-xl sm:text-2xl font-semibold tracking-tight text-white/90">Gestão de Portfólio</h1>
+          <p class="text-white/40 text-xs sm:text-sm">Configure os limites regulatórios e enquadramento das carteiras.</p>
+        } @else {
+          <h1 class="text-xl sm:text-2xl font-semibold tracking-tight text-white/90">Configuração de Classes</h1>
+          <p class="text-white/40 text-xs sm:text-sm">Defina a estrutura de classes de cotas, taxas e remunerações.</p>
+        }
       </div>
 
       <div class="flex items-center gap-4 w-full sm:w-auto">
@@ -52,7 +63,8 @@
     </header>
 
     <!-- Dashboard Content -->
-    <div class="flex-1 overflow-y-auto p-4 sm:p-8 flex flex-col xl:flex-row gap-8">
+    @if (currentTab() === 'home') {
+      <div class="flex-1 overflow-y-auto p-4 sm:p-8 flex flex-col xl:flex-row gap-8">
       
       <!-- Left Column: Metrics & Transactions -->
       <div class="flex-[2] flex flex-col gap-8 order-2 xl:order-1">
@@ -207,5 +219,14 @@
 
       </div>
     </div>
+    } @else if (currentTab() === 'portfolio') {
+      <div class="flex-1 overflow-y-auto p-4 sm:p-8 flex flex-col gap-8">
+        <app-portfolio-composition></app-portfolio-composition>
+      </div>
+    } @else {
+      <div class="flex-1 overflow-y-auto p-4 sm:p-8 flex flex-col gap-8">
+        <app-class-configuration></app-class-configuration>
+      </div>
+    }
   </main>
 </div>

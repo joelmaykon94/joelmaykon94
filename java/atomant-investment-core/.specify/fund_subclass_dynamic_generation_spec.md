@@ -1,5 +1,7 @@
 # Feature Specification: Fund Subclass Dynamic Generation
 
+![Dynamic Generation](https://img.shields.io/badge/Mode-Dynamic%20Subclasses-green?style=for-the-badge&logo=dependabot) ![Validation](https://img.shields.io/badge/Validation-Hibernate%20Validator-blue?style=for-the-badge&logo=hibernate) ![Quarkus](https://img.shields.io/badge/Framework-Quarkus-red?style=for-the-badge&logo=quarkus)
+
 **Feature Branch**: `fund-subclass-dynamic-generation`
 
 **Created**: 2026-06-08
@@ -7,6 +9,14 @@
 **Status**: Draft
 
 **Input**: User description: "Create the 'Fund Subclass Dynamic Generation' specification. Implement the business rule that allows a single Investment Class to spawn up to 12 distinct Subclasses dynamically. Define the API contracts that accept partial payloads for 'Draft' mode (Save) versus strict validation for 'Formalization' mode (Save and Proceed), ensuring that all 12 subclass data structures are independently validated before final submission. Stack: Quarkus, Hibernate Validator."
+
+---
+
+## Logical Flow Overview
+
+![Fund Subclass Dynamic Generation Diagram](/home/joelmaykon/joelmaykon94/docs/files/fund_subclass_generation_diagram.png)
+
+---
 
 ## User Scenarios & Testing *(mandatory)*
 

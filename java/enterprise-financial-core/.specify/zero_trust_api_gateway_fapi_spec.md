@@ -1,5 +1,7 @@
 # Feature Specification: Zero-Trust API Gateway & FAPI Security
 
+![Zero-Trust](https://img.shields.io/badge/Security-Zero--Trust-red?style=for-the-badge&logo=fastly) ![FAPI compliant](https://img.shields.io/badge/FAPI-Financial--grade%20API-blue?style=for-the-badge&logo=openid) ![Quarkus](https://img.shields.io/badge/Framework-Quarkus-red?style=for-the-badge&logo=quarkus) ![JWT](https://img.shields.io/badge/Security-SmallRye%20JWT-orange?style=for-the-badge&logo=json-web-tokens)
+
 **Feature Branch**: `zero-trust-api-gateway-fapi`
 
 **Created**: 2026-06-08
@@ -7,6 +9,14 @@
 **Status**: Draft
 
 **Input**: User description: "Create the 'Zero-Trust API Gateway & FAPI Security' specification. Implement a centralized API Gateway to resolve the 'Spaghetti Mesh' integration anti-pattern. Enforce Zero-Trust security principles using mutual TLS (mTLS) for internal service-to-service communication. For external Open Banking integrations, implement Financial-grade APIs (FAPI) standards leveraging OAuth 2.0 and Proof Key for Code Exchange (PKCE). Stack: Quarkus, SmallRye JWT."
+
+---
+
+## Architectural Diagram
+
+![Zero-Trust API Gateway Architecture](/home/joelmaykon/joelmaykon94/docs/files/zero_trust_fapi_architecture.png)
+
+---
 
 ## User Scenarios & Testing *(mandatory)*
 

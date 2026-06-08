@@ -1,3 +1,5 @@
+package org.acme;
+
 import io.quarkus.funqy.Funq;
 
 public class GreetingFunction {

@@ -26,4 +26,10 @@ public class PanacheFundRepository implements FundRepository, PanacheRepositoryB
                 .firstResultOptional()
                 .map(FundEntity::toDomain);
     }
+
+    @Override
+    public Optional<Fund> findFundById(Long id) {
+        return findByIdOptional(id)
+                .map(FundEntity::toDomain);
+    }
 }

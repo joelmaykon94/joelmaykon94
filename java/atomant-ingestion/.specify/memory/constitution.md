@@ -19,6 +19,37 @@ graph LR
     Ingestion -->|Normalized JSON| CalcEngine[Investment Fee Engine]
 ```
 
+### Ingestion Flow Description
+The diagram above illustrates the high-level data flow from external financial regulatory bodies to the internal calculation engine. 
+- **Upstream Sources**: CVM and BACEN provide raw data in varying formats (XML, CSV, JSON).
+- **Transformation Layer**: The Ingestion Module acts as a buffer and transformer, ensuring that downstream services receive consistent, high-precision data regardless of the source's original format.
+- **Resilience**: The flow implies the use of circuit breakers and retries when communicating with the external APIs.
+
+### Data Normalization Pipeline (Mermaid)
+```mermaid
+graph TD
+    subgraph ExternalSources [External Open Data]
+        CVM[CVM - Daily NAV]
+        BACEN[BACEN - SELIC/Calendar]
+    end
+
+    subgraph IngestionModule [Ingestion Module Pipeline]
+        Fetch[REST Client + Fault Tolerance]
+        Stream[Streaming Parser Jackson/CSV]
+        Sanitize[Sanitizer: CNPJ/Date Cleanup]
+        Normalize[Normalizer: Precision Scaling]
+        Dispatch[Standard JSON Dispatch]
+    end
+
+    CVM --> Fetch
+    BACEN --> Fetch
+    Fetch --> Stream
+    Stream --> Sanitize
+    Sanitize --> Normalize
+    Normalize --> Dispatch
+    Dispatch -->|NormalizedPayload| CalcEngine[Investment Fee Engine]
+```
+
 ---
 
 ## 2. API Ingestion Rules

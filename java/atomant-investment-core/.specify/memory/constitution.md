@@ -42,27 +42,37 @@ graph TD
     Infrastructure[Infrastructure Layer] -->|Implements / Extends| Domain
 ```
 
-### 2.1 API Layer (`org.acme.investment.api`)
-* **Responsibility**: Handles HTTP requests, RESTEasy Reactive routing, serialization, and input validation.
-* **Rules**:
-  * Only contains JAX-RS resources (`*Resource`), DTO definitions (`*DTO`), and request/response mappers.
-  * No business logic is allowed in resources. They must immediately delegate to Domain Services.
-  * HTTP endpoints must return domain-agnostic JSON schemas.
+### Layer Architecture Description
+The diagram above represents the **Hexagonal/Clean Architecture** approach used in this project.
+- **API Layer**: The entry point, responsible for HTTP communication and request/response mapping. It depends only on the Domain layer.
+- **Domain Layer**: The heart of the application, containing all business logic and domain entities. It is completely isolated from frameworks and external concerns.
+- **Infrastructure Layer**: Handles all technical details like database persistence (Hibernate), external API calls, and messaging. It implements interfaces defined in the Domain layer.
 
-### 2.2 Domain Layer (`org.acme.investment.domain`)
-* **Responsibility**: Houses the core business logic, domain models, validations, and interfaces for data access (repositories) and external services.
-* **Rules**:
-  * **Strict Framework Isolation**: No JPA annotations (`@Entity`, `@Table`) or Quarkus dependencies (like Panache) are allowed in the core domain models.
-  * Domain models must be pure Java.
-  * Use **Java 21 Records** for immutable Value Objects (e.g., `FeeSplit`, `Money`).
-  * Define interfaces for data retrieval (e.g., `FundRepository`, `LedgerRepository`) in `org.acme.investment.domain.repository`.
+### Component Interaction Flow (Mermaid)
+```mermaid
+sequenceDiagram
+    participant User as HTTP Client
+    participant API as API Resource (JAX-RS)
+    participant Domain as Domain Service (Business Logic)
+    participant Repo as Repository Interface (Domain)
+    participant Persistence as Infrastructure Persistence (Panache)
+    participant DB as PostgreSQL
 
-### 2.3 Infrastructure Layer (`org.acme.investment.infrastructure`)
-* **Responsibility**: Implements the repositories (using Panache/Hibernate with PostgreSQL), manages database migrations (Flyway/Liquibase), and houses external HTTP client integrations (using REST Client Reactive).
-* **Rules**:
-  * Contains database entity wrappers mapped to the domain model (e.g., `FundDbEntity`).
-  * Houses implementations of repositories (e.g., `PanacheFundRepository` implementing `FundRepository`).
-  * Houses HTTP integrations in `org.acme.investment.infrastructure.client`.
+    User->>API: POST /calculate-fee
+    API->>Domain: calculate(fundId, date)
+    Domain->>Repo: findFundById(fundId)
+    Repo->>Persistence: find(id)
+    Persistence->>DB: SELECT *
+    DB-->>Persistence: EntityData
+    Persistence-->>Repo: FundModel
+    Repo-->>Domain: FundModel
+    Domain->>Domain: Execute Complex Fee Logic
+    Domain->>Repo: saveFeeResult(fee)
+    Repo->>Persistence: persist(feeEntity)
+    Persistence->>DB: INSERT INTO fees
+    Domain-->>API: CalculationResult
+    API-->>User: 200 OK + JSON
+```
 
 ---
 

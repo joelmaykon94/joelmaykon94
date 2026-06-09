@@ -16,6 +16,36 @@
 
 ![Fund Subclass Dynamic Generation Diagram](/home/joelmaykon/joelmaykon94/docs/files/fund_subclass_generation_diagram.png)
 
+### Diagram Description
+The diagram above illustrates the dynamic generation lifecycle of investment fund subclasses. It highlights the transition from a **Draft State**, where partial data is accepted for incremental saving, to a **Formalized State**, where strict validation is enforced. 
+
+Key stages include:
+1.  **Payload Submission**: The Fund Manager sends a JSON payload containing Investment Class data and a list of up to 12 Subclasses.
+2.  **State Detection**: The system determines if the request is for `DRAFT` (partial save) or `FORMALIZATION` (strict check).
+3.  **Dynamic Spawning**: The backend logic iterates through the provided subclass structures, ensuring the count remains within the [1, 12] range.
+4.  **Hibernate Validation**: For formalization, each subclass is independently validated (CNPJ format, positive fees, tax classification).
+5.  **Persistence**: Data is saved to PostgreSQL, with the status updated to `FORMALIZED` upon successful validation.
+
+### Technical Flow (Mermaid)
+```mermaid
+graph TD
+    User([Fund Manager]) -->|Submits Payload| API{API Endpoint}
+    API -->|POST /api/classes/draft| Draft[Draft Mode: Partial Save]
+    API -->|POST /api/classes/formalize| Formalize[Formalization Mode: Strict Check]
+    
+    subgraph Validation [Validation Engine]
+        Formalize --> Count{Count <= 12?}
+        Count -->|Yes| HV[Hibernate Validator]
+        Count -->|No| Reject[400 Bad Request]
+        HV -->|Success| Save[Persist as FORMALIZED]
+        HV -->|Fail| Err[Return Detailed Errors]
+    end
+    
+    Draft -->|Minimal Check| SaveDraft[Persist as DRAFT]
+    SaveDraft --> DB[(PostgreSQL)]
+    Save --> DB
+```
+
 ---
 
 ## User Scenarios & Testing *(mandatory)*

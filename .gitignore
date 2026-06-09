@@ -1,0 +1,3 @@
+# Local LLM logs
+local-llm/logs/*.log
+*.log

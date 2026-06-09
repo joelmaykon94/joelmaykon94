@@ -6,7 +6,7 @@ RUN npm install
 COPY . .
 RUN npm run build --prod
 
-# Estágio 2: Servindo a aplicação com Nginx
+# Estágio 2: Servindo a aplicação com Nginx com k niveis
 FROM nginx:alpine
 COPY --from=build /app/dist/financial /usr/share/nginx/html
 EXPOSE 80

@@ -35,6 +35,35 @@ graph TD
     DLQ -->|Publish| DLQTopic[Topic: pix.requests.dlq]
 ```
 
+### Architecture Description
+The architecture diagram illustrates a robust, non-blocking ingestion pipeline.
+- **Client REST API**: Decouples the user request from the processing by immediately publishing to Kafka.
+- **Payment Processor**: Operates asynchronously, pulling messages from the `pix.requests` topic.
+- **Virtual Threads**: Utilizes Java 21 light-weight threads to perform blocking I/O (like DB updates or external API calls) without exhausting the thread pool.
+- **Dead-Letter Queue (DLQ)**: Provides a safety net for messages that cannot be processed after multiple retries, allowing for manual inspection and recovery.
+
+### Kafka Message Flow (Mermaid)
+```mermaid
+sequenceDiagram
+    participant TopicReq as Kafka: pix.requests
+    participant Processor as Payment Processor
+    participant DB as PostgreSQL
+    participant TopicProc as Kafka: pix.processed
+    participant TopicDLQ as Kafka: pix.requests.dlq
+
+    TopicReq->>Processor: Consume Message
+    Processor->>DB: Check Idempotency & Balance
+    
+    alt Success
+        Processor->>DB: Commit Transaction
+        Processor->>TopicProc: Publish Success Event
+    else Retryable Failure
+        Processor->>Processor: Exponential Backoff Retry
+    else Critical Failure / Max Retries
+        Processor->>TopicDLQ: Publish to DLQ
+    end
+```
+
 ### 1.2 Configuration Properties (`application.properties`)
 ```properties
 # Kafka Bootstrap Servers

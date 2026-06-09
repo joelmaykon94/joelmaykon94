@@ -31,6 +31,14 @@ flowchart TD
     MatchCheck -->|No| R403
 ```
 
+### Access Validation Description
+The flowchart above details the rigorous security check performed for every account-related request. 
+- **Authentication**: First, the system verifies the presence and validity of the JWT token.
+- **Role Hierarchy**: 
+    - Users with the `ADMIN` role bypass the ownership check, allowing support or system processes to manage any account.
+    - Users with the `CUSTOMER` role must pass the **Ownership Verification** step.
+- **Ownership Verification**: The `sub` (Subject) claim in the JWT is compared against the `ownerCustomerId` stored in the database for the requested account. If they do not match, a `403 Forbidden` response is returned, preventing unauthorized data access.
+
 ---
 
 ## 2. API Endpoint Contracts

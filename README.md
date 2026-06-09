@@ -65,11 +65,7 @@ Engenheiro de Software com **experiência consolidada desde 2018**. Minha filoso
 </div>
 
 ---
-
-## GOALS
-
-
-
+ 
 ## 🔗 Vamos nos conectar?
 
 <div align="center"> 

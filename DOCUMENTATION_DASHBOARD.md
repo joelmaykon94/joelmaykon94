@@ -1,4 +1,4 @@
-# 🗂️ Global Documentation & Specification Dashboard
+# 🗂️ Documentation & Specification
 
 Welcome to the central documentation index for the **joelmaykon94** workspace. This repository represents a modern, clean-architecture banking platform integrating **Angular 19** frontends, **Java 21 / Quarkus** microservices, and automated **GitOps & DevOps** pipelines.
 
@@ -6,7 +6,67 @@ Use this dashboard to navigate the specifications, architecture constitutions, i
 
 ---
 
-## 🏗️ Project Landscape & Tech Stack
+## 🏗️ Project Landscape & Tech Stack (Interactive)
+
+```mermaid
+graph LR
+    subgraph Frontend["🎨 Frontend Layer"]
+        ANG["Angular 19<br/>Financial UI"]
+        DASH["Dashboard<br/>Keycloak Auth"]
+    end
+    
+    subgraph Backend["☕ Backend Layer"]
+        AUTH["atomant-auth<br/>KYC/MFA"]
+        PAY["atomant-payment<br/>PIX/TED"]
+        INV["atomant-investment<br/>Fund Mgmt"]
+        CALC["atomant-calculator<br/>Fee Engine"]
+        FIN["enterprise-finance<br/>Ledger"]
+        AUDIT["atomant-audit<br/>20yr Trail"]
+        INT["atomant-integration<br/>Export/Notify"]
+        ING["atomant-ingestion<br/>NAV Fetching"]
+        FP["atomant-file<br/>Upload/Parse"]
+    end
+    
+    subgraph Data["💾 Data Layer"]
+        PG["PostgreSQL<br/>Partitioned"]
+        REDIS["Redis<br/>Multi-Tier Cache"]
+    end
+    
+    subgraph DevOps["🚀 DevOps Pipeline"]
+        DOCKER["Docker<br/>Containers"]
+        K8S["Kubernetes<br/>Orchestration"]
+        GITHUB["GitHub Actions<br/>CI/CD"]
+        ARGO["ArgoCD<br/>GitOps"]
+    end
+    
+    Frontend -->|JAX-RS APIs| Backend
+    Backend -->|SQL/Cache| Data
+    Backend -->|Events| INT
+    Data ---|Persistent| PG
+    Data ---|Fast| REDIS
+    Backend -->|Containerize| DevOps
+    DevOps -->|Deploy| K8S
+    GitHub ---|Trigger| ARGO
+    
+    style Frontend fill:#14b8a6
+    style Backend fill:#4693ff
+    style Data fill:#f59e0b
+    style DevOps fill:#8b5cf6
+    style ANG fill:#14b8a6
+    style AUTH fill:#60a5fa
+    style PAY fill:#60a5fa
+    style INV fill:#60a5fa
+    style CALC fill:#60a5fa
+    style FIN fill:#60a5fa
+    style AUDIT fill:#60a5fa
+    style INT fill:#60a5fa
+    style ING fill:#60a5fa
+    style FP fill:#60a5fa
+```
+
+---
+
+## 📊 Technology Stack Overview
 
 ![Angular](https://img.shields.io/badge/Frontend-Angular%2019-DD0031?style=for-the-badge&logo=angular&logoColor=white)
 ![Quarkus](https://img.shields.io/badge/Backend-Quarkus%20Java%2021-4643CC?style=for-the-badge&logo=quarkus&logoColor=white)

@@ -52,20 +52,49 @@ classDiagram
     }
 ```
 
+### Data Model Description
+The class diagram above defines the relationship between the fund's configuration and its associated classes. 
+- **ClassStructureType**: An enumeration that determines if the fund follows a simple single-class structure or a complex multi-class setup.
+- **FundClassModel**: The core entity representing an individual class. It contains attributes for financial parameters (fees, remuneration), regulatory metadata (ESG, target audience), and state management (minimum remuneration toggle).
+
 ---
 
-## 4. UI/UX & Interactive Tree Preview (Builder Component)
+## 4. UI/UX & Interactive Tree Builder (Builder Component)
+
+### Interactive Tree Builder Flow
+```mermaid
+graph TD
+    UI[UI Input: Fee/Name/Toggle] -->|Update Signal| State[Reactive State Manager]
+    State -->|Compute Tree| Builder[Tree Builder Component]
+    Builder -->|Render| NodeFund[Fund Root Node]
+    NodeFund --> NodeClass1[Class: Principal]
+    NodeFund --> NodeClass2[Class: Retail]
+    NodeFund --> NodeClass3[Class: Institutional]
+    
+    subgraph LivePreview [Real-Time Preview Panel]
+        NodeFund
+        NodeClass1
+        NodeClass2
+        NodeClass3
+    end
+    
+    subgraph Validation [Validation Overlay]
+        NodeClass1 ---|Valid| Green[Green Indicator]
+        NodeClass2 ---|Incomplete| Yellow[Yellow Warning]
+    end
+```
+
+### Tree Builder Description
+The flow diagram illustrates how user inputs in the configuration forms are propagated to the live preview tree. 
+- **Reactive State Manager**: Uses Angular Signals to track every field change.
+- **Tree Builder Component**: A specialized component that transforms the flat list of classes into a hierarchical SVG or HTML-based tree.
+- **Validation Overlay**: Provides immediate visual feedback within the tree nodes, helping users identify incomplete configurations without leaving the "Builder" view.
 
 > [!NOTE]
 > To comply with the "frontend is builder component" request, the interface displays a **live preview tree** representing the fund composition:
 > - **Top-level Node:** Fund (Single or Multi-class tag).
 > - **Child Nodes:** Real-time cards representing each configured class.
 > - **Live Updates:** Changes to custody fees, minimum values, indexes, or names automatically reflect inside the card structure, giving backoffice users an immediate overview of the fund topography.
-
-### UI Tab Validation States
-Each class tab header features a real-time status indicator:
-- **Green Dot:** Class is fully populated and valid.
-- **Yellow Dot:** Class has missing parameters (e.g. minimum remuneration enabled but amount or index not selected).
 
 ---
 

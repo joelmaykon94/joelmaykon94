@@ -51,6 +51,27 @@ sequenceDiagram
     end
 ```
 
+### Idempotency Flow Description
+The sequence diagram above demonstrates the lifecycle of a transfer request protected by an idempotency key. 
+- **Deterministic Response**: If the same key is sent twice, the system returns the cached result of the first successful processing without re-executing business logic.
+- **Race Condition Prevention**: The first request immediately marks the key as `PENDING` in the database, ensuring that concurrent requests with the same key are blocked or returned the pending status.
+- **External Integrity**: The authorization from external partners is only requested for new, unique keys.
+
+### Component Interaction (Mermaid)
+```mermaid
+graph LR
+    API[Transfer Resource] -->|Delegates| Service[Transfer Service]
+    Service -->|Uses| Repo[Account Repository]
+    Repo -->|Locks| DB[(PostgreSQL)]
+    Service -->|Checks| Idem[Idempotency Store]
+    Service -->|Calls| Auth[External Authorizer Client]
+    
+    subgraph TransactionScope [Atomic Transaction Block]
+        Repo
+        Idem
+    end
+```
+
 ---
 
 ## 3. Resilience & Fault Tolerance (SmallRye)

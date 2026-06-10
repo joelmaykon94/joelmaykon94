@@ -23,7 +23,7 @@
 }
 
 .bentoItem:hover {
-  border-color: rgba(228, 242, 34, 0.3);
+  border-color: rgba(189, 147, 249, 0.3);
   transform: translateY(-4px);
   background: var(--color-deep-slate);
 }
@@ -53,6 +53,6 @@
   right: 0;
   width: 100px;
   height: 100px;
-  background: radial-gradient(circle at top right, rgba(228, 242, 34, 0.05), transparent);
+  background: radial-gradient(circle at top right, rgba(189, 147, 249, 0.08), transparent);
   pointer-events: none;
 }

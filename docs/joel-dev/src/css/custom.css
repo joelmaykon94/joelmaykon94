@@ -492,3 +492,8 @@ table tr:nth-child(even) {
 table tr:hover {
   background-color: var(--table-row-hover);
 }
+
+/* Hide the active language in the locale dropdown menu to avoid repetition */
+.dropdown__menu .dropdown__link--active {
+  display: none;
+}

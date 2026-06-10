@@ -165,11 +165,21 @@ Clique em cada seção abaixo para expandir e explorar a função e stack de cad
 
 ## 💼 Experiência Profissional Recente
 
-| Período | Cargo / Empresa | Impacto Principal |
-|---------|----------------|-------------------|
-| 05/2026 – Atual | Analista Senior Plataforma Baixa – EngeSoftware (CEF - Bank Federal) | Modernização Java & Angular. |
-| 05/2025 – 12/2025 | Assessor Especial – Pref. de Parnamirim/RN | Modernização Java, Angular & Quarkus via K8s e GitOps. |
-| 09/2023 – 07/2024 | Eng. de IA Conversacional – Mutant (Vivo) | Fluxos LLM para milhões de usuários. |
+### 🏦 EngeSoftware (Prestador CEF - Caixa Econômica Federal)
+**Analista Senior Plataforma Baixa** (05/2026 – Atual)
+* **Modernização do Core Ledger Bancário**: Arquitetura e desenvolvimento de motores contábeis distribuídos de alto desempenho (*Double-Entry Ledger Engine* & *Investment Core*) com concorrência otimizada e consistência eventual em Java 21, Quarkus e Spring Boot.
+* **Processamento Batch de Larga Escala**: Otimização de pipelines para processamento em lote (*Batch File Processor*) e ingestão assíncrona de arquivos de dados financeiros e conciliações.
+* **Autenticação & Federação Segura**: Integração com Keycloak para autenticação segura corporativa e gerenciamento federado de sessões bancárias (*Auth Keycloak Module*).
+* **Auditoria de Transações**: Implementação de barramento centralizado de auditoria (*Audit Logging & Aggregator*) para rastreamento de eventos em conformidade com as normas regulatórias do BACEN e políticas de conformidade.
+* **Painel Financeiro Admin**: Desenvolvimento de interfaces responsivas e de alta performance com Angular 19 e Tailwind CSS.
+
+### 🏛️ Prefeitura de Parnamirim/RN
+**Assessor Especial / Tech Lead** (05/2025 – 12/2025)
+* Liderança técnica na modernização de sistemas governamentais utilizando Quarkus, Angular 19 e orquestração em Kubernetes com ArgoCD.
+
+### 🤖 Mutant (Vivo Aura)
+**Engenheiro de IA Conversacional** (09/2023 – 07/2024)
+* Evolução de RAG pipelines e engenharia de prompts com LangChain e Python para o assistente Vivo Aura, atendendo mais de 15M de interações mensais.
 
 ---
 

@@ -34,6 +34,12 @@ Engenheiro de Software com **+7 anos** de experiência em arquiteturas escaláve
 
 ## EXPERIÊNCIA PROFISSIONAL
 
+**EngeSoftware (Prestador CEF - Caixa Econômica Federal)** | *Analista Senior Plataforma Baixa* (Mai/2026 – Atual)
+- Modernização do Core Ledger Bancário, projetando motores contábeis distribuídos de alta transacionalidade (*Double-Entry Ledger Engine* & *Investment Core*) em Java 21, Quarkus e Spring Boot.
+- Desenvolvimento de fluxos de processamento em lote (*Batch File Processor*) e ingestão assíncrona de arquivos e conciliações financeiras em larga escala.
+- Implementação de microsserviços de auditoria centralizada (*Audit Logging & Aggregator*) e federação de identidade segura integrada ao Keycloak (segurança bancária).
+- Construção de interfaces de painel web administrativo financeiro de alto desempenho com Angular 19.
+
 **Prefeitura de Parnamirim/RN** | *Tech Lead / Infrastructure Architect* (Mai/2025 – Dez/2025)
 - Liderança técnica e arquitetural na modernização de sistemas governamentais legados em Java, aplicando DDD e Clean Architecture.
 - Implementei pipelines CI/CD com **GitLab CI**, **ArgoCD** e **Kubernetes**, reduzindo o tempo de deploy em 40%.

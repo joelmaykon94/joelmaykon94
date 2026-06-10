@@ -89,7 +89,7 @@ Os executáveis estarão em `llama.cpp/build/bin/`.
 
 ## 📂 Passo 4: Script de Inicialização para Servidores Duplos
 
-Criamos o script [start-coder-servers.sh](file:///home/joelmaykon/joelmaykon94/local-llm/start-coder-servers.sh) para gerenciar a inicialização dos dois modelos simultaneamente:
+Criamos o script [start-coder-servers.sh](/local-llm/start-coder-servers.sh) para gerenciar a inicialização dos dois modelos simultaneamente:
 
 ```bash
 #!/bin/bash
@@ -150,7 +150,7 @@ chmod +x start-coder-servers.sh
 
 ### Opção Alternativa: Script de Inicialização Standalone (Servidor Único)
 
-Se você preferir rodar apenas um servidor único (por exemplo, apenas para chat de codificação geral ou se sua máquina não comportar dois modelos rodando ao mesmo tempo), pode utilizar o script [start-server.sh](file:///home/joelmaykon/joelmaykon94/local-llm/start-server.sh). Este script foi configurado para iniciar o **Qwen 2.5 Coder 7B Instruct** por padrão na porta `8080`:
+Se você preferir rodar apenas um servidor único (por exemplo, apenas para chat de codificação geral ou se sua máquina não comportar dois modelos rodando ao mesmo tempo), pode utilizar o script [start-server.sh](/local-llm/start-server.sh). Este script foi configurado para iniciar o **Qwen 2.5 Coder 7B Instruct** por padrão na porta `8080`:
 
 ```bash
 #!/bin/bash

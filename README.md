@@ -8,12 +8,12 @@
   <br/>
 
   <!-- Typing SVG - Dark Purple -->
-  [![Typing SVG](https://readme-typing-svg.herokuapp.com/?color=4c1d95&size=35&center=true&vCenter=true&width=1000&lines=SPECIALIST+SOFTWARE+ENGINEER;JAVA+|+GO+|+ANGULAR;CLARITY+OVER+COMPLEXITY;LESS+IS+MORE)](https://git.io/typing-svg)
+  [![Typing SVG](https://readme-typing-svg.herokuapp.com/?color=a78bfa&size=35&center=true&vCenter=true&width=1000&lines=SPECIALIST+SOFTWARE+ENGINEER;JAVA+|+GO+|+ANGULAR;CLARITY+OVER+COMPLEXITY;LESS+IS+MORE)](https://git.io/typing-svg)
 
   <!-- Core Badges - Dracula & Dark Purple Style -->
-  <img src="https://img.shields.io/badge/EXPERIÊNCIA-Desde%202018-4c1d95?style=for-the-badge&labelColor=282a36&logo=clock&logoColor=bd93f9" />
+  <img src="https://img.shields.io/badge/EXPERIÊNCIA-Desde%202018-a78bfa?style=for-the-badge&labelColor=282a36&logo=clock&logoColor=bd93f9" />
   <img src="https://img.shields.io/badge/SENIORIDADE-Especialista-9d174d?style=for-the-badge&labelColor=282a36&logo=trending-up&logoColor=bd93f9" />
-  <img src="https://img.shields.io/badge/FOCO-Performance-4c1d95?style=for-the-badge&labelColor=282a36&logo=cpu&logoColor=bd93f9" />
+  <img src="https://img.shields.io/badge/FOCO-Performance-a78bfa?style=for-the-badge&labelColor=282a36&logo=cpu&logoColor=bd93f9" />
   
   <br/>
   

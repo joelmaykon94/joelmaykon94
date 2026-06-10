@@ -110,12 +110,12 @@
   --color-fog-grey: #6272a4;         /* Comment / Gray */
   
   --color-brand-pink: #9d174d;       /* Dark Pink (Rosa Escuro) for fine details */
-  --color-brand-purple: #4c1d95;     /* Dark Purple (Roxo Escuro) as primary */
+  --color-brand-purple: #a78bfa;     /* Lighter purple for better readability in dark mode */
   --color-brand-cyan: #8be9fd;       /* Dracula Cyan */
   --color-brand-green: #50fa7b;      /* Dracula Green */
   
   --color-brand-silver: var(--color-brand-purple); 
-  --color-aether-blue: rgba(76, 29, 149, 0.08); /* Translucent dark purple */
+  --color-aether-blue: rgba(167, 139, 250, 0.08); /* Translucent lighter purple */
   --color-warning-red: #ff5555;      /* Dracula Red */
   --color-forest-green: #50fa7b;     /* Dracula Green */
 
@@ -161,8 +161,8 @@
   --bento-glow: radial-gradient(circle at top right, rgba(189, 147, 249, 0.08), transparent);
   --button-secondary-hover-color: #bd93f9;
 
-  --tech-tag-hover-bg: rgba(76, 29, 149, 0.1);
-  --tech-tag-hover-border: rgba(76, 29, 149, 0.4);
+  --tech-tag-hover-bg: rgba(167, 139, 250, 0.1);
+  --tech-tag-hover-border: rgba(167, 139, 250, 0.4);
   --tech-tag-hover-color: #bd93f9;
 
   /* Dynamic theme elements */
@@ -335,7 +335,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .button--primary-linear:hover {
   transform: scale(1.05);
-  box-shadow: 0 12px 24px rgba(76, 29, 149, 0.45);
+  box-shadow: 0 12px 24px rgba(167, 139, 250, 0.45);
   color: #ffffff;
   text-decoration: none;
 }

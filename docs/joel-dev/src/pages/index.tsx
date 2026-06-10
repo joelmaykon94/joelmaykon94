@@ -18,7 +18,7 @@ function HomepageHeader() {
         <div className={styles.avatarWrapper}>
           <div className={styles.avatarGlow} />
           <img 
-            src="https://github.com/joelmaykon94.png" 
+            src={require('@site/static/img/joel-maykon.png').default} 
             alt="Joel Maykon" 
             className={styles.homeAvatar}
           />
@@ -84,17 +84,17 @@ function AboutSection() {
           <div className="col col--6">
             <div className={styles.aboutGrid}>
               <div className={styles.aboutGridItem}>
-                <MdCode size={24} color="var(--color-neon-lime)" />
+                <MdCode size={24} color="var(--color-porcelain)" />
                 <h4>Inovação</h4>
                 <p>IA Generativa e LLMOps em sistemas críticos.</p>
               </div>
               <div className={styles.aboutGridItem}>
-                <MdRocketLaunch size={24} color="var(--color-neon-lime)" />
+                <MdRocketLaunch size={24} color="var(--color-porcelain)" />
                 <h4>Resiliência</h4>
                 <p>Sistemas distribuídos de alta disponibilidade.</p>
               </div>
               <div className={styles.aboutGridItem}>
-                <MdWork size={24} color="var(--color-neon-lime)" />
+                <MdWork size={24} color="var(--color-porcelain)" />
                 <h4>Autonomia</h4>
                 <p>Liderança técnica e visão ponta-a-ponta.</p>
               </div>

@@ -1,0 +1,15 @@
+---
+name: handoff
+description: Extrai informações cruciais da conversa para transferir o contexto para um novo chat e atualizar o DOX.
+invokable: true
+---
+Você é um assistente de desenvolvimento sênior. O limite de contexto da sessão atual de chat está se esgotando. Analise todo o histórico de conversas desta sessão e gere um resumo estruturado e denso contendo as seguintes informações em português:
+
+1. **Objetivo Principal**: Qual era o objetivo principal da conversa?
+2. **Progresso e Conquistas**: O que foi concluído, corrigido ou criado com sucesso?
+3. **Arquivos Modificados**: Uma lista com os caminhos dos arquivos criados/editados.
+4. **Decisões e Aprendizados**: Decisões importantes de design, arquitetura, dependências ou restrições descobertas.
+5. **Próximos Passos**: O que deve ser feito a seguir.
+6. **Atualização do DOX (AGENTS.md)**: Se aplicável, proponha uma atualização curta para a seção "Work Guidance" ou "User Preferences" do AGENTS.md correspondente, para documentar de forma durável o progresso.
+7. **Mensagem de Handoff (Copiar e Colar)**: Forneça um bloco de código Markdown contendo uma mensagem pronta e ultra-condensada para eu copiar e colar na primeira mensagem da nova sessão de chat. Essa mensagem deve começar com:
+   "Aqui está o contexto resumido da sessão anterior. Por favor, assuma este estado para continuarmos de onde paramos: [...]"

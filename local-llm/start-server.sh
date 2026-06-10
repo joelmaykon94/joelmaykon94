@@ -1,20 +1,24 @@
 #!/bin/bash
 # start-server.sh
-# Helper script to run llama.cpp server with Qwen 3.5 model
+# Helper script to run llama.cpp server with Qwen Coder model
 
 # Directory where llama.cpp binaries are stored
 BIN_DIR="/home/joelmaykon/joelmaykon94/local-llm/llama-b9580"
 
-# Model configuration: We use the 4B model as default for smooth CPU/GPU speed.
-# If you want to use the 9B model, comment the 4B configuration and uncomment the 9B one.
+# Model configuration: We use the Qwen 2.5 Coder 7B model as default.
+# You can uncomment another size (1.5B or 14B/32B if your machine supports it).
 
-# --- 4B Model (Recommended for speed and consumer hardware) ---
-HF_REPO="unsloth/Qwen3.5-4B-GGUF"
-HF_FILE="Qwen3.5-4B-UD-Q4_K_XL.gguf"
+# --- 7B Model (Recommended default for coding assistant tasks) ---
+#HF_REPO="unsloth/Qwen2.5-Coder-7B-Instruct-GGUF"
+#HF_FILE="Qwen2.5-Coder-7B-Instruct-Q4_K_M.gguf"
 
-# --- 9B Model (More intelligent, requires more RAM/VRAM) ---
-# HF_REPO="unsloth/Qwen3.5-9B-GGUF"
-# HF_FILE="Qwen3.5-9B-UD-Q4_K_XL.gguf"
+# --- 1.5B Model (Extremely fast, low resource usage) ---
+HF_REPO="unsloth/Qwen2.5-Coder-1.5B-Instruct-GGUF"
+HF_FILE="Qwen2.5-Coder-1.5B-Instruct-Q4_K_M.gguf"
+
+# --- 14B Model (More intelligent coding, needs ~10GB VRAM/RAM) ---
+# HF_REPO="unsloth/Qwen2.5-Coder-14B-Instruct-GGUF"
+# HF_FILE="Qwen2.5-Coder-14B-Instruct-Q4_K_M.gguf"
 
 echo "Starting llama-server..."
 echo "Hugging Face Repo: $HF_REPO"

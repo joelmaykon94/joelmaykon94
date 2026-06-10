@@ -27,15 +27,32 @@ const config: Config = {
 
   i18n: {
     defaultLocale: 'pt-BR',
-    locales: ['pt-BR', 'en'],
+    locales: ['pt-BR', 'en', 'zh-Hans', 'he', 'ja'],
     localeConfigs: {
-      en: {
-        label: 'English',
-        direction: 'ltr',
-      },
       'pt-BR': {
         label: 'Português',
         direction: 'ltr',
+        htmlLang: 'pt-BR',
+      },
+      en: {
+        label: 'English',
+        direction: 'ltr',
+        htmlLang: 'en-US',
+      },
+      'zh-Hans': {
+        label: '中文 (简体)',
+        direction: 'ltr',
+        htmlLang: 'zh-CN',
+      },
+      he: {
+        label: 'עברית',
+        direction: 'rtl',
+        htmlLang: 'he-IL',
+      },
+      ja: {
+        label: '日本語',
+        direction: 'ltr',
+        htmlLang: 'ja-JP',
       },
     },
   },

@@ -148,6 +148,39 @@ chmod +x start-coder-servers.sh
 ./start-coder-servers.sh
 ```
 
+### Opção Alternativa: Script de Inicialização Standalone (Servidor Único)
+
+Se você preferir rodar apenas um servidor único (por exemplo, apenas para chat de codificação geral ou se sua máquina não comportar dois modelos rodando ao mesmo tempo), pode utilizar o script [start-server.sh](file:///home/joelmaykon/joelmaykon94/local-llm/start-server.sh). Este script foi configurado para iniciar o **Qwen 2.5 Coder 7B Instruct** por padrão na porta `8080`:
+
+```bash
+#!/bin/bash
+# start-server.sh
+# Helper script to run llama.cpp server with Qwen Coder model
+
+# Directory where llama.cpp binaries are stored
+BIN_DIR="/home/joelmaykon/joelmaykon94/local-llm/llama-b9580"
+
+# --- 7B Model (Recommended default for coding assistant tasks) ---
+HF_REPO="unsloth/Qwen2.5-Coder-7B-Instruct-GGUF"
+HF_FILE="Qwen2.5-Coder-7B-Instruct-Q4_K_M.gguf"
+
+# (Outras opções como o modelo superleve 1.5B ou o mais inteligente 14B estão comentadas no script para fácil alternação)
+
+"$BIN_DIR/llama-server" \
+  --hf-repo "$HF_REPO" \
+  --hf-file "$HF_FILE" \
+  --host 127.0.0.1 \
+  --port 8080 \
+  -c 8192 \
+  --threads $(nproc)
+```
+
+Torne o script executável e inicie o servidor:
+```bash
+chmod +x start-server.sh
+./start-server.sh
+```
+
 ---
 
 ## 🔌 Passo 5: Configuração no VS Code (Continue Extension)

@@ -3,7 +3,22 @@
   text-align: center;
   position: relative;
   overflow: hidden;
-  background-color: var(--color-pitch-black);
+  background-color: transparent;
+}
+
+.heroBanner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/img/background.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.15;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .avatarWrapper {
@@ -17,9 +32,9 @@
   position: absolute;
   width: 180px;
   height: 180px;
-  background: var(--color-aether-blue);
-  filter: blur(40px);
-  opacity: 0.2;
+  background: rgba(255, 255, 255, 0.12);
+  filter: blur(50px);
+  opacity: 0.3;
   border-radius: 50%;
   top: 50%;
   left: 50%;
@@ -30,15 +45,16 @@
   width: 140px;
   height: 140px;
   border-radius: 50%;
+  object-fit: cover;
   border: 4px solid var(--color-charcoal-grey);
   box-shadow: var(--shadow-xl);
   z-index: 1;
-  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .homeAvatar:hover {
   transform: scale(1.1) rotate(5deg);
-  border-color: var(--color-neon-lime);
+  border-color: var(--color-porcelain);
 }
 
 .pulseDot {
@@ -67,8 +83,8 @@
 }
 
 .heroAccent {
-  color: var(--color-neon-lime);
-  background: linear-gradient(135deg, var(--color-neon-lime) 0%, #fff 100%);
+  color: var(--color-porcelain);
+  background: linear-gradient(135deg, #ffffff 0%, #a1a1aa 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -87,10 +103,10 @@
   gap: 16px;
 }
 
-/* About Section */
+/* About Section - Glass Integration */
 .aboutSection {
   padding: 120px 0;
-  background-color: var(--color-graphite);
+  background-color: transparent;
 }
 
 .sectionHeading {
@@ -103,7 +119,7 @@
 .aboutText {
   font-size: 18px;
   line-height: 1.8;
-  color: var(--color-storm-cloud);
+  color: var(--color-fog-grey);
   margin-bottom: 24px;
 }
 
@@ -121,7 +137,7 @@
 .statValue {
   font-size: 32px;
   font-weight: 700;
-  color: var(--color-neon-lime);
+  color: var(--color-porcelain);
 }
 
 .statLabel {
@@ -138,15 +154,18 @@
 }
 
 .aboutGridItem {
-  background: var(--color-deep-slate);
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.05);
   padding: 32px;
   border-radius: 16px;
-  border: 1px solid var(--color-charcoal-grey);
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .aboutGridItem:hover {
-  border-color: var(--color-neon-lime);
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.04);
   transform: translateY(-5px);
 }
 
@@ -162,10 +181,10 @@
   margin: 0;
 }
 
-/* Portfolio Section */
+/* Portfolio Section - Glass Cards */
 .portfolioSection {
   padding: 120px 0;
-  background-color: var(--color-pitch-black);
+  background-color: transparent;
 }
 
 .caseStack {
@@ -177,18 +196,23 @@
 }
 
 .caseCard {
-  background: var(--color-graphite);
-  border: 1px solid var(--color-charcoal-grey);
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.05);
   padding: 48px;
   border-radius: 24px;
-  transition: all 0.4s ease;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
   overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
 }
 
 .caseCard:hover {
-  border-color: rgba(212, 214, 185, 0.4);
-  transform: scale(1.02);
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.04);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.7);
 }
 
 .caseHeader {
@@ -201,7 +225,7 @@
 .caseCompany {
   font-size: 14px;
   font-weight: 700;
-  color: var(--color-neon-lime);
+  color: var(--color-fog-grey);
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
@@ -218,6 +242,7 @@
   border-radius: 99px;
   font-size: 13px;
   color: var(--color-light-steel);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .caseDesc {
@@ -231,7 +256,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px solid var(--color-charcoal-grey);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   padding-top: 24px;
 }
 
@@ -243,7 +268,7 @@
 /* Experience Timeline */
 .experienceSection {
   padding: 120px 0;
-  background-color: var(--color-graphite);
+  background-color: transparent;
 }
 
 .stickyHeading {
@@ -262,24 +287,27 @@
 .timelineDate {
   font-size: 14px;
   font-weight: 700;
-  color: var(--color-neon-lime);
+  color: var(--color-porcelain);
   margin-bottom: 8px;
   display: block;
 }
 
-/* Contact Section */
+/* Contact Section - Premium Contact Card */
 .contactSection {
   padding: 160px 0;
-  background-color: var(--color-pitch-black);
+  background-color: transparent;
 }
 
 .contactCard {
-  background: linear-gradient(135deg, var(--color-graphite) 0%, var(--color-deep-slate) 100%);
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(30px) saturate(180%);
+  -webkit-backdrop-filter: blur(30px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   padding: 80px 40px;
   border-radius: 32px;
-  border: 1px solid var(--color-charcoal-grey);
   position: relative;
   overflow: hidden;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.6);
 }
 
 .contactGlow {
@@ -288,7 +316,7 @@
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle, rgba(212, 214, 185, 0.05) 0%, transparent 60%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 60%);
   pointer-events: none;
 }
 
@@ -302,9 +330,9 @@
 /* Tech Stack */
 .techStackSection {
   padding: 40px 0;
-  background: rgba(255, 255, 255, 0.02);
-  border-top: 1px solid var(--color-charcoal-grey);
-  border-bottom: 1px solid var(--color-charcoal-grey);
+  background: rgba(255, 255, 255, 0.01);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .techStackWrapper {
@@ -334,7 +362,7 @@
 }
 
 .techItem:hover {
-  color: var(--color-neon-lime);
+  color: var(--color-porcelain);
   transform: translateY(-2px);
 }
 

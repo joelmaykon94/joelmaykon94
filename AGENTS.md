@@ -76,7 +76,9 @@ Default section order:
 
 ## User Preferences
 
-When the user requests a durable behavior change, record it here or in the relevant child AGENTS.md
+When the user requests a durable behavior change, record it here or in the relevant child AGENTS.md.
+
+- **Continue Chat Handoff**: When the chat context limit is reached in Continue, use the `/handoff` prompt command (defined in [.prompts/handoff.prompt](file:///home/joelmaykon/joelmaykon94/.prompts/handoff.prompt)) to summarize the session's work. Paste the generated handoff message into the new chat session, and update the closest owning `AGENTS.md` file if any local contracts or work guidance have changed.
 
 ## Child DOX Index
 

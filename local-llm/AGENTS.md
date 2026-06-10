@@ -1,5 +1,5 @@
 # Purpose
-This repository manages local Large Language Model (LLM) server environments using compiled `llama.cpp` binaries. It facilitates hosting lightweight model servers (like Qwen 2.5 Coder and Qwen 3.5) for local chat and autocomplete developer tools on CPU/GPU.
+This repository manages local Large Language Model (LLM) server environments using compiled `llama.cpp` binaries. It facilitates hosting lightweight model servers (like Qwen 2.5 Coder) for local chat and autocomplete developer tools on CPU/GPU.
 
 # Ownership
 - Owner: joelmaykon
@@ -11,8 +11,9 @@ This repository manages local Large Language Model (LLM) server environments usi
 
 # Work Guidance
 - Use [start-coder-servers.sh](file:///home/joelmaykon/joelmaykon94/local-llm/start-coder-servers.sh) to spin up two servers: autocomplete on port `8081` and chat on port `8080`.
-- Use [start-server.sh](file:///home/joelmaykon/joelmaykon94/local-llm/start-server.sh) to run a standalone llama-server for general Qwen 3.5 chat.
+- Use [start-server.sh](file:///home/joelmaykon/joelmaykon94/local-llm/start-server.sh) to run a standalone llama-server for general Qwen Coder chat.
 - Binaries are hosted in [llama-b9580](file:///home/joelmaykon/joelmaykon94/local-llm/llama-b9580) and should not be modified directly.
+- **Context Size Calibration**: If the local model context is too small, increase the context size parameters (`CHAT_CONTEXT` or `-c`) in the startup scripts and align them with the `contextLength` setting in Continue's configuration file.
 
 # Verification
 - Run a server script and verify it listens on its configured ports (e.g., `8080` or `8081`).

@@ -6,7 +6,7 @@ This document lists the atomic, sequential execution tasks for implementing the 
 
 ## Phase 1: Setup & Configuration
 
-- [ ] T001 Verify Hibernate Validator dependencies are configured in [pom.xml](file:///home/joelmaykon/joelmaykon94/java/atomant-investment-core/pom.xml).
+- [ ] T001 Verify Hibernate Validator dependencies are configured in [pom.xml](/java/atomant-investment-core/pom.xml).
 - [ ] T002 [P] Configure JSON validation error mappings in `java/atomant-investment-core/src/main/java/org/acme/investment/api/error/ValidationExceptionMapper.java` to return standardized error codes and field mappings.
 
 ---

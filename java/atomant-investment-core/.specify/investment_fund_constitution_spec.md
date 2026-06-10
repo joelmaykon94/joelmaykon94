@@ -65,7 +65,7 @@ sequenceDiagram
 
 ### 2.1 Resolution Logic
 - **Internal Master:** Resolved directly against the local `FundRepository` by ID or CNPJ.
-- **External Master:** Resolved via the `MasterFundOutboundPort`. The adapter implementation ([LegacyMasterFundACL](file:///home/joelmaykon/joelmaykon94/java/atomant-investment-core/src/main/java/org/acme/investment/infrastructure/client/)) queries the legacy core system by CNPJ or internal registry code, sanitizes the response, and returns a unified domain representation.
+- **External Master:** Resolved via the `MasterFundOutboundPort`. The adapter implementation ([LegacyMasterFundACL](/java/atomant-investment-core/src/main/java/org/acme/investment/infrastructure/client/)) queries the legacy core system by CNPJ or internal registry code, sanitizes the response, and returns a unified domain representation.
 
 ---
 

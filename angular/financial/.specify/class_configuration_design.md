@@ -23,10 +23,10 @@ Key features implemented:
 ## 2. Component Files
 
 The following files were created or modified:
-1. **Component Logic:** [class-configuration.ts](file:///home/joelmaykon/joelmaykon94/angular/financial/src/app/class-configuration/class-configuration.ts) - Manages signal states, reactive array modifications, change notifications, and validation logic.
-2. **Template Layout:** [class-configuration.html](file:///home/joelmaykon/joelmaykon94/angular/financial/src/app/class-configuration/class-configuration.html) - Renders forms, class tabs, validation error panels, and the interactive tree layout.
-3. **Vitest Unit Tests:** [class-configuration.spec.ts](file:///home/joelmaykon/joelmaykon94/angular/financial/src/app/class-configuration/class-configuration.spec.ts) - 8 test cases verifying dynamic tab additions, tab removal bounds, fee precision limits, index requirements, and saving simulation.
-4. **App Container Integrations:** [app.ts](file:///home/joelmaykon/joelmaykon94/angular/financial/src/app/app.ts) & [app.html](file:///home/joelmaykon/joelmaykon94/angular/financial/src/app/app.html) - Integrated as a third tab in the sidebar linked to the `Wallet` icon.
+1. **Component Logic:** [class-configuration.ts](/angular/financial/src/app/class-configuration/class-configuration.ts) - Manages signal states, reactive array modifications, change notifications, and validation logic.
+2. **Template Layout:** [class-configuration.html](/angular/financial/src/app/class-configuration/class-configuration.html) - Renders forms, class tabs, validation error panels, and the interactive tree layout.
+3. **Vitest Unit Tests:** [class-configuration.spec.ts](/angular/financial/src/app/class-configuration/class-configuration.spec.ts) - 8 test cases verifying dynamic tab additions, tab removal bounds, fee precision limits, index requirements, and saving simulation.
+4. **App Container Integrations:** [app.ts](/angular/financial/src/app/app.ts) & [app.html](/angular/financial/src/app/app.html) - Integrated as a third tab in the sidebar linked to the `Wallet` icon.
 
 ---
 
@@ -104,9 +104,9 @@ All tests execute successfully under Vitest and JSDOM.
 
 | Test File | Description | Status |
 | :--- | :--- | :--- |
-| [app.spec.ts](file:///home/joelmaykon/joelmaykon94/angular/financial/src/app/app.spec.ts) | Core app rendering | **PASSED** |
-| [portfolio-composition.spec.ts](file:///home/joelmaykon/joelmaykon94/angular/financial/src/app/portfolio-composition/portfolio-composition.spec.ts) | Portfolio compositions and accordions | **PASSED** |
-| [class-configuration.spec.ts](file:///home/joelmaykon/joelmaykon94/angular/financial/src/app/class-configuration/class-configuration.spec.ts) | Class settings, dynamic tab limits, remuneration validation, and index selections | **PASSED** |
+| [app.spec.ts](/angular/financial/src/app/app.spec.ts) | Core app rendering | **PASSED** |
+| [portfolio-composition.spec.ts](/angular/financial/src/app/portfolio-composition/portfolio-composition.spec.ts) | Portfolio compositions and accordions | **PASSED** |
+| [class-configuration.spec.ts](/angular/financial/src/app/class-configuration/class-configuration.spec.ts) | Class settings, dynamic tab limits, remuneration validation, and index selections | **PASSED** |
 
 > [!TIP]
 > The test suite uses the `onFieldsChange()` change detection helper to force-trigger computed signal re-evaluation whenever properties inside the reactive list are mutated, guaranteeing that tests and components remain in sync.

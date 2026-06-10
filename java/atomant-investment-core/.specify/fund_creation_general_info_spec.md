@@ -9,7 +9,7 @@ This document specifies the generic, framework-aligned API design and business r
 The core domain model `Fund` represents the investment fund. The **General Info** step captures the initial parameters required to register a fund.
 
 ### 1.1 Model Attributes & Types
-The following attributes are mapped within the domain model class [Fund.java](file:///home/joelmaykon/joelmaykon94/java/atomant-investment-core/src/main/java/org/acme/investment/domain/model/Fund.java):
+The following attributes are mapped within the domain model class [Fund.java](/java/atomant-investment-core/src/main/java/org/acme/investment/domain/model/Fund.java):
 
 | Field | Type | Constraint | Description |
 | :--- | :--- | :--- | :--- |
@@ -150,7 +150,7 @@ public interface DepartmentClient {
 ```
 
 ### 4.2 JSR-380 Custom Constraint Validation
-We declare a custom class-level validation constraint `@ValidFundGeneralInfo` mapped to [FundGeneralInfoValidator.java](file:///home/joelmaykon/joelmaykon94/java/atomant-investment-core/src/main/java/org/acme/investment/api/validator/FundGeneralInfoValidator.java):
+We declare a custom class-level validation constraint `@ValidFundGeneralInfo` mapped to [FundGeneralInfoValidator.java](/java/atomant-investment-core/src/main/java/org/acme/investment/api/validator/FundGeneralInfoValidator.java):
 
 ```java
 public class FundGeneralInfoValidator implements ConstraintValidator<ValidFundGeneralInfo, FundGeneralInfoCreateDTO> {

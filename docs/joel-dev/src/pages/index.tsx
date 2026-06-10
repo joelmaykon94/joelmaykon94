@@ -109,6 +109,15 @@ function AboutSection() {
 function PortfolioSection() {
   const cases = [
     {
+      id: 'cef',
+      company: 'Caixa Econômica Federal (CEF)',
+      role: 'Senior Software Analyst',
+      title: 'Modernização de Core Ledger & Segurança',
+      description: 'Arquitetura e modernização do ecossistema de processamento distribuído de alta transacionalidade. Desenvolvimento de motor contábil (Double-Entry Ledger Core) e serviços de auditoria e segurança federada com Keycloak, garantindo conformidade regulatória total (BACEN).',
+      tech: ['Java 21', 'Quarkus', 'Spring Boot', 'Keycloak', 'Kubernetes'],
+      results: 'Garantia de conformidade regulatória total e conciliação em lote assíncrona de alta performance.',
+    },
+    {
       id: 'aura',
       company: 'Vivo/Mutant',
       role: 'AI Engineer',
@@ -131,9 +140,9 @@ function PortfolioSection() {
       company: 'J17 Bank',
       role: 'Software Engineer',
       title: 'APIs Financeiras & PIX',
-      description: 'Sustentação de fluxos bancários críticos com conformidade PCI DSS.',
+      description: 'Sustentação de fluxos bancários críticos e seguros com conformidade PCI DSS.',
       tech: ['Java', 'MySQL', 'Docker', 'JUnit'],
-      results: 'Redução de 25% na latência transacional.',
+      results: 'Redução de 25% na latência transacional com criptografia de ponta.',
     },
   ];
 
@@ -186,7 +195,8 @@ function ExperienceTimeline() {
           <div className="col col--8">
             <div className={styles.timeline}>
               {[
-                { date: '2025', title: 'Tech Lead @ Parnamirim/RN', desc: 'Modernização de sistemas legados com Kubernetes e ArgoCD.' },
+                { date: '2026 - Atual', title: 'Senior Analyst @ Caixa Federal (CEF)', desc: 'Modernização de motores contábeis core, auditoria e federação Keycloak.' },
+                { date: '2025', title: 'Tech Lead @ Parnamirim/RN', desc: 'Modernização de sistemas governamentais com Kubernetes e ArgoCD.' },
                 { date: '2023 - 2024', title: 'AI Engineer @ Vivo Aura', desc: 'IA Generativa e RAG pipelines processando 15M+ interações.' },
                 { date: '2023', title: 'Software Engineer @ J17 Bank', desc: 'Compliance PCI DSS e otimização core banking (PIX).' },
                 { date: '2022 - 2023', title: 'Tech Lead @ Holistix', desc: 'Arquitetura de dados com Kafka e Rockset.' }

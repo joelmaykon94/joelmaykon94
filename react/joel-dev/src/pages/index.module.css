@@ -1,0 +1,415 @@
+.heroBanner {
+  padding: 120px 0 160px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.heroBanner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/img/background.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.15;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.avatarWrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+  position: relative;
+}
+
+.avatarGlow {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background: var(--avatar-glow-color);
+  filter: blur(50px);
+  opacity: 0.3;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.homeAvatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--color-charcoal-grey);
+  box-shadow: var(--shadow-xl);
+  z-index: 1;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.homeAvatar:hover {
+  transform: scale(1.1) rotate(5deg);
+  border-color: var(--color-porcelain);
+}
+
+.pulseDot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-forest-green);
+  border-radius: 50%;
+  margin-right: 8px;
+  display: inline-block;
+  box-shadow: 0 0 10px var(--color-forest-green);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.95); opacity: 0.7; }
+  70% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(0.95); opacity: 0.7; }
+}
+
+.heroTitle {
+  font-size: 80px;
+  line-height: 1.1;
+  font-weight: 700;
+  color: var(--color-porcelain);
+  margin-bottom: 24px;
+}
+
+.heroAccent {
+  color: var(--color-porcelain);
+  background: linear-gradient(135deg, var(--color-brand-pink) 0%, var(--color-brand-purple) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heroSubtitle {
+  font-size: 24px;
+  color: var(--color-storm-cloud);
+  max-width: 800px;
+  margin: 0 auto 48px;
+  line-height: 1.6;
+}
+
+.heroButtons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+/* About Section - Glass Integration */
+.aboutSection {
+  padding: 120px 0;
+  background-color: transparent;
+}
+
+.sectionHeading {
+  font-size: 48px;
+  color: var(--color-porcelain);
+  margin-bottom: 32px;
+  line-height: 1.2;
+}
+
+.aboutText {
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--color-fog-grey);
+  margin-bottom: 24px;
+}
+
+.aboutStats {
+  display: flex;
+  gap: 48px;
+  margin-top: 48px;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.statValue {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--color-porcelain);
+}
+
+.statLabel {
+  font-size: 14px;
+  color: var(--color-fog-grey);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.aboutGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.aboutGridItem {
+  background: var(--card-bg);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid var(--card-border);
+  padding: 32px;
+  border-radius: 16px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: var(--card-shadow);
+}
+
+.aboutGridItem:hover {
+  border-color: var(--card-hover-border);
+  background: var(--card-hover-bg);
+  transform: translateY(-5px);
+  box-shadow: var(--card-hover-shadow);
+}
+
+.aboutGridItem h4 {
+  font-size: 20px;
+  color: var(--color-porcelain);
+  margin: 16px 0 8px;
+}
+
+.aboutGridItem p {
+  font-size: 14px;
+  color: var(--color-storm-cloud);
+  margin: 0;
+}
+
+/* Portfolio Section - Glass Cards */
+.portfolioSection {
+  padding: 120px 0;
+  background-color: transparent;
+}
+
+.caseStack {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.caseCard {
+  background: var(--card-bg);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid var(--card-border);
+  padding: 48px;
+  border-radius: 24px;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+}
+
+.caseCard:hover {
+  border-color: var(--card-hover-border);
+  background: var(--card-hover-bg);
+  transform: translateY(-4px);
+  box-shadow: var(--card-hover-shadow);
+}
+
+.caseHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.caseCompany {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-fog-grey);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.caseTitle {
+  font-size: 28px;
+  color: var(--color-porcelain);
+  margin-top: 4px;
+}
+
+.caseRole {
+  background: var(--case-role-bg);
+  padding: 6px 16px;
+  border-radius: 99px;
+  font-size: 13px;
+  color: var(--case-role-color);
+  border: 1px solid var(--case-role-border);
+}
+
+.caseDesc {
+  font-size: 18px;
+  color: var(--color-storm-cloud);
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.caseFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--card-border);
+  padding-top: 24px;
+}
+
+.caseResult {
+  font-size: 14px;
+  color: var(--color-light-steel);
+}
+
+/* Experience Timeline */
+.experienceSection {
+  padding: 120px 0;
+  background-color: transparent;
+}
+
+.stickyHeading {
+  font-size: 48px;
+  color: var(--color-porcelain);
+  position: sticky;
+  top: 100px;
+}
+
+.experienceIntro {
+  font-size: 18px;
+  color: var(--color-storm-cloud);
+  margin-top: 24px;
+}
+
+.timelineDate {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-porcelain);
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* Contact Section - Premium Contact Card */
+.contactSection {
+  padding: 160px 0;
+  background-color: transparent;
+}
+
+.contactCard {
+  background: var(--contact-card-bg);
+  backdrop-filter: blur(30px) saturate(180%);
+  -webkit-backdrop-filter: blur(30px) saturate(180%);
+  border: 1px solid var(--contact-card-border);
+  padding: 80px 40px;
+  border-radius: 32px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--contact-card-shadow);
+}
+
+.contactGlow {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: var(--contact-glow);
+  pointer-events: none;
+}
+
+.contactButtons {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 48px;
+}
+
+/* Tech Stack */
+.techStackSection {
+  padding: 40px 0;
+  background: var(--tech-stack-bg);
+  border-top: 1px solid var(--tech-stack-border);
+  border-bottom: 1px solid var(--tech-stack-border);
+}
+
+.techStackWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.techStackLabel {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-fog-grey);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.techGrid {
+  display: flex;
+  gap: 32px;
+}
+
+.techItem {
+  color: var(--color-storm-cloud);
+  font-size: 14px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.techItem:hover {
+  color: var(--color-porcelain);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 996px) {
+  .heroTitle { font-size: 48px; }
+  .aboutGrid { grid-template-columns: 1fr; }
+  .aboutStats { flex-direction: column; gap: 24px; }
+  .caseHeader { flex-direction: column; gap: 16px; }
+  .caseFooter { flex-direction: column; align-items: flex-start; gap: 24px; }
+  .techStackWrapper { flex-direction: column; gap: 24px; }
+  .techGrid { flex-wrap: wrap; justify-content: center; gap: 16px; }
+  .contactButtons { flex-direction: column; }
+}
+
+.educationSection {
+  padding: 120px 0;
+  background-color: transparent;
+  border-top: 1px solid var(--card-border);
+}
+
+.certItem {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  padding: 24px;
+  border-radius: 16px;
+  margin-bottom: 16px;
+  transition: all 0.3s ease;
+  box-shadow: var(--card-shadow);
+}
+
+.certItem:hover {
+  border-color: var(--card-hover-border);
+  background: var(--card-hover-bg);
+  transform: translateY(-2px);
+  box-shadow: var(--card-hover-shadow);
+}
+
+.certItem h4 {
+  margin: 0 0 8px 0;
+  color: var(--color-porcelain);
+  font-size: 18px;
+}
+
+.certItem p {
+  margin: 0;
+  color: var(--color-storm-cloud);
+  font-size: 14px;
+}

@@ -1,0 +1,46 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.Arquitetura": {
+    "message": "Arquitetura",
+    "description": "The label for category 'Arquitetura' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Arquitetura.link.generated-index.description": {
+    "message": "Detalhamento técnico da arquitetura de sistemas, padrões e infraestrutura utilizados nos meus projetos.",
+    "description": "The generated-index page description for category 'Arquitetura' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Implementação GitOps": {
+    "message": "Implementação GitOps",
+    "description": "The label for category 'Implementação GitOps' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Implementação GitOps.link.generated-index.description": {
+    "message": "Detalhes técnicos sobre a implementação de CI/CD utilizando GitHub Actions e ArgoCD.",
+    "description": "The generated-index page description for category 'Implementação GitOps' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Especialista Java": {
+    "message": "Especialista Java",
+    "description": "The label for category 'Especialista Java' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Especialista Java.link.generated-index.description": {
+    "message": "Guia aprofundado para domínio do Java Moderno, baseado nas melhores práticas de mercado e no roadmap.sh.",
+    "description": "The generated-index page description for category 'Especialista Java' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Qualidade & Monitoramento": {
+    "message": "Qualidade & Monitoramento",
+    "description": "The label for category 'Qualidade & Monitoramento' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Qualidade & Monitoramento.link.generated-index.description": {
+    "message": "Ferramentas e práticas para garantir a qualidade, segurança e observabilidade do código.",
+    "description": "The generated-index page description for category 'Qualidade & Monitoramento' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Engenharia de Prompt": {
+    "message": "Engenharia de Prompt",
+    "description": "The label for category 'Engenharia de Prompt' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Engenharia de Prompt.link.generated-index.description": {
+    "message": "Guia aprofundado sobre engenharia de prompt, cobrindo técnicas, melhores práticas e exemplos para criar prompts eficazes para modelos de linguagem.",
+    "description": "The generated-index page description for category 'Engenharia de Prompt' in sidebar 'tutorialSidebar'"
+  }
+}

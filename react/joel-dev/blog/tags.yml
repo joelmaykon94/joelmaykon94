@@ -1,0 +1,18 @@
+java:
+  label: Java
+  description: Posts sobre o ecossistema Java, Spring Boot e Quarkus.
+python:
+  label: Python
+  description: Automação, IA e Web com Python.
+architecture:
+  label: Arquitetura
+  description: Design de sistemas, Clean Architecture e DDD.
+career:
+  label: Carreira
+  description: Reflexões sobre evolução profissional e aprendizado.
+devops:
+  label: DevOps
+  description: CI/CD, Infrastructure as Code e Automação de Infraestrutura.
+quality:
+  label: Qualidade
+  description: Testes, SonarQube e melhores práticas de Clean Code.

@@ -164,7 +164,7 @@
 }
 
 .aboutGridItem:hover {
-  border-color: rgba(255, 0, 127, 0.4);
+  border-color: rgba(189, 147, 249, 0.3);
   background: rgba(40, 42, 54, 0.6);
   transform: translateY(-5px);
 }
@@ -209,7 +209,7 @@
 }
 
 .caseCard:hover {
-  border-color: rgba(255, 0, 127, 0.4);
+  border-color: rgba(189, 147, 249, 0.3);
   background: rgba(40, 42, 54, 0.5);
   transform: translateY(-4px);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.7);
@@ -316,7 +316,7 @@
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle, rgba(255, 0, 127, 0.08) 0%, transparent 60%);
+  background: radial-gradient(circle, rgba(157, 23, 77, 0.08) 0%, transparent 60%);
   pointer-events: none;
 }
 

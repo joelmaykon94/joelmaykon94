@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-  /* Colors - Dracula Theme with Shocking Pink (Rosa Choque) Accent */
+  /* Colors - Dracula Theme with Masculine Dark Purple & Dark Pink accents */
   --color-pitch-black: #181920;      /* Deep dark background */
   --color-graphite: #1e1f29;         /* Dracula main background */
   --color-deep-slate: #282a36;       /* Dracula card/box background */
@@ -17,13 +17,13 @@
   --color-storm-cloud: #a0a0b8;      /* Muted text gray */
   --color-fog-grey: #6272a4;         /* Comment / Gray */
   
-  --color-brand-pink: #ff007f;       /* Shocking Pink (Rosa Choque) */
-  --color-brand-purple: #bd93f9;     /* Dracula Purple */
+  --color-brand-pink: #9d174d;       /* Dark Pink (Rosa Escuro) for fine details */
+  --color-brand-purple: #4c1d95;     /* Dark Purple (Roxo Escuro) as primary */
   --color-brand-cyan: #8be9fd;       /* Dracula Cyan */
   --color-brand-green: #50fa7b;      /* Dracula Green */
   
-  --color-brand-silver: var(--color-brand-pink); 
-  --color-aether-blue: rgba(189, 147, 249, 0.08); /* Translucent purple */
+  --color-brand-silver: var(--color-brand-purple); 
+  --color-aether-blue: rgba(76, 29, 149, 0.08); /* Translucent dark purple */
   --color-warning-red: #ff5555;      /* Dracula Red */
   --color-forest-green: #50fa7b;     /* Dracula Green */
 
@@ -34,11 +34,11 @@
   --ifm-footer-background-color: var(--color-pitch-black);
   --ifm-card-background-color: rgba(68, 71, 90, 0.15);
   --ifm-font-color-base: var(--color-porcelain);
-  --ifm-heading-color: var(--color-brand-pink);
-  --ifm-color-primary: var(--color-brand-pink);
+  --ifm-heading-color: var(--color-porcelain); /* White headings for a cleaner layout */
+  --ifm-color-primary: var(--color-brand-purple);
   
   --ifm-navbar-link-color: var(--color-porcelain);
-  --ifm-navbar-link-hover-color: var(--color-brand-purple);
+  --ifm-navbar-link-hover-color: var(--color-brand-pink);
   
   /* Layout */
   --ifm-container-width: 1100px;
@@ -55,8 +55,8 @@
 body {
   background-color: var(--color-pitch-black);
   background-image: 
-    radial-gradient(at 0% 0%, rgba(189, 147, 249, 0.07) 0px, transparent 50%),
-    radial-gradient(at 100% 100%, rgba(255, 0, 127, 0.05) 0px, transparent 50%);
+    radial-gradient(at 0% 0%, rgba(189, 147, 249, 0.06) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(157, 23, 77, 0.03) 0px, transparent 50%);
   background-attachment: fixed;
   -webkit-font-smoothing: antialiased;
   letter-spacing: -0.01em;
@@ -137,7 +137,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bento-item:hover {
-  border-color: rgba(255, 0, 127, 0.4);
+  border-color: rgba(189, 147, 249, 0.3);
   background: rgba(40, 42, 54, 0.6);
   transform: translateY(-4px);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.7);
@@ -167,7 +167,7 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--color-brand-pink);
   border: 3px solid var(--color-pitch-black);
   border-radius: 50%;
-  box-shadow: 0 0 12px rgba(255, 0, 127, 0.8);
+  box-shadow: 0 0 10px rgba(157, 23, 77, 0.8);
 }
 
 /* Tech Tags - Glass Pills */
@@ -187,16 +187,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .tech-tag:hover {
-  background: rgba(255, 0, 127, 0.1);
-  border-color: rgba(255, 0, 127, 0.4);
-  color: var(--color-brand-pink);
+  background: rgba(76, 29, 149, 0.1);
+  border-color: rgba(76, 29, 149, 0.4);
+  color: #bd93f9;
 }
 
 /* Buttons - Shocking Pink & Glass Purple Outline */
 .button--primary-linear {
-  background: linear-gradient(135deg, var(--color-brand-pink) 0%, #db2777 100%);
+  background: linear-gradient(135deg, var(--color-brand-pink) 0%, var(--color-brand-purple) 100%);
   color: #ffffff;
-  border: 1px solid rgba(255, 0, 127, 0.25);
+  border: 1px solid rgba(157, 23, 77, 0.3);
   border-radius: var(--ifm-button-border-radius);
   padding: 14px 28px;
   font-weight: 600;
@@ -205,15 +205,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .button--primary-linear:hover {
   transform: scale(1.05);
-  box-shadow: 0 12px 24px rgba(255, 0, 127, 0.35);
+  box-shadow: 0 12px 24px rgba(76, 29, 149, 0.45);
   color: #ffffff;
   text-decoration: none;
 }
 
 .button--secondary-linear {
-  background: rgba(189, 147, 249, 0.05);
+  background: rgba(76, 29, 149, 0.08);
   color: var(--color-porcelain);
-  border: 1px solid rgba(189, 147, 249, 0.2);
+  border: 1px solid rgba(76, 29, 149, 0.3);
   backdrop-filter: blur(10px);
   border-radius: var(--ifm-button-border-radius);
   padding: 14px 28px;
@@ -222,10 +222,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .button--secondary-linear:hover {
-  background: rgba(189, 147, 249, 0.15);
-  border-color: rgba(189, 147, 249, 0.4);
+  background: rgba(76, 29, 149, 0.18);
+  border-color: rgba(76, 29, 149, 0.6);
   transform: scale(1.05);
-  color: var(--color-brand-purple);
+  color: #bd93f9;
   text-decoration: none;
 }
 
@@ -346,9 +346,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .menu__link--active {
-  color: var(--color-brand-pink) !important;
-  background-color: rgba(255, 0, 127, 0.05) !important;
-  border: 1px solid rgba(255, 0, 127, 0.15);
+  color: #bd93f9 !important;
+  background-color: rgba(189, 147, 249, 0.05) !important;
+  border: 1px solid rgba(189, 147, 249, 0.15);
   font-weight: 700;
 }
 

@@ -32,7 +32,7 @@
   position: absolute;
   width: 180px;
   height: 180px;
-  background: rgba(189, 147, 249, 0.25);
+  background: var(--avatar-glow-color);
   filter: blur(50px);
   opacity: 0.3;
   border-radius: 50%;

@@ -1,6 +1,6 @@
 <div align="center">
-  <!-- Header Wave Render - Dracula Dark Purple/Pink -->
-  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=282a36&height=120&section=header&text=JOEL%20MAYKON&fontSize=50&fontColor=9d174d"/>
+  <!-- Header Wave Render - Dracula Theme -->
+  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=282a36&height=120&section=header&text=JOEL%20MAYKON&fontSize=50&fontColor=bd93f9"/>
 
   <!-- Background Banner -->
   <img src="docs/files/background.png" width="100%" alt="Background Banner" />
@@ -10,13 +10,15 @@
   <!-- Typing SVG - Dark Purple -->
   [![Typing SVG](https://readme-typing-svg.herokuapp.com/?color=4c1d95&size=35&center=true&vCenter=true&width=1000&lines=SPECIALIST+SOFTWARE+ENGINEER;JAVA+|+GO+|+ANGULAR;CLARITY+OVER+COMPLEXITY;LESS+IS+MORE)](https://git.io/typing-svg)
 
-  <!-- Core Badges - Dark Purple & Dark Pink Style -->
-  <img src="https://img.shields.io/badge/EXPERIÊNCIA-Desde%202018-4c1d95?style=for-the-badge&labelColor=282a36&logo=clock&logoColor=4c1d95" />
-  <img src="https://img.shields.io/badge/SENIORIDADE-Especialista-9d174d?style=for-the-badge&labelColor=282a36&logo=trending-up&logoColor=9d174d" />
-  <img src="https://img.shields.io/badge/FOCO-Performance-4c1d95?style=for-the-badge&labelColor=282a36&logo=cpu&logoColor=4c1d95" />
+  <!-- Core Badges - Dracula & Dark Purple Style -->
+  <img src="https://img.shields.io/badge/EXPERIÊNCIA-Desde%202018-4c1d95?style=for-the-badge&labelColor=282a36&logo=clock&logoColor=bd93f9" />
+  <img src="https://img.shields.io/badge/SENIORIDADE-Especialista-9d174d?style=for-the-badge&labelColor=282a36&logo=trending-up&logoColor=bd93f9" />
+  <img src="https://img.shields.io/badge/FOCO-Performance-4c1d95?style=for-the-badge&labelColor=282a36&logo=cpu&logoColor=bd93f9" />
   
   <br/>
   
+  <!-- Contador de Visitantes -->
+  <img src="https://komarev.com/normal-badge/?username=joelmaykon94&color=9d174d&label=VISITANTES&style=for-the-badge&labelColor=282a36" />
  
 </div>
 
@@ -178,11 +180,11 @@ Clique em cada seção abaixo para expandir e explorar a função e stack de cad
     <tr>
       <td width="50%" align="center">
         <!-- Estatísticas Gerais do GitHub -->
-        <img src="https://github-readme-stats.vercel.app/api?username=joelmaykon94&show_icons=true&bg_color=282a36&title_color=9d174d&icon_color=4c1d95&text_color=f8f8f2&hide_border=true" />
+        <img src="https://github-readme-stats.vercel.app/api?username=joelmaykon94&show_icons=true&theme=dracula&hide_border=true" />
       </td>
       <td width="50%" align="center">
         <!-- Linguagens Mais Utilizadas -->
-        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=joelmaykon94&layout=compact&bg_color=282a36&title_color=9d174d&icon_color=4c1d95&text_color=f8f8f2&hide_border=true" />
+        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=joelmaykon94&layout=compact&theme=dracula&hide_border=true" />
       </td>
     </tr>
   </table>
@@ -192,12 +194,12 @@ Clique em cada seção abaixo para expandir e explorar a função e stack de cad
 
 <div align="center">
   <!-- Gráfico de Atividade de Commits -->
-  <img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=joelmaykon94&bg_color=282a36&color=9d174d&line=4c1d95&point=9d174d&area=true&hide_border=true" />
+  <img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=joelmaykon94&theme=dracula&hide_border=true" />
 </div>
 
 <div align="center" style="display: flex; justify-content: space-between; gap: 2%;">
   <!-- Streak de Contribuições (Consistência) -->
-  <img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=joelmaykon94&background=282a36&ring=4c1d95&fire=9d174d&currStreakNum=f8f8f2&currStreakLabel=9d174d&sideNums=f8f8f2&sideLabels=f8f8f2&dates=a0a0b8&hide_border=true" />
+  <img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=joelmaykon94&theme=dracula&hide_border=true" />
   
   <!-- Troféus de Conquistas (Dracula Style) -->
   <img width="49%" src="https://github-profile-trophy-fork-two.vercel.app/?username=joelmaykon94&theme=dracula&no-bg=true&no-frame=true&column=3&margin-w=15&margin-h=15" />
@@ -214,11 +216,11 @@ Clique em cada seção abaixo para expandir e explorar a função e stack de cad
 ## 🔗 Vamos nos conectar?
 
 <div align="center"> 
-  <a href="https://www.linkedin.com/in/joelmaykon/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-282a36?style=for-the-badge&logo=linkedin&logoColor=9d174d" style="border: 1px solid #9d174d; border-radius: 10px"></a> 
-  <a href="https://github.com/joelmaykon94" target="_blank"><img src="https://img.shields.io/badge/-GitHub-282a36?style=for-the-badge&logo=github&logoColor=4c1d95" style="border: 1px solid #4c1d95; border-radius: 10px"></a>
+  <a href="https://www.linkedin.com/in/joelmaykon/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-282a36?style=for-the-badge&logo=linkedin&logoColor=bd93f9" style="border: 1px solid #bd93f9; border-radius: 10px"></a> 
+  <a href="https://github.com/joelmaykon94" target="_blank"><img src="https://img.shields.io/badge/-GitHub-282a36?style=for-the-badge&logo=github&logoColor=bd93f9" style="border: 1px solid #bd93f9; border-radius: 10px"></a>
 </div>
 
 <div align="center">
   <!-- Footer Wave Render - Dracula Theme -->
-  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=282a36&height=120&section=footer&fontColor=4c1d95"/>
+  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=282a36&height=120&section=footer&fontColor=bd93f9"/>
 </div>

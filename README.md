@@ -147,6 +147,98 @@ Clique em cada seção abaixo para expandir e explorar a função e stack de cad
   </blockquote>
 </details>
 
+<details>
+  <summary><b>🌐 docs/ (Documentação & Portfólio Docusaurus)</b></summary>
+  <br/>
+  <blockquote>
+    <table>
+      <thead>
+        <tr>
+          <th>Componente</th>
+          <th>Diretório Local</th>
+          <th>Propósito & Tecnologias</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>💼 <b>Docusaurus Portfolio</b></td>
+          <td><a href="./docs/joel-dev"><code>docs/joel-dev</code></a></td>
+          <td>Código-fonte do website de portfólio interativo de Joel Maykon, com suporte a múltiplos idiomas e tema dinâmico.</td>
+        </tr>
+      </tbody>
+    </table>
+  </blockquote>
+</details>
+
+<details>
+  <summary><b>🐍 python/ (Automações, Scraping & Scripts Python)</b></summary>
+  <br/>
+  <blockquote>
+    <table>
+      <thead>
+        <tr>
+          <th>Recurso</th>
+          <th>Diretório Local</th>
+          <th>Propósito & Tecnologias</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>🕸️ <b>Web Scraping & Automations</b></td>
+          <td><a href="./python/scraping-videos"><code>python/scraping-videos</code></a></td>
+          <td>Scripts em Python para automações de tarefas cotidianas, extração de dados da web (web scraping) e processamento de informações.</td>
+        </tr>
+      </tbody>
+    </table>
+  </blockquote>
+</details>
+
+<details>
+  <summary><b>⚛️ react/ (Aplicações Frontend - ReactJS)</b></summary>
+  <br/>
+  <blockquote>
+    <table>
+      <thead>
+        <tr>
+          <th>Recurso</th>
+          <th>Diretório Local</th>
+          <th>Propósito & Tecnologias</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>🌐 <b>React Frontends</b></td>
+          <td><a href="./react"><code>react/</code></a></td>
+          <td>Diretório reservado para o desenvolvimento e hospedagem de interfaces web utilizando a biblioteca React.</td>
+        </tr>
+      </tbody>
+    </table>
+  </blockquote>
+</details>
+
+<details>
+  <summary><b>♾️ devops/ (Pipelines & Orquestração de Infraestrutura)</b></summary>
+  <br/>
+  <blockquote>
+    <table>
+      <thead>
+        <tr>
+          <th>Recurso</th>
+          <th>Diretório Local</th>
+          <th>Propósito & Tecnologias</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>☁️ <b>Infra & CI/CD</b></td>
+          <td><a href="./devops"><code>devops/</code></a></td>
+          <td>Configurações de implantação, orquestração Kubernetes, fluxos de integração contínua (CI/CD) e IaC (Infrastructure as Code).</td>
+        </tr>
+      </tbody>
+    </table>
+  </blockquote>
+</details>
+
 <br/>
 
 ---

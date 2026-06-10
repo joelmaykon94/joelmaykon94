@@ -78,18 +78,19 @@ Default section order:
 
 When the user requests a durable behavior change, record it here or in the relevant child AGENTS.md.
 
-- **Continue Chat Handoff**: When the chat context limit is reached in Continue, use the `/handoff` prompt command (defined in [.prompts/handoff.prompt](file:///home/joelmaykon/joelmaykon94/.prompts/handoff.prompt)) to summarize the session's work. Paste the generated handoff message into the new chat session, and update the closest owning `AGENTS.md` file if any local contracts or work guidance have changed.
+- **Commit Style Guidelines**: Always follow the commit patterns specified in [iuricode/padroes-de-commits](https://github.com/iuricode/padroes-de-commits) and include standard emojis/icons (e.g., `✨ feat:`, `🐛 fix:`, `📝 docs:`, `💄 style:`, `♻️ refactor:`, `🧪 test:`, `🔧 chore:`).
+- **Continue Chat Handoff**: When the chat context limit is reached in Continue, use the `/handoff` prompt command (defined in [.prompts/handoff.prompt](./.prompts/handoff.prompt)) to summarize the session's work. Paste the generated handoff message into the new chat session, and update the closest owning `AGENTS.md` file if any local contracts or work guidance have changed.
 
 ## Child DOX Index
 
-- [angular/auth-keycloak/AGENTS.md](file:///home/joelmaykon/joelmaykon94/angular/auth-keycloak/AGENTS.md): Keycloak integration library for Angular.
-- [angular/financial/AGENTS.md](file:///home/joelmaykon/joelmaykon94/angular/financial/AGENTS.md): Financial frontend dashboard in Angular.
-- [java/atomant-audit/AGENTS.md](file:///home/joelmaykon/joelmaykon94/java/atomant-audit/AGENTS.md): Core Audit & Aggregation backend service.
-- [java/atomant-auth/AGENTS.md](file:///home/joelmaykon/joelmaykon94/java/atomant-auth/AGENTS.md): Authentication microservice.
-- [java/atomant-calculator/AGENTS.md](file:///home/joelmaykon/joelmaykon94/java/atomant-calculator/AGENTS.md): Financial calculator microservice.
-- [java/atomant-file-processor/AGENTS.md](file:///home/joelmaykon/joelmaykon94/java/atomant-file-processor/AGENTS.md): Batch file processor microservice.
-- [java/atomant-financial-core/AGENTS.md](file:///home/joelmaykon/joelmaykon94/java/atomant-financial-core/AGENTS.md): Financial Core and Ledger Engine microservice.
-- [java/atomant-ingestion/AGENTS.md](file:///home/joelmaykon/joelmaykon94/java/atomant-ingestion/AGENTS.md): Ingestion and parsing engine.
-- [java/atomant-integration/AGENTS.md](file:///home/joelmaykon/joelmaykon94/java/atomant-integration/AGENTS.md): Integration gateway service.
-- [java/atomant-investment-core/AGENTS.md](file:///home/joelmaykon/joelmaykon94/java/atomant-investment-core/AGENTS.md): Investment and core ledger engine.
-- [local-llm/AGENTS.md](file:///home/joelmaykon/joelmaykon94/local-llm/AGENTS.md): Local LLM server wrapper scripts and binaries.
+- [angular/auth-keycloak/AGENTS.md](/angular/auth-keycloak/AGENTS.md): Keycloak integration library for Angular.
+- [angular/financial/AGENTS.md](/angular/financial/AGENTS.md): Financial frontend dashboard in Angular.
+- [java/atomant-audit/AGENTS.md](/java/atomant-audit/AGENTS.md): Core Audit & Aggregation backend service.
+- [java/atomant-auth/AGENTS.md](/java/atomant-auth/AGENTS.md): Authentication microservice.
+- [java/atomant-calculator/AGENTS.md](/java/atomant-calculator/AGENTS.md): Financial calculator microservice.
+- [java/atomant-file-processor/AGENTS.md](/java/atomant-file-processor/AGENTS.md): Batch file processor microservice.
+- [java/atomant-financial-core/AGENTS.md](/java/atomant-financial-core/AGENTS.md): Financial Core and Ledger Engine microservice.
+- [java/atomant-ingestion/AGENTS.md](/java/atomant-ingestion/AGENTS.md): Ingestion and parsing engine.
+- [java/atomant-integration/AGENTS.md](/java/atomant-integration/AGENTS.md): Integration gateway service.
+- [java/atomant-investment-core/AGENTS.md](/java/atomant-investment-core/AGENTS.md): Investment and core ledger engine.
+- [local-llm/AGENTS.md](/local-llm/AGENTS.md): Local LLM server wrapper scripts and binaries.

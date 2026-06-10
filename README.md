@@ -176,18 +176,8 @@ Clique em cada seção abaixo para expandir e explorar a função e stack de cad
 ## 📊 Estatísticas e Métricas do GitHub
 
 <div align="center">
-  <table border="0" cellpadding="0" cellspacing="0" width="100%">
-    <tr>
-      <td width="50%" align="center">
-        <!-- Estatísticas Gerais do GitHub -->
-        <img src="https://github-readme-stats.vercel.app/api?username=joelmaykon94&show_icons=true&theme=dracula&hide_border=true" />
-      </td>
-      <td width="50%" align="center">
-        <!-- Linguagens Mais Utilizadas -->
-        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=joelmaykon94&layout=compact&theme=dracula&hide_border=true" />
-      </td>
-    </tr>
-  </table>
+  <!-- Estatísticas Gerais do GitHub -->
+  <img src="https://github-readme-stats.vercel.app/api?username=joelmaykon94&show_icons=true&theme=dracula&hide_border=true" />
 </div>
 
 <br/>
@@ -197,12 +187,25 @@ Clique em cada seção abaixo para expandir e explorar a função e stack de cad
   <img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=joelmaykon94&theme=dracula&hide_border=true" />
 </div>
 
-<div align="center" style="display: flex; justify-content: space-between; gap: 2%;">
-  <!-- Streak de Contribuições (Consistência) -->
-  <img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=joelmaykon94&theme=dracula&hide_border=true" />
-  
-  <!-- Troféus de Conquistas (Dracula Style) -->
-  <img width="49%" src="https://github-profile-trophy-fork-two.vercel.app/?username=joelmaykon94&theme=dracula&no-bg=true&no-frame=true&column=3&margin-w=15&margin-h=15" />
+<br/>
+
+<div align="center">
+  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+      <td width="49%" valign="top">
+        <!-- Linguagens Mais Utilizadas -->
+        <img width="100%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=joelmaykon94&layout=compact&theme=dracula&hide_border=true" />
+        <br/><br/>
+        <!-- Streak de Contribuições (Consistência) -->
+        <img width="100%" src="https://github-readme-streak-stats.herokuapp.com/?user=joelmaykon94&theme=dracula&hide_border=true" />
+      </td>
+      <td width="2%">&nbsp;</td>
+      <td width="49%" valign="middle" align="center">
+        <!-- Troféus de Conquistas (Dracula Style) -->
+        <img width="100%" src="https://github-profile-trophy-fork-two.vercel.app/?username=joelmaykon94&theme=dracula&no-bg=true&no-frame=true&column=3&margin-w=15&margin-h=15" />
+      </td>
+    </tr>
+  </table>
 </div>
 
 ---

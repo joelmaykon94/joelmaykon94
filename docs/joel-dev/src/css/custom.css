@@ -5,7 +5,84 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-  /* Colors - Dracula Theme with Masculine Dark Purple & Dark Pink accents */
+  /* Colors - Dracula Soft Light Theme */
+  --color-pitch-black: #e2e0e9;      /* Muted light border/background */
+  --color-graphite: #f2f0f5;         /* Soft light main background */
+  --color-deep-slate: #ffffff;       /* Card surface (pure white) */
+  --color-charcoal-grey: #d7d5e0;    /* Divider/Selection light */
+  --color-muted-ash: #c8c6d1;        /* Divider darker light */
+  --color-gunmetal: #4d4d4d;         /* Text color (gray) */
+  --color-porcelain: #282a36;        /* Headings/Core Text color (Dracula base background) */
+  --color-light-steel: #343746;      /* Sub-headings */
+  --color-storm-cloud: #4d4d4d;      /* Body Text */
+  --color-fog-grey: #6272a4;         /* Comment / Gray */
+  
+  --color-brand-pink: #be185d;       /* Dark pink (Rosa Escuro) for fine details */
+  --color-brand-purple: #6d28d9;     /* Dark purple (Roxo Escuro) as primary */
+  --color-brand-cyan: #0891b2;       /* Cyan */
+  --color-brand-green: #15803d;      /* Green */
+  
+  --color-brand-silver: var(--color-brand-purple); 
+  --color-aether-blue: rgba(109, 40, 217, 0.05); /* Translucent purple */
+  --color-warning-red: #b91c1c;      /* Red */
+  --color-forest-green: #15803d;     /* Green */
+
+  /* Infima Overrides */
+  --ifm-font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --ifm-background-color: var(--color-graphite);
+  --ifm-navbar-background-color: rgba(242, 240, 245, 0.8);
+  --ifm-footer-background-color: var(--color-pitch-black);
+  --ifm-card-background-color: var(--color-deep-slate);
+  --ifm-font-color-base: var(--color-storm-cloud);
+  --ifm-heading-color: var(--color-porcelain); 
+  --ifm-color-primary: var(--color-brand-purple);
+  
+  --ifm-navbar-link-color: var(--color-porcelain);
+  --ifm-navbar-link-hover-color: var(--color-brand-pink);
+  
+  /* Layout */
+  --ifm-container-width: 1100px;
+  --section-padding: 100px 0;
+  --ifm-global-border-radius: 16px;
+  --ifm-button-border-radius: 99px;
+
+  /* Theme-Dependent Card Colors (Light Mode) */
+  --card-bg: rgba(255, 255, 255, 0.7);
+  --card-border: rgba(109, 40, 217, 0.15);
+  --card-hover-bg: rgba(255, 255, 255, 0.95);
+  --card-hover-border: rgba(109, 40, 217, 0.4);
+  --card-shadow: 0 8px 32px 0 rgba(109, 40, 217, 0.08);
+  --card-hover-shadow: 0 12px 40px rgba(109, 40, 217, 0.15);
+  
+  --timeline-border: rgba(109, 40, 217, 0.15);
+  --admonition-bg: rgba(255, 255, 255, 0.7);
+  --admonition-border: rgba(109, 40, 217, 0.2);
+  --table-bg: rgba(255, 255, 255, 0.5);
+  --table-row-even: rgba(109, 40, 217, 0.03);
+  --table-row-hover: rgba(109, 40, 217, 0.08);
+
+  --contact-card-bg: rgba(255, 255, 255, 0.8);
+  --contact-card-border: rgba(109, 40, 217, 0.2);
+  --contact-card-shadow: 0 16px 48px rgba(109, 40, 217, 0.1);
+  --contact-glow: radial-gradient(circle, rgba(109, 40, 217, 0.05) 0%, transparent 60%);
+  
+  --tech-stack-bg: rgba(109, 40, 217, 0.03);
+  --tech-stack-border: rgba(109, 40, 217, 0.08);
+  
+  --case-role-bg: rgba(109, 40, 217, 0.05);
+  --case-role-border: rgba(109, 40, 217, 0.2);
+  --case-role-color: var(--color-brand-purple);
+
+  --bento-glow: radial-gradient(circle at top right, rgba(109, 40, 217, 0.12), transparent);
+  --button-secondary-hover-color: var(--color-brand-purple);
+  
+  --tech-tag-hover-bg: rgba(109, 40, 217, 0.1);
+  --tech-tag-hover-border: rgba(109, 40, 217, 0.4);
+  --tech-tag-hover-color: var(--color-brand-purple);
+}
+
+[data-theme='dark'] {
+  /* Colors - Dracula Dark Theme */
   --color-pitch-black: #181920;      /* Deep dark background */
   --color-graphite: #1e1f29;         /* Dracula main background */
   --color-deep-slate: #282a36;       /* Dracula card/box background */
@@ -28,27 +105,50 @@
   --color-forest-green: #50fa7b;     /* Dracula Green */
 
   /* Infima Overrides */
-  --ifm-font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   --ifm-background-color: var(--color-graphite);
   --ifm-navbar-background-color: rgba(30, 31, 41, 0.7);
   --ifm-footer-background-color: var(--color-pitch-black);
   --ifm-card-background-color: rgba(68, 71, 90, 0.15);
   --ifm-font-color-base: var(--color-porcelain);
-  --ifm-heading-color: var(--color-porcelain); /* White headings for a cleaner layout */
+  --ifm-heading-color: var(--color-porcelain); 
   --ifm-color-primary: var(--color-brand-purple);
   
   --ifm-navbar-link-color: var(--color-porcelain);
   --ifm-navbar-link-hover-color: var(--color-brand-pink);
-  
-  /* Layout */
-  --ifm-container-width: 1100px;
-  --section-padding: 100px 0;
-  --ifm-global-border-radius: 16px;
-  --ifm-button-border-radius: 99px;
-}
 
-[data-theme='dark'] {
-  --ifm-navbar-background-color: rgba(0, 0, 0, 0.4);
+  /* Theme-Dependent Card Colors (Dark Mode) */
+  --card-bg: rgba(40, 42, 54, 0.4);
+  --card-border: rgba(189, 147, 249, 0.1);
+  --card-hover-bg: rgba(40, 42, 54, 0.6);
+  --card-hover-border: rgba(189, 147, 249, 0.3);
+  --card-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+  --card-hover-shadow: 0 12px 40px rgba(0, 0, 0, 0.7);
+
+  --timeline-border: rgba(189, 147, 249, 0.15);
+  --admonition-bg: rgba(40, 42, 54, 0.2);
+  --admonition-border: rgba(189, 147, 249, 0.1);
+  --table-bg: rgba(40, 42, 54, 0.1);
+  --table-row-even: rgba(40, 42, 54, 0.2);
+  --table-row-hover: rgba(40, 42, 54, 0.4);
+
+  --contact-card-bg: rgba(40, 42, 54, 0.4);
+  --contact-card-border: rgba(189, 147, 249, 0.15);
+  --contact-card-shadow: 0 16px 48px rgba(0, 0, 0, 0.6);
+  --contact-glow: radial-gradient(circle, rgba(157, 23, 77, 0.08) 0%, transparent 60%);
+
+  --tech-stack-bg: rgba(40, 42, 54, 0.2);
+  --tech-stack-border: rgba(189, 147, 249, 0.08);
+
+  --case-role-bg: rgba(189, 147, 249, 0.05);
+  --case-role-border: rgba(189, 147, 249, 0.2);
+  --case-role-color: var(--color-light-steel);
+
+  --bento-glow: radial-gradient(circle at top right, rgba(189, 147, 249, 0.08), transparent);
+  --button-secondary-hover-color: #bd93f9;
+
+  --tech-tag-hover-bg: rgba(76, 29, 149, 0.1);
+  --tech-tag-hover-border: rgba(76, 29, 149, 0.4);
+  --tech-tag-hover-color: #bd93f9;
 }
 
 /* Base Styles with Radial Background from angular-financial */
@@ -121,10 +221,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bento-item {
-  background: rgba(40, 42, 54, 0.4);
+  background: var(--card-bg);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border: 1px solid rgba(189, 147, 249, 0.1);
+  border: 1px solid var(--card-border);
   border-radius: var(--ifm-global-border-radius);
   padding: 32px;
   position: relative;
@@ -133,14 +233,14 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
 }
 
 .bento-item:hover {
-  border-color: rgba(189, 147, 249, 0.3);
-  background: rgba(40, 42, 54, 0.6);
+  border-color: var(--card-hover-border);
+  background: var(--card-hover-bg);
   transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
 }
 
 .bento-item h3 {
@@ -151,7 +251,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Timeline */
 .timeline-item {
-  border-left: 2px solid rgba(189, 147, 249, 0.15);
+  border-left: 2px solid var(--timeline-border);
   padding-left: 28px;
   padding-bottom: 40px;
   position: relative;
@@ -174,8 +274,8 @@ h1, h2, h3, h4, h5, h6 {
 .tech-tag {
   display: inline-block;
   padding: 6px 14px;
-  background: rgba(189, 147, 249, 0.05);
-  border: 1px solid rgba(189, 147, 249, 0.15);
+  background: var(--case-role-bg);
+  border: 1px solid var(--case-role-border);
   backdrop-filter: blur(5px);
   border-radius: 99px;
   font-size: 12px;
@@ -187,9 +287,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .tech-tag:hover {
-  background: rgba(76, 29, 149, 0.1);
-  border-color: rgba(76, 29, 149, 0.4);
-  color: #bd93f9;
+  background: var(--tech-tag-hover-bg);
+  border-color: var(--tech-tag-hover-border);
+  color: var(--tech-tag-hover-color);
 }
 
 /* Buttons - Shocking Pink & Glass Purple Outline */
@@ -211,9 +311,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .button--secondary-linear {
-  background: rgba(76, 29, 149, 0.08);
+  background: var(--case-role-bg);
   color: var(--color-porcelain);
-  border: 1px solid rgba(76, 29, 149, 0.3);
+  border: 1px solid var(--case-role-border);
   backdrop-filter: blur(10px);
   border-radius: var(--ifm-button-border-radius);
   padding: 14px 28px;
@@ -222,10 +322,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .button--secondary-linear:hover {
-  background: rgba(76, 29, 149, 0.18);
-  border-color: rgba(76, 29, 149, 0.6);
+  background: var(--tech-tag-hover-bg);
+  border-color: var(--tech-tag-hover-border);
   transform: scale(1.05);
-  color: #bd93f9;
+  color: var(--button-secondary-hover-color);
   text-decoration: none;
 }
 
@@ -241,8 +341,8 @@ h1, h2, h3, h4, h5, h6 {
   align-items: flex-start;
   gap: 1.5rem;
   padding: 1.5rem !important;
-  background: rgba(40, 42, 54, 0.2);
-  border: 1px solid rgba(189, 147, 249, 0.1);
+  background: var(--admonition-bg);
+  border: 1px solid var(--admonition-border);
 }
 
 .admonition-heading {
@@ -358,13 +458,13 @@ table {
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid var(--color-charcoal-grey);
-  background: rgba(40, 42, 54, 0.1);
+  background: var(--table-bg);
 }
 
 table tr:nth-child(even) {
-  background-color: rgba(40, 42, 54, 0.2);
+  background-color: var(--table-row-even);
 }
 
 table tr:hover {
-  background-color: rgba(40, 42, 54, 0.4);
+  background-color: var(--table-row-hover);
 }

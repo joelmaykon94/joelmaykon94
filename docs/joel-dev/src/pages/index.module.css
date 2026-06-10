@@ -154,19 +154,21 @@
 }
 
 .aboutGridItem {
-  background: rgba(40, 42, 54, 0.4);
+  background: var(--card-bg);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border: 1px solid rgba(189, 147, 249, 0.1);
+  border: 1px solid var(--card-border);
   padding: 32px;
   border-radius: 16px;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: var(--card-shadow);
 }
 
 .aboutGridItem:hover {
-  border-color: rgba(189, 147, 249, 0.3);
-  background: rgba(40, 42, 54, 0.6);
+  border-color: var(--card-hover-border);
+  background: var(--card-hover-bg);
   transform: translateY(-5px);
+  box-shadow: var(--card-hover-shadow);
 }
 
 .aboutGridItem h4 {
@@ -196,23 +198,23 @@
 }
 
 .caseCard {
-  background: rgba(40, 42, 54, 0.3);
+  background: var(--card-bg);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border: 1px solid rgba(189, 147, 249, 0.1);
+  border: 1px solid var(--card-border);
   padding: 48px;
   border-radius: 24px;
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
   overflow: hidden;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  box-shadow: var(--card-shadow);
 }
 
 .caseCard:hover {
-  border-color: rgba(189, 147, 249, 0.3);
-  background: rgba(40, 42, 54, 0.5);
+  border-color: var(--card-hover-border);
+  background: var(--card-hover-bg);
   transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.7);
+  box-shadow: var(--card-hover-shadow);
 }
 
 .caseHeader {
@@ -237,12 +239,12 @@
 }
 
 .caseRole {
-  background: rgba(189, 147, 249, 0.05);
+  background: var(--case-role-bg);
   padding: 6px 16px;
   border-radius: 99px;
   font-size: 13px;
-  color: var(--color-light-steel);
-  border: 1px solid rgba(189, 147, 249, 0.2);
+  color: var(--case-role-color);
+  border: 1px solid var(--case-role-border);
 }
 
 .caseDesc {
@@ -256,7 +258,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px solid rgba(189, 147, 249, 0.15);
+  border-top: 1px solid var(--card-border);
   padding-top: 24px;
 }
 
@@ -299,15 +301,15 @@
 }
 
 .contactCard {
-  background: rgba(40, 42, 54, 0.4);
+  background: var(--contact-card-bg);
   backdrop-filter: blur(30px) saturate(180%);
   -webkit-backdrop-filter: blur(30px) saturate(180%);
-  border: 1px solid rgba(189, 147, 249, 0.15);
+  border: 1px solid var(--contact-card-border);
   padding: 80px 40px;
   border-radius: 32px;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.6);
+  box-shadow: var(--contact-card-shadow);
 }
 
 .contactGlow {
@@ -316,7 +318,7 @@
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle, rgba(157, 23, 77, 0.08) 0%, transparent 60%);
+  background: var(--contact-glow);
   pointer-events: none;
 }
 
@@ -330,9 +332,9 @@
 /* Tech Stack */
 .techStackSection {
   padding: 40px 0;
-  background: rgba(40, 42, 54, 0.2);
-  border-top: 1px solid rgba(189, 147, 249, 0.08);
-  border-bottom: 1px solid rgba(189, 147, 249, 0.08);
+  background: var(--tech-stack-bg);
+  border-top: 1px solid var(--tech-stack-border);
+  border-bottom: 1px solid var(--tech-stack-border);
 }
 
 .techStackWrapper {

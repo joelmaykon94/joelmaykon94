@@ -9,8 +9,8 @@ This directory houses precompiled `llama.cpp` binaries and supporting shared lib
 - Maintain executable permissions for all binaries.
 
 # Work Guidance
-- Use [llama-server](file:///home/joelmaykon/joelmaykon94/local-llm/llama-b9580/llama-server) as the main server executable.
-- The startup scripts [start-coder-servers.sh](file:///home/joelmaykon/joelmaykon94/local-llm/start-coder-servers.sh) and [start-server.sh](file:///home/joelmaykon/joelmaykon94/local-llm/start-server.sh) depend on the libraries in this directory being present in the library load path or local executable directory.
+- Use [llama-server](/local-llm/llama-b9580/llama-server) as the main server executable.
+- The startup scripts [start-coder-servers.sh](/local-llm/start-coder-servers.sh) and [start-server.sh](/local-llm/start-server.sh) depend on the libraries in this directory being present in the library load path or local executable directory.
 
 # Verification
 - Run `./llama-server --help` to confirm execution capability and list supported CLI flags.

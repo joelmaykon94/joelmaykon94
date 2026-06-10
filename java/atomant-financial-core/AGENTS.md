@@ -11,12 +11,12 @@ This project contains the **Financial Core & Ledger Engine** backend service (fo
 
 # Work Guidance
 For complete context about requirements and architecture, refer to:
-- [.specify/memory/constitution.md](file:///home/joelmaykon/joelmaykon94/java/atomant-financial-core/.specify/memory/constitution.md): Architectural layers and component interaction.
-- [.specify/memory/business-rules.md](file:///home/joelmaykon/joelmaykon94/java/atomant-financial-core/.specify/memory/business-rules.md): Detailed business rules for the ledger, clearing, fraud checks, and legacy adapters.
-- [.specify/global_kyc_risk_analysis_spec.md](file:///home/joelmaykon/joelmaykon94/java/atomant-financial-core/.specify/global_kyc_risk_analysis_spec.md): Specifications for real-time risk assessment and KYC validation.
-- [.specify/dora_compliance_cloud_resilience_spec.md](file:///home/joelmaykon/joelmaykon94/java/atomant-financial-core/.specify/dora_compliance_cloud_resilience_spec.md): Resiliency patterns and DORA compliance checklist.
-- [.specify/zero_trust_api_gateway_fapi_spec.md](file:///home/joelmaykon/joelmaykon94/java/atomant-financial-core/.specify/zero_trust_api_gateway_fapi_spec.md): Zero-Trust security rules and FAPI compliance.
-- [.specify/checklists/requirements.md](file:///home/joelmaykon/joelmaykon94/java/atomant-financial-core/.specify/checklists/requirements.md): System integration requirements checklist.
+- [.specify/memory/constitution.md](/java/atomant-financial-core/.specify/memory/constitution.md): Architectural layers and component interaction.
+- [.specify/memory/business-rules.md](/java/atomant-financial-core/.specify/memory/business-rules.md): Detailed business rules for the ledger, clearing, fraud checks, and legacy adapters.
+- [.specify/global_kyc_risk_analysis_spec.md](/java/atomant-financial-core/.specify/global_kyc_risk_analysis_spec.md): Specifications for real-time risk assessment and KYC validation.
+- [.specify/dora_compliance_cloud_resilience_spec.md](/java/atomant-financial-core/.specify/dora_compliance_cloud_resilience_spec.md): Resiliency patterns and DORA compliance checklist.
+- [.specify/zero_trust_api_gateway_fapi_spec.md](/java/atomant-financial-core/.specify/zero_trust_api_gateway_fapi_spec.md): Zero-Trust security rules and FAPI compliance.
+- [.specify/checklists/requirements.md](/java/atomant-financial-core/.specify/checklists/requirements.md): System integration requirements checklist.
 
 # Verification
 - Run test suites using the project build tools.

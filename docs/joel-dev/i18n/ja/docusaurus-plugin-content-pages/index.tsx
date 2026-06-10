@@ -107,6 +107,15 @@ function AboutSection() {
 function PortfolioSection() {
   const cases = [
     {
+      id: 'cef',
+      company: 'Caixa Econômica Federal (CEF) / EngeSoftware',
+      role: 'シニアソフトウェアプラットフォームアナリスト',
+      title: 'コア元帳とセキュリティの近代化',
+      description: '高トランザクションの分散処理エコシステムのアーキテクチャ設計および近代化。会計エンジン（複式簿記元帳コア）や中央監査サービス、Keycloakと統合されたフェデレーション識別セキュリティの構築など、ブラジル中央銀行（BACEN）の規制に完全準拠した開発を統括。',
+      tech: ['Java 21', 'Quarkus', 'Spring Boot', 'Keycloak', 'Kubernetes'],
+      results: '規制要件への完全準拠と、大容量バッチの非同期高速照合を実現。',
+    },
+    {
       id: 'aura',
       company: 'Vivo/Mutant',
       role: 'AI エンジニア',
@@ -184,10 +193,17 @@ function ExperienceTimeline() {
           <div className="col col--8">
             <div className={styles.timeline}>
               {[
-                { date: '2025', title: '技術负责人 (Tech Lead) @ Parnamirim/RN', desc: 'KubernetesとArgoCDを使用したレガシーシステムの近代化。' },
-                { date: '2023 - 2024', title: 'AI エンジニア @ Vivo Aura', desc: '1500万回以上の対話を処理する生成AIおよびRAGパイプライン。' },
-                { date: '2023', title: 'ソフトウェアエンジニア @ J17 銀行', desc: 'PCI DSS準拠およびコアバンキング（PIX）の最適化。' },
-                { date: '2022 - 2023', title: '技術负责人 (Tech Lead) @ Holistix', desc: 'KafkaとRocksetを使用したデータアーキテクチャ。' }
+                { date: '2026年5月 - 現在', title: 'シニアアナリスト @ Caixa Econômica Federal (CEF) / EngeSoftware', desc: '銀行コア元帳の近代化。高スループットの分散型勘定エンジン（複式簿記コア、監査、Keycloak）の設計・開発。' },
+                { date: '2025年5月 - 2025年12月', title: '技術负责人 / アーキテクト @ パルナミリン市役所/RN', desc: 'Kubernetes、ArgoCD、GitLab CIを用いた行政レガシーシステムの近代化。Hibernate/JPAのリファクタリングによりパフォーマンスを30%向上。' },
+                { date: '2025年3月 - 2025年6月', title: '非常勤講師 @ IFRN', desc: 'Web開発とデータベースの基礎を指導。Python、SQL、ベストプラクティスについて40名以上の学生を育成。' },
+                { date: '2023年9月 - 2024年7月', title: 'AI エンジニア @ Vivo Aura / Mutant', desc: 'RAGパイプライン、LangChain、Python、RabbitMQを用いて、バーチャルアシスタント「Aura」（月間1500万件以上の対話）を生成AIへ進化。' },
+                { date: '2023年11月 - 2023年12月', title: 'ソフトウェアエンジニア @ J17 Bank', desc: 'PCI DSSに準拠した重要な金融API의維持。MySQLクエリおよびPIX即時決済フローの最適化により、遅延を25%削減。' },
+                { date: '2023年1月 - 2023年12月', title: 'フロントエンド開発者 @ Not so Impossible Media', desc: 'ReactJS、Material UI、SASSを用いた、レスポンシブでパフォーマンスの高いWebアプリケーションの構築。' },
+                { date: '2022年2月 - 2023年3月', title: '技術负责人 @ Holistix', desc: 'KafkaとRocksetを用いたデータアーキテクチャおよびパイプラインの構築。Node.js、Pythonによる拡張性の高いRESTful API設計、テストカバー率85%以上。' },
+                { date: '2021年4月 - 2022年2月', title: 'フルスタックソフトウェアエンジニア @ Stefanini Brasil', desc: 'AWS（Lambda, ECS, EKS）におけるサーバーレスAPI設計により、インフラコストを20%削減。Terraformを用いたIaC（Infrastructure as Code）の実施。' },
+                { date: '2020年11月 - 2021年4月', title: 'システムアナリスト @ +A Educação', desc: '.NET Core (C#)、Node.js、Vue.js、PostgreSQLを用いた教育プラットフォーム開発。' },
+                { date: '2019年 - 2020年', title: 'システムアナリスト @ ITEP', desc: 'PHP、C#、JavaScript、MongoDBを用いたMVCウェブアプリケーションの開発。' },
+                { date: '2018年 - 2019年', title: '研究助手 @ IFRN', desc: '自動化、ウェブスクレイピング、リアルタイムデータ処理のためのPythonスクリプト開発。' }
               ].map((item, i) => (
                 <div key={i} className="timeline-item">
                   <span className={styles.timelineDate}>{item.date}</span>
@@ -195,6 +211,49 @@ function ExperienceTimeline() {
                   <p>{item.desc}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function EducationSection() {
+  return (
+    <section className={styles.educationSection}>
+      <div className="container">
+        <div className="row">
+          <div className="col col--6">
+            <div className="hero-badge">🎓 学歴</div>
+            <Heading as="h2" className={styles.sectionHeading}>学術背景</Heading>
+            <div className={styles.certItem}>
+              <h4>計算知能修了（修士課程）</h4>
+              <p>北大河州連邦大学 (UFRN) （休学）</p>
+            </div>
+            <div className={styles.certItem}>
+              <h4>システム分析・開発技術学士</h4>
+              <p>北大河州連邦教育科学技術学院 (IFRN) (2016 – 2022) — クリーンアーキテクチャ専攻</p>
+            </div>
+            <div className={styles.certItem}>
+              <h4>プログラミング技術コース</h4>
+              <p>北大河州連邦大学 (UFRN) (2012)</p>
+            </div>
+          </div>
+          <div className="col col--6">
+            <div className="hero-badge">📜 資格とコース</div>
+            <Heading as="h2" className={styles.sectionHeading}>認定資格</Heading>
+            <div className={styles.certItem}>
+              <h4>Python for Data Science</h4>
+              <p>データサイエンス & アナリティクス</p>
+            </div>
+            <div className={styles.certItem}>
+              <h4>Microsoft Azure AI Fundamentals (AI-900)</h4>
+              <p>Microsoft認定</p>
+            </div>
+            <div className={styles.certItem}>
+              <h4>基本プログラミング / フルスタックブートキャンプ</h4>
+              <p>Web開発 & フルスタックエンジニアリング</p>
             </div>
           </div>
         </div>
@@ -261,6 +320,7 @@ export default function Home(): ReactNode {
         <HomepageFeatures />
         <PortfolioSection />
         <ExperienceTimeline />
+        <EducationSection />
         <ContactSection />
       </main>
     </Layout>

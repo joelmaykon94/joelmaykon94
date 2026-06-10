@@ -195,11 +195,17 @@ function ExperienceTimeline() {
           <div className="col col--8">
             <div className={styles.timeline}>
               {[
-                { date: '2026 - Atual', title: 'Senior Analyst @ Caixa Federal (CEF)', desc: 'Modernização de motores contábeis core, auditoria e federação Keycloak.' },
-                { date: '2025', title: 'Tech Lead @ Parnamirim/RN', desc: 'Modernização de sistemas governamentais com Kubernetes e ArgoCD.' },
-                { date: '2023 - 2024', title: 'AI Engineer @ Vivo Aura', desc: 'IA Generativa e RAG pipelines processando 15M+ interações.' },
-                { date: '2023', title: 'Software Engineer @ J17 Bank', desc: 'Compliance PCI DSS e otimização core banking (PIX).' },
-                { date: '2022 - 2023', title: 'Tech Lead @ Holistix', desc: 'Arquitetura de dados com Kafka e Rockset.' }
+                { date: 'Mai/2026 - Atual', title: 'Analista Senior @ Caixa Econômica Federal (CEF) / EngeSoftware', desc: 'Modernização do Core Ledger Bancário, projetando motores contábeis distribuídos de alta transacionalidade (Double-Entry Ledger, Audit e Keycloak).' },
+                { date: 'Mai/2025 - Dez/2025', title: 'Tech Lead / Arquiteto @ Prefeitura de Parnamirim/RN', desc: 'Modernização de sistemas governamentais com Kubernetes, ArgoCD e GitLab CI. Refatoração de Hibernate/JPA para ganho de 30% em performance.' },
+                { date: 'Mar/2025 - Jun/2025', title: 'Professor Temporário @ IFRN', desc: 'Lecionei Desenvolvimento Web e Banco de Dados, capacitando mais de 40 alunos em Python, SQL e boas práticas.' },
+                { date: 'Set/2023 - Jul/2024', title: 'Engenheiro de IA @ Vivo Aura / Mutant', desc: 'Evolução do assistente virtual Aura (15M+ interações/mês) com pipelines RAG, LangChain, Python e mensageria RabbitMQ.' },
+                { date: 'Nov/2023 - Dez/2023', title: 'Engenheiro de Software @ J17 Bank', desc: 'Sustentação de APIs financeiras em conformidade com PCI DSS. Otimização de queries MySQL e fluxos do PIX com redução de 25% na latência.' },
+                { date: 'Jan/2023 - Dez/2023', title: 'Desenvolvedor Front-end @ Not so Impossible Media', desc: 'Construção de aplicações web responsivas e otimizadas com ReactJS, Material UI e SASS.' },
+                { date: 'Fev/2022 - Mar/2023', title: 'Líder Técnico @ Holistix', desc: 'Arquitetura de dados com Kafka e Rockset. APIs RESTful com Node.js e Python, com testes JUnit/PyTest e cobertura de 85%.' },
+                { date: 'Abr/2021 - Fev/2022', title: 'Engenheiro de Software Full Stack @ Stefanini Brasil', desc: 'Projetei APIs e soluções serverless na AWS (Lambda, ECS, EKS) com economia de 20%. Infraestrutura como Código via Terraform.' },
+                { date: 'Nov/2020 - Abr/2021', title: 'Analista de Sistemas @ +A Educação', desc: 'Desenvolvimento de plataformas educacionais com .NET Core (C#), Node.js, Vue.js e banco de dados PostgreSQL.' },
+                { date: '2019 - 2020', title: 'Analista de Sistemas @ ITEP', desc: 'Desenvolvimento de aplicações web MVC com PHP, C#, JavaScript e banco de dados NoSQL MongoDB.' },
+                { date: '2018 - 2019', title: 'Assistente de Pesquisa @ IFRN', desc: 'Criação de scripts Python para automação, web scraping e tratamento de dados em tempo real.' }
               ].map((item, i) => (
                 <div key={i} className="timeline-item">
                   <span className={styles.timelineDate}>{item.date}</span>
@@ -207,6 +213,49 @@ function ExperienceTimeline() {
                   <p>{item.desc}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function EducationSection() {
+  return (
+    <section className={styles.educationSection}>
+      <div className="container">
+        <div className="row">
+          <div className="col col--6">
+            <div className="hero-badge">🎓 Formação</div>
+            <Heading as="h2" className={styles.sectionHeading}>Formação Acadêmica</Heading>
+            <div className={styles.certItem}>
+              <h4>Mestrado em Inteligência Computacional</h4>
+              <p>UFRN (Trancado)</p>
+            </div>
+            <div className={styles.certItem}>
+              <h4>Tecnologia em Análise e Desenvolvimento de Sistemas</h4>
+              <p>IFRN (2016 – 2022) — Ênfase em Clean Architecture</p>
+            </div>
+            <div className={styles.certItem}>
+              <h4>Técnico em Programação</h4>
+              <p>UFRN (2012)</p>
+            </div>
+          </div>
+          <div className="col col--6">
+            <div className="hero-badge">📜 Certificados</div>
+            <Heading as="h2" className={styles.sectionHeading}>Certificações & Cursos</Heading>
+            <div className={styles.certItem}>
+              <h4>Python for Data Science</h4>
+              <p>Data Science & Analytics</p>
+            </div>
+            <div className={styles.certItem}>
+              <h4>Microsoft Azure AI Fundamentals (AI-900)</h4>
+              <p>Microsoft Certified</p>
+            </div>
+            <div className={styles.certItem}>
+              <h4>Curso de Formação em Programação Básica / Full Stack</h4>
+              <p>Desenvolvimento Web & Engenharia Full Stack</p>
             </div>
           </div>
         </div>
@@ -273,6 +322,7 @@ export default function Home(): ReactNode {
         <HomepageFeatures />
         <PortfolioSection />
         <ExperienceTimeline />
+        <EducationSection />
         <ContactSection />
       </main>
     </Layout>

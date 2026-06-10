@@ -107,9 +107,18 @@ function AboutSection() {
 function PortfolioSection() {
   const cases = [
     {
+      id: 'cef',
+      company: 'Caixa Econômica Federal (CEF) / EngeSoftware',
+      role: 'אנליסט פלטפורמה בכיר',
+      title: 'מודרניזציה של ליבת הספר הראשי ואבטחה',
+      description: 'ארכיטקטורה ומודרניזציה של המערכת המבוזרת לעיבוד עסקאות בנפח גבוה. פיתוח מנוע הנהלת החשבונות (Double-Entry Ledger Core) ושירותי ביקורת מרכזיים, לצד אבטחת זהות פדרטיבית המשולבת עם Keycloak, להבטחת עמידה מלאה בדרישות הרגולטוריות של הבנק המרכזי בברזיל (BACEN).',
+      tech: ['Java 21', 'Quarkus', 'Spring Boot', 'Keycloak', 'Kubernetes'],
+      results: 'הבטחת עמידה מלאה ברגולציה והתאמה אסינכרונית של קבצי אצווה בביצועים גבוהים.',
+    },
+    {
       id: 'aura',
       company: 'Vivo/Mutant',
-      role: 'مهندس AI',
+      role: 'מהנדס AI',
       title: "צ'אטבוט Aura AI",
       description: 'פיתוח של העוזר הווירטואלי (15 מיליון+ אינטראקציות בחודש) לבינה מלאכותית יוצרת באמצעות Python ו-LangChain.',
       tech: ['Python', 'LangChain', 'RabbitMQ', 'Azure'],
@@ -184,10 +193,17 @@ function ExperienceTimeline() {
           <div className="col col--8">
             <div className={styles.timeline}>
               {[
-                { date: '2025', title: 'מוביל טכנולוגי (Tech Lead) @ Parnamirim/RN', desc: 'מודרניזציה של מערכות מורשת בעזרת Kubernetes ו-ArgoCD.' },
-                { date: '2023 - 2024', title: 'מהנדס AI @ Vivo Aura', desc: 'בינה מלאכותית יוצרת וצינורות RAG המעבדים 15 מיליון+ אינטראקציות.' },
-                { date: '2023', title: 'מהנדס תוכנה @ J17 Bank', desc: 'תאימות PCI DSS ואופטימיזציה של ליבת הבנקאות (PIX).' },
-                { date: '2022 - 2023', title: 'מוביל טכנולוגי (Tech Lead) @ Holistix', desc: 'ארכיטקטורת נתונים עם Kafka ו-Rockset.' }
+                { date: 'מאי/2026 - נוכחי', title: 'אנליסט בכיר @ Caixa Econômica Federal (CEF) / EngeSoftware', desc: 'מודרניזציה של ליבת הספר הראשי הבנקאי, תוך תכנון מנועי רישום מבוזרים לתפוקה גבוהה (ספר ראשי כפול, ביקורת ו-Keycloak).' },
+                { date: 'מאי/2025 - דצמ/2025', title: 'מוביל טכנולוגי / ארכיטקט @ עיריית פרנמירין/RN', desc: 'מודרניזציה של מערכות ממשלתיות בעזרת Kubernetes, ArgoCD ו-GitLab CI. רה-פקטורינג של מודולי Hibernate/JPA עם שיפור של 30% בביצועים.' },
+                { date: 'מרץ/2025 - יוני/2025', title: 'מרצה זמני @ IFRN', desc: 'הוראת פיתוח אתרים ויסודות מסדי נתונים, הכשרת יותר מ-40 סטודנטים ב-Python, SQL ופרקטיקות מומלצות.' },
+                { date: 'ספט/2023 - יולי/2024', title: 'מהנדס AI @ Vivo Aura / Mutant', desc: 'פיתוח העוזר הווירטואלי Aura (מעל 15 מיליון אינטראקציות בחודש) באמצעות צינורות RAG, LangChain, Python ו-RabbitMQ.' },
+                { date: 'נוב/2023 - דצמ/2023', title: 'מהנדס תוכנה @ J17 Bank', desc: 'תמיכה בממשקי API פיננסיים קריטיים עם תאימות לתקן PCI DSS. אופטימיזציה של שאילתות MySQL ותהליכי תשלום PIX, עם הפחתה של 25% בזמן התגובה.' },
+                { date: 'ינו/2023 - דצמ/2023', title: 'מפתח פרונט-אנד @ Not so Impossible Media', desc: 'בניית אפליקציות אינטרנט רספונסיביות ואופטימליות בעזרת ReactJS, Material UI ו-SASS.' },
+                { date: 'פבר/2022 - מרץ/2023', title: 'מוביל טכנולוגי @ Holistix', desc: 'ארכיטקטורת נתונים עם Kafka ו-Rockset. פיתוח ממשקי API RESTful הניתנים להרחבה עם Node.js ו-Python, עם כיסוי בדיקות של מעל 85%.' },
+                { date: 'אפר/2021 - פבר/2022', title: 'מהנדס תוכנה פול סטאק @ Stefanini Brasil', desc: 'תכנון ממשקי API ללא שרת ב-AWS (Lambda, ECS, EKS) עם חיסכון של 20% בעלויות. תשתית כקוד (IaC) באמצעות Terraform.' },
+                { date: 'נוב/2020 - אפר/2021', title: 'אנליסט מערכות @ +A Educação', desc: 'פיתוח פלטפורמות חינוכיות באמצעות .NET Core (C#), Node.js, Vue.js ומסד נתונים PostgreSQL.' },
+                { date: '2019 - 2020', title: 'אנליסט מערכות @ ITEP', desc: 'פיתוח אפליקציות אינטרנט MVC באמצעות PHP, C#, JavaScript ומסד נתונים NoSQL MongoDB.' },
+                { date: '2018 - 2019', title: 'עוזר מחקר @ IFRN', desc: 'כתיבת סקריפטים ב-Python לאוטומציה, גירוד נתוני אינטרנט ועיבוד נתונים בזמן אמת.' }
               ].map((item, i) => (
                 <div key={i} className="timeline-item">
                   <span className={styles.timelineDate}>{item.date}</span>
@@ -195,6 +211,49 @@ function ExperienceTimeline() {
                   <p>{item.desc}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function EducationSection() {
+  return (
+    <section className={styles.educationSection}>
+      <div className="container">
+        <div className="row">
+          <div className="col col--6">
+            <div className="hero-badge">🎓 השכלה</div>
+            <Heading as="h2" className={styles.sectionHeading}>השכלה אקדמית</Heading>
+            <div className={styles.certItem}>
+              <h4>תואר שני בבינה חישובית</h4>
+              <p>UFRN (הופסק/בשלבי הקפאה)</p>
+            </div>
+            <div className={styles.certItem}>
+              <h4>הנדסאי ניתוח ופיתוח מערכות</h4>
+              <p>IFRN (2016 – 2022) — דגש על ארכיטקטורה נקייה (Clean Architecture)</p>
+            </div>
+            <div className={styles.certItem}>
+              <h4>טכנאי תכנות</h4>
+              <p>UFRN (2012)</p>
+            </div>
+          </div>
+          <div className="col col--6">
+            <div className="hero-badge">📜 תעודות וקורסים</div>
+            <Heading as="h2" className={styles.sectionHeading}>הסמכות וקורסים</Heading>
+            <div className={styles.certItem}>
+              <h4>Python for Data Science</h4>
+              <p>מדע הנתונים ואנליטיקה</p>
+            </div>
+            <div className={styles.certItem}>
+              <h4>Microsoft Azure AI Fundamentals (AI-900)</h4>
+              <p>מוסמך מיקרוסופט</p>
+            </div>
+            <div className={styles.certItem}>
+              <h4>קורס הכשרה לתכנות בסיסי / פול סטאק</h4>
+              <p>פיתוח אתרים והנדסת פול סטאק</p>
             </div>
           </div>
         </div>
@@ -261,6 +320,7 @@ export default function Home(): ReactNode {
         <HomepageFeatures />
         <PortfolioSection />
         <ExperienceTimeline />
+        <EducationSection />
         <ContactSection />
       </main>
     </Layout>

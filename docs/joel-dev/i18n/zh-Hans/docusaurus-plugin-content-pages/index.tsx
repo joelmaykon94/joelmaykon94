@@ -107,6 +107,15 @@ function AboutSection() {
 function PortfolioSection() {
   const cases = [
     {
+      id: 'cef',
+      company: 'Caixa Econômica Federal (CEF) / EngeSoftware',
+      role: '高级软件平台分析师',
+      title: '核心分类账与安全现代化',
+      description: '高并发分布式处理生态系统的架构与现代化。设计与开发分布式账本引擎 (Double-Entry Ledger Core) 及集中审计服务，并与 Keycloak 集成实现身份安全联邦，保障符合巴西央行 (BACEN) 的监管合规要求。',
+      tech: ['Java 21', 'Quarkus', 'Spring Boot', 'Keycloak', 'Kubernetes'],
+      results: '完全保证监管合规，并实现了高性能的异步批量对账。',
+    },
+    {
       id: 'aura',
       company: 'Vivo/Mutant',
       role: 'AI 工程师',
@@ -184,10 +193,17 @@ function ExperienceTimeline() {
           <div className="col col--8">
             <div className={styles.timeline}>
               {[
-                { date: '2025', title: '技术负责人 (Tech Lead) @ Parnamirim/RN', desc: '使用 Kubernetes 和 ArgoCD 进行遗留系统现代化。' },
-                { date: '2023 - 2024', title: 'AI 工程师 @ Vivo Aura', desc: '生成式 AI 和 RAG 流水线，处理 1500 万+ 互动。' },
-                { date: '2023', title: '软件工程师 @ J17 银行', desc: 'PCI DSS 合规及核心银行（PIX）优化。' },
-                { date: '2022 - 2023', title: '技术负责人 (Tech Lead) @ Holistix', desc: '使用 Kafka 和 Rockset 构建数据架构。' }
+                { date: '2026年5月 - 至今', title: '高级分析师 @ Caixa Econômica Federal (CEF) / EngeSoftware', desc: '进行银行核心分类账系统现代化建设，设计高并发分布式账本引擎（双分录账本核心、审计和 Keycloak）。' },
+                { date: '2025年5月 - 2025年12月', title: '技术负责人 / 架构师 @ Prefeitura de Parnamirim/RN', desc: '使用 Kubernetes、ArgoCD 和 GitLab CI 对政府遗留系统进行现代化改造。重构 Hibernate/JPA 模块，性能提升了 30%。' },
+                { date: '2025年3月 - 2025年6月', title: '临时教师 @ IFRN', desc: '授课网页开发及数据库基础，培养了 40 多名学习 Python、SQL 和最佳实践的学生。' },
+                { date: '2023年9月 - 2024年7月', title: 'AI 工程师 @ Vivo Aura / Mutant', desc: '使用 RAG 流水线、LangChain、Python 和 RabbitMQ 消息队列优化并演进 Aura 智能虚拟助手（每月处理 1500 万+ 互动）。' },
+                { date: '2023年11月 - 2023年12月', title: '软件工程师 @ J17 Bank', desc: '支持符合 PCI DSS 规范的关键金融 API。优化 MySQL 查询和 PIX 核心支付流程，降低交易延迟 25%。' },
+                { date: '2023年1月 - 2023年12月', title: '前端开发人员 @ Not so Impossible Media', desc: '使用 ReactJS、Material UI 和 SASS 构建响应式和优化的高性能网页应用。' },
+                { date: '2022年2月 - 2023年3月', title: '技术负责人 @ Holistix', desc: '使用 Kafka 和 Rockset 构建数据架构和流水线。使用 Node.js 和 Python 开发可扩展 of RESTful API，测试覆盖率超 85%。' },
+                { date: '2021年4月 - 2022年2月', title: '全栈软件工程师 @ Stefanini Brasil', desc: '在 AWS（Lambda、ECS、EKS）上设计无服务器 API，节省 20% 成本。使用 Terraform 进行基础设施即代码（IaC）建设。' },
+                { date: '2020年11月 - 2021年4月', title: '系统分析师 @ +A Educação', desc: '使用 .NET Core (C#)、Node.js、Vue.js 和 PostgreSQL 数据库开发教育平台。' },
+                { date: '2019年 - 2020年', title: '系统分析师 @ ITEP', desc: '使用 PHP、C#、JavaScript 和 MongoDB 开发 MVC 模式网页应用。' },
+                { date: '2018年 - 2019年', title: '研究助理 @ IFRN', desc: '编写 Python 脚本实现自动化、网页爬虫及实时数据处理。' }
               ].map((item, i) => (
                 <div key={i} className="timeline-item">
                   <span className={styles.timelineDate}>{item.date}</span>
@@ -195,6 +211,49 @@ function ExperienceTimeline() {
                   <p>{item.desc}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function EducationSection() {
+  return (
+    <section className={styles.educationSection}>
+      <div className="container">
+        <div className="row">
+          <div className="col col--6">
+            <div className="hero-badge">🎓 教育经历</div>
+            <Heading as="h2" className={styles.sectionHeading}>教育背景</Heading>
+            <div className={styles.certItem}>
+              <h4>计算智能硕士</h4>
+              <p>巴西北大河州联邦大学 (UFRN) — 暂休</p>
+            </div>
+            <div className={styles.certItem}>
+              <h4>系统分析与开发技术学士</h4>
+              <p>巴西北大河州联邦学院 (IFRN) (2016 – 2022) — 专注清洁架构</p>
+            </div>
+            <div className={styles.certItem}>
+              <h4>计算机编程技术员</h4>
+              <p>巴西北大河州联邦大学 (UFRN) (2012)</p>
+            </div>
+          </div>
+          <div className="col col--6">
+            <div className="hero-badge">📜 认证与课程</div>
+            <Heading as="h2" className={styles.sectionHeading}>专业证书</Heading>
+            <div className={styles.certItem}>
+              <h4>Python for Data Science</h4>
+              <p>数据科学与分析证书</p>
+            </div>
+            <div className={styles.certItem}>
+              <h4>Microsoft Azure AI Fundamentals (AI-900)</h4>
+              <p>微软认证 AI 基础</p>
+            </div>
+            <div className={styles.certItem}>
+              <h4>基础编程与全栈训练营</h4>
+              <p>Web 开发与全栈工程</p>
             </div>
           </div>
         </div>
@@ -261,6 +320,7 @@ export default function Home(): ReactNode {
         <HomepageFeatures />
         <PortfolioSection />
         <ExperienceTimeline />
+        <EducationSection />
         <ContactSection />
       </main>
     </Layout>

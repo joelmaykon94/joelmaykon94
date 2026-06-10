@@ -109,6 +109,15 @@ function AboutSection() {
 function PortfolioSection() {
   const cases = [
     {
+      id: 'cef',
+      company: 'Caixa Econômica Federal (CEF)',
+      role: 'Senior Software Analyst',
+      title: 'Core Ledger & Security Modernization',
+      description: 'Architecture and modernization of the high-transaction distributed processing ecosystem. Development of the accounting engine (Double-Entry Ledger Core) and centralized auditing services, plus federated identity security integrated with Keycloak, ensuring full regulatory compliance (BACEN).',
+      tech: ['Java 21', 'Quarkus', 'Spring Boot', 'Keycloak', 'Kubernetes'],
+      results: 'Full regulatory compliance guaranteed and high-performance asynchronous batch reconciliation.',
+    },
+    {
       id: 'aura',
       company: 'Vivo/Mutant',
       role: 'AI Engineer',
@@ -186,10 +195,17 @@ function ExperienceTimeline() {
           <div className="col col--8">
             <div className={styles.timeline}>
               {[
-                { date: '2025', title: 'Tech Lead @ Parnamirim/RN', desc: 'Modernizing legacy systems with Kubernetes and ArgoCD.' },
-                { date: '2023 - 2024', title: 'AI Engineer @ Vivo Aura', desc: 'Generative AI and RAG pipelines processing 15M+ interactions.' },
-                { date: '2023', title: 'Software Engineer @ J17 Bank', desc: 'PCI DSS compliance and core banking (PIX) optimization.' },
-                { date: '2022 - 2023', title: 'Tech Lead @ Holistix', desc: 'Data architecture with Kafka and Rockset.' }
+                { date: 'May/2026 - Present', title: 'Senior Analyst @ Caixa Econômica Federal (CEF) / EngeSoftware', desc: 'Modernization of the Banking Core Ledger, designing high-throughput distributed engines (Double-Entry Ledger Core, Audit and Keycloak).' },
+                { date: 'May/2025 - Dec/2025', title: 'Tech Lead / Architect @ Parnamirim/RN City Hall', desc: 'Modernization of government systems using Kubernetes, ArgoCD, and GitLab CI. Refactored Hibernate/JPA modules achieving a 30% performance boost.' },
+                { date: 'Mar/2025 - Jun/2025', title: 'Temporary Professor @ IFRN', desc: 'Taught Web Development and Database Fundamentals, training over 40 students in Python, SQL, and best practices.' },
+                { date: 'Sep/2023 - Jul/2024', title: 'AI Engineer @ Vivo Aura / Mutant', desc: 'Evolved the Aura virtual assistant (15M+ interactions/month) using RAG pipelines, LangChain, Python, and RabbitMQ.' },
+                { date: 'Nov/2023 - Dec/2023', title: 'Software Engineer @ J17 Bank', desc: 'Sustained critical financial APIs with PCI DSS compliance. Optimized MySQL queries and core banking PIX flows, reducing latency by 25%.' },
+                { date: 'Jan/2023 - Dec/2023', title: 'Front-end Developer @ Not so Impossible Media', desc: 'Built responsive and optimized web applications using ReactJS, Material UI, and SASS.' },
+                { date: 'Feb/2022 - Mar/2023', title: 'Technical Lead @ Holistix', desc: 'Data architecture with Kafka and Rockset. Scalable RESTful APIs with Node.js and Python, achieving over 85% test coverage.' },
+                { date: 'Apr/2021 - Feb/2022', title: 'Full Stack Software Engineer @ Stefanini Brasil', desc: 'Designed serverless APIs on AWS (Lambda, ECS, EKS) with 20% cost savings. Infrastructure as Code via Terraform.' },
+                { date: 'Nov/2020 - Apr/2021', title: 'Systems Analyst @ +A Educação', desc: 'Developed educational platforms with .NET Core (C#), Node.js, Vue.js, and PostgreSQL.' },
+                { date: '2019 - 2020', title: 'Systems Analyst @ ITEP', desc: 'Developed MVC web applications with PHP, C#, JavaScript, and MongoDB.' },
+                { date: '2018 - 2019', title: 'Research Assistant @ IFRN', desc: 'Created Python scripts for automation, web scraping, and real-time data processing.' }
               ].map((item, i) => (
                 <div key={i} className="timeline-item">
                   <span className={styles.timelineDate}>{item.date}</span>
@@ -197,6 +213,49 @@ function ExperienceTimeline() {
                   <p>{item.desc}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function EducationSection() {
+  return (
+    <section className={styles.educationSection}>
+      <div className="container">
+        <div className="row">
+          <div className="col col--6">
+            <div className="hero-badge">🎓 Education</div>
+            <Heading as="h2" className={styles.sectionHeading}>Academic Background</Heading>
+            <div className={styles.certItem}>
+              <h4>Master's in Computational Intelligence</h4>
+              <p>UFRN (Incomplete/Paused)</p>
+            </div>
+            <div className={styles.certItem}>
+              <h4>B.S. in Systems Analysis & Development</h4>
+              <p>IFRN (2016 – 2022) — Emphasis on Clean Architecture</p>
+            </div>
+            <div className={styles.certItem}>
+              <h4>Programming Technician</h4>
+              <p>UFRN (2012)</p>
+            </div>
+          </div>
+          <div className="col col--6">
+            <div className="hero-badge">📜 Certificates</div>
+            <Heading as="h2" className={styles.sectionHeading}>Certifications & Courses</Heading>
+            <div className={styles.certItem}>
+              <h4>Python for Data Science</h4>
+              <p>Data Science & Analytics</p>
+            </div>
+            <div className={styles.certItem}>
+              <h4>Microsoft Azure AI Fundamentals (AI-900)</h4>
+              <p>Microsoft Certified</p>
+            </div>
+            <div className={styles.certItem}>
+              <h4>Basic Programming / Full Stack Bootcamp</h4>
+              <p>Web Development & Full Stack Engineering</p>
             </div>
           </div>
         </div>
@@ -263,6 +322,7 @@ export default function Home(): ReactNode {
         <HomepageFeatures />
         <PortfolioSection />
         <ExperienceTimeline />
+        <EducationSection />
         <ContactSection />
       </main>
     </Layout>

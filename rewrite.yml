@@ -1,0 +1,10 @@
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: com.atomant.QualityAndPerformance
+displayName: Atomant Quality and Performance Pack
+description: A suite of recipes to improve code quality and performance across the codebase.
+recipeList:
+  - org.openrewrite.staticanalysis.CommonStaticAnalysis
+  - org.openrewrite.staticanalysis.PrimitiveWrapperClassConstructorToValueOf
+  - org.openrewrite.java.migrate.UpgradeToJava21
+  - org.openrewrite.java.cleanup.CleanupRecipe
